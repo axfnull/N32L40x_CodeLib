@@ -1,0 +1,15 @@
+"D:\IAR\azlj\arm\bin\armproc.dll" 
+
+"D:\IAR\azlj\arm\bin\armJET.dll" 
+
+"D:\NS3602_Back\2.DevelopmentKit\4.DesignKit\SDK\Nationstech.N32L40x_Library.1.0.1\projects\n32l40x_EVAL\examples\RTC\RtcBKP\EWARM\Debug\Exe\template_project.out" 
+
+--plugin "D:\IAR\azlj\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR\azlj\arm\config\debugger\Nations\N32L40x\N32L40x.dmac" 
+
+--flash_loader "D:\IAR\azlj\arm\config\flashloader\Nations\N32L406xB\N32L406xB.board" 
+
+
+
+

@@ -1,0 +1,19 @@
+--cpu=Cortex-M4.fp
+".\objects\startup_n32l40x.o"
+".\objects\system_n32l40x.o"
+".\objects\main.o"
+".\objects\n32l40x_it.o"
+".\objects\user_rtcbkp_config.o"
+".\objects\log.o"
+".\objects\misc.o"
+".\objects\n32l40x_exti.o"
+".\objects\n32l40x_flash.o"
+".\objects\n32l40x_gpio.o"
+".\objects\n32l40x_pwr.o"
+".\objects\n32l40x_rcc.o"
+".\objects\n32l40x_rtc.o"
+".\objects\n32l40x_usart.o"
+--library_type=microlib --strict --scatter ".\Objects\Alarm.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Alarm.map" -o .\Objects\Alarm.axf
