@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 #include <stdio.h>
@@ -131,7 +131,6 @@ void MPU_SETUP(void)
  */
 void accesspermission(void)
 {
-    volatile uint8_t a;
 
     /* Configure region for privilegedreadonlyarray as REGION NÝ3, 32byte and R
        only in privileged mode */
@@ -140,7 +139,7 @@ void accesspermission(void)
     MPU->RASR |= ARRAY_SIZE | portMPU_REGION_PRIVILEGED_READ_ONLY;
 
     /* Read from privilegedreadonlyarray. This will not generate error */
-    a = privilegedreadonlyarray[0];
+    //privilegedreadonlyarray[0];
 
     /* Uncomment the following line to write to privilegedreadonlyarray. This will
        generate error */

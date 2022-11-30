@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -60,20 +60,6 @@ int main(void)
     /* GPIO Configuration */
     GPIO_Configuration();
 
-    /* -----------------------------------------------------------------------
-    TIM3 Configuration: generate 4 PWM signals with 4 different duty cycles:
-    The TIM3CLK frequency is set to SystemCoreClock (Hz), to get TIM3 counter
-    clock at 6 MHz the Prescaler is computed as following:
-     - Prescaler = (TIM3CLK / TIM3 counter clock) - 1
-    SystemCoreClock is set to 64 MHz
-
-    The TIM3 is running at 36 KHz: TIM3 Frequency = TIM3 counter clock/(AR + 1)
-                                                  = 6 MHz / 666 = 9 KHz
-    TIM3 Channel1 duty cycle = (TIM3_CCR1/ TIM3_ARR)* 100 = 50%
-    TIM3 Channel2 duty cycle = (TIM3_CCR2/ TIM3_ARR)* 100 = 37.5%
-    TIM3 Channel3 duty cycle = (TIM3_CCR3/ TIM3_ARR)* 100 = 25%
-    TIM3 Channel4 duty cycle = (TIM3_CCR4/ TIM3_ARR)* 100 = 12.5%
-    ----------------------------------------------------------------------- */
     /* Compute the prescaler value */
     PrescalerValue = (uint16_t)(SystemCoreClock / 12000000) - 1;
     /* Time base configuration */

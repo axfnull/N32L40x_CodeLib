@@ -1,36 +1,73 @@
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËLPUARTÓëPC¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-    ÖØ¶¨Ïòprintfº¯ÊıÖÁLPUART£¬²¢Ê¹ÓÃprintfº¯ÊıÊä³öÏûÏ¢ÖÁÖÕ¶Ë¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†LPUARTä¸PCé—´é€šè¿‡æŸ¥è¯¢æ£€æµ‹æ ‡è¯†å®ç°çš„åŸºç¡€é€šä¿¡ã€‚
+    é‡å®šå‘printfå‡½æ•°è‡³LPUARTï¼Œå¹¶ä½¿ç”¨printfå‡½æ•°è¾“å‡ºæ¶ˆæ¯è‡³ç»ˆç«¯ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+    ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    LPUARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»£¨¹Ì¶¨£©
-    - 1Í£Ö¹Î»£¨¹Ì¶¨£©
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    LPUARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 9600 baud
+    - å­—é•¿ = 8æ•°æ®ä½ï¼ˆå›ºå®šï¼‰
+    - 1åœæ­¢ä½ï¼ˆå›ºå®šï¼‰
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
-    LPUARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    LPUARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š
     - LPUART_Tx.PA1 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬²é¿´´®¿Ú´òÓ¡ĞÅÏ¢
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼ŒæŸ¥çœ‹ä¸²å£æ‰“å°ä¿¡æ¯
 
 
-4¡¢×¢ÒâÊÂÏî
+4ã€æ³¨æ„äº‹é¡¹
+
+1. Function description
+
+This test example demonstrates the basic communication between the LPUART and the PC by querying the detection flag.
+     Redirect the printf function to the LPUART, and use the printf function to output messages to the terminal.
+
+
+2. Use environment
+
+Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+         Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+     The system clock configuration is as follows:
+     - Clock source = HSE + PLL
+     - System Clock = 64MHz
+    
+     The LPUART configuration is as follows:
+     - Baud rate = 9600 baud
+     - Word length = 8 data bits (fixed)
+     - 1 stop bit (fixed)
+     - checksum control disabled
+     - Hardware flow control disabled (RTS and CTS signals)
+     - Receiver and transmitter enable
+    
+     The LPUART pins are connected as follows:
+     - LPUART_Tx.PA1
+    
+     Test steps and phenomena:
+     - Demo is compiled in KEIL environment and downloaded to MCU
+     - reset operation, view serial port printing information
+
+
+4. Matters needing attention

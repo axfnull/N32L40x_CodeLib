@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -66,15 +66,14 @@ int main(void)
 
     /* ---------------------------------------------------------------
     TIM2 Configuration: Output Compare Timing Mode:
-    TIM2 counter clock at 6 MHz
-    CC1 update rate = TIM2 counter clock / CCR1_Val = 146.48 Hz
-    CC2 update rate = TIM2 counter clock / CCR2_Val = 219.7 Hz
-    CC3 update rate = TIM2 counter clock / CCR3_Val = 439.4 Hz
-    CC4 update rate = TIM2 counter clock / CCR4_Val = 878.9 Hz
+    CC1 update rate = TIM2 counter clock / CCR1_Val
+    CC2 update rate = TIM2 counter clock / CCR2_Val
+    CC3 update rate = TIM2 counter clock / CCR3_Val
+    CC4 update rate = TIM2 counter clock / CCR4_Val
     --------------------------------------------------------------- */
 
     /* Compute the prescaler value */
-    PrescalerValue = (uint16_t)(SystemCoreClock / 12000000) - 1;  //SystemCoreClock = 2*F(ck_int),所以这里要除以12000000
+    PrescalerValue = (uint16_t)(SystemCoreClock / 12000000) - 1; 
 
     /* Time base configuration */
     TIM_TimeBaseStructure.Period    = 65535;

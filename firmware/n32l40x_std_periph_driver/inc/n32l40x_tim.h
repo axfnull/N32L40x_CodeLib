@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_tim.h
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __N32L40X_TIM_H__
 #define __N32L40X_TIM_H__
@@ -568,19 +568,16 @@ typedef struct
 #define TIM_DMABASE_CAPCMPDAT4 ((uint16_t)0x0010)
 #define TIM_DMABASE_BKDT       ((uint16_t)0x0011)
 #define TIM_DMABASE_DMACTRL    ((uint16_t)0x0012)
-#define TIM_DMABASE_CAPCMPMOD3 ((uint16_t)0x0013)
-#define TIM_DMABASE_CAPCMPDAT5 ((uint16_t)0x0014)
-#define TIM_DMABASE_CAPCMPDAT6 ((uint16_t)0x0015)
+
 
 #define IsTimDmaBase(BASE)                                                                                             \
     (((BASE) == TIM_DMABASE_CTRL1) || ((BASE) == TIM_DMABASE_CTRL2) || ((BASE) == TIM_DMABASE_SMCTRL)                  \
      || ((BASE) == TIM_DMABASE_DMAINTEN) || ((BASE) == TIM_DMABASE_STS) || ((BASE) == TIM_DMABASE_EVTGEN)              \
-     || ((BASE) == TIM_DMABASE_CAPCMPMOD1) || ((BASE) == TIM_DMABASE_CAPCMPMOD2) || ((BASE) == TIM_DMABASE_CAPCMPMOD3) \
+     || ((BASE) == TIM_DMABASE_CAPCMPMOD1) || ((BASE) == TIM_DMABASE_CAPCMPMOD2)                                       \
      || ((BASE) == TIM_DMABASE_CAPCMPEN) || ((BASE) == TIM_DMABASE_CNT) || ((BASE) == TIM_DMABASE_PSC)                 \
      || ((BASE) == TIM_DMABASE_AR) || ((BASE) == TIM_DMABASE_REPCNT) || ((BASE) == TIM_DMABASE_CAPCMPDAT1)             \
      || ((BASE) == TIM_DMABASE_CAPCMPDAT2) || ((BASE) == TIM_DMABASE_CAPCMPDAT3) || ((BASE) == TIM_DMABASE_CAPCMPDAT4) \
-     || ((BASE) == TIM_DMABASE_CAPCMPDAT5) || ((BASE) == TIM_DMABASE_CAPCMPDAT6) || ((BASE) == TIM_DMABASE_BKDT)       \
-     || ((BASE) == TIM_DMABASE_DMACTRL))
+     || ((BASE) == TIM_DMABASE_BKDT)|| ((BASE) == TIM_DMABASE_DMACTRL))
 /**
  * @}
  */

@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -101,7 +101,7 @@ void TIM_Configuration(void)
 void RCC_Configuration(void)
 {
     /* PCLK1 = HCLK/4 */
-    RCC_ConfigPclk1(RCC_HCLK_DIV1);
+    RCC_ConfigPclk1(RCC_HCLK_DIV4);
 
     /* TIM6 clock enable */
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM6, ENABLE);

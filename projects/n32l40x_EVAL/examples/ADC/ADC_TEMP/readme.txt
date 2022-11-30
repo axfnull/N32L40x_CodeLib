@@ -1,27 +1,56 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢ADC²ÉÑù×ª»»ÄÚ²¿ÎÂ¶È´«¸ĞÆ÷µÄÄ£ÄâµçÑ¹£¬²¢×ª»»ÎªÎÂ¶ÈÖµ
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€ADCé‡‡æ ·è½¬æ¢å†…éƒ¨æ¸©åº¦ä¼ æ„Ÿå™¨çš„æ¨¡æ‹Ÿç”µå‹ï¼Œå¹¶è½¬æ¢ä¸ºæ¸©åº¦å€¼
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š        åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M
-        2¡¢DMA£º
-            DMA_CH1Í¨µÀ»Ø»·Ä£Ê½°áÔËÒ»¸ö°ë×ÖµÄADC×ª»»½á¹ûµ½ADCConvertedValue±äÁ¿
-        3¡¢ADC£º
-            ADCÁ¬Ğø×ª»»¡¢Èí¼ş´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬×ª»»Í¨µÀ17¼´ÄÚ²¿ÎÂ¶È´«¸ĞÆ÷µÄÄ£ÄâµçÑ¹Êı¾İ
-        4¡¢¶Ë¿ÚÅäÖÃ£º
-            PA9Ñ¡ÔñÎªUSART1µÄTXÒı½Å
-            PA10Ñ¡ÔñÎªUSART1µÄRXÒı½Å
-        5¡¢USART£º
-            USART1 115200²¨ÌØÂÊ¡¢8Î»Êı¾İÎ»¡¢1Î»Í£Ö¹Î»¡¢ÎŞÆæÅ¼Ğ£ÑéÎ»¡¢ÎŞÓ²¼şÁ÷¿Ø¡¢·¢ËÍºÍ½ÓÊÕÊ¹ÄÜ
-        6¡¢¹¦ÄÜº¯Êı£º
-            TempValue = TempCal(ADCConvertedValue)º¯Êı½«ÎÂ¶ÈADCÔ­Ê¼¸ñÊ½Êı¾İ×ªÎª¶ÈµÄµ¥Î»µÄ¸ñÊ½
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«±äÁ¿ADCConvertedValue,TempValueÌí¼Óµ½watch´°¿Ú¹Û²ì
-        2¡¢½«´®¿Ú¹¤¾ßÁ¬½Óµ½PA9Òı½Å£¬²¢´ò¿ª´®¿Ú½ÓÊÕ¹¤¾ß
-        3¡¢È«ËÙÔËĞĞ£¬¿ÉÒÔ¿´µ½ÎÂ¶È±äÁ¿µÄÊıÖµÔÚ³£ÎÂÏÂ½Ó½ü25¶È×óÓÒ£¬Í¬Ê±´®¿Ú¹¤¾ßÏÔÊ¾ÊµÊ±Ğ¾Æ¬ÄÚµÄÎÂ¶ÈÖµ
-4¡¢×¢ÒâÊÂÏî
-    µ±ÏµÍ³²ÉÓÃHSEÊ±ÖÓÊ±£¨Ò»°ãHSIÒ²ÊÇ´ò¿ªµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)¿ÉÒÔÅäÖÃÎªHSE»òÕßHSI
-    µ±ÏµÍ³²ÉÑùHSIÊ±ÖÓÊ±£¨Ò»°ãHSEÊÇ¹Ø±ÕµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)Ö»ÄÜÅäÖÃÎªHSI
+        2ã€DMAï¼š
+            DMA_CH1é€šé“å›ç¯æ¨¡å¼æ¬è¿ä¸€ä¸ªåŠå­—çš„ADCè½¬æ¢ç»“æœåˆ°ADCConvertedValueå˜é‡
+        3ã€ADCï¼š
+            ADCè¿ç»­è½¬æ¢ã€è½¯ä»¶è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œè½¬æ¢é€šé“17å³å†…éƒ¨æ¸©åº¦ä¼ æ„Ÿå™¨çš„æ¨¡æ‹Ÿç”µå‹æ•°æ®
+        4ã€ç«¯å£é…ç½®ï¼š
+            PA9é€‰æ‹©ä¸ºUSART1çš„TXå¼•è„š
+            PA10é€‰æ‹©ä¸ºUSART1çš„RXå¼•è„š
+        5ã€USARTï¼š
+            USART1 115200æ³¢ç‰¹ç‡ã€8ä½æ•°æ®ä½ã€1ä½åœæ­¢ä½ã€æ— å¥‡å¶æ ¡éªŒä½ã€æ— ç¡¬ä»¶æµæ§ã€å‘é€å’Œæ¥æ”¶ä½¿èƒ½
+        6ã€åŠŸèƒ½å‡½æ•°ï¼š
+            TempValue = TempCal(ADCConvertedValue)å‡½æ•°å°†æ¸©åº¦ADCåŸå§‹æ ¼å¼æ•°æ®è½¬ä¸ºåº¦çš„å•ä½çš„æ ¼å¼
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†å˜é‡ADCConvertedValue,TempValueæ·»åŠ åˆ°watchçª—å£è§‚å¯Ÿ
+        2ã€å°†ä¸²å£å·¥å…·è¿æ¥åˆ°PA9å¼•è„šï¼Œå¹¶æ‰“å¼€ä¸²å£æ¥æ”¶å·¥å…·
+        3ã€å…¨é€Ÿè¿è¡Œï¼Œå¯ä»¥çœ‹åˆ°æ¸©åº¦å˜é‡çš„æ•°å€¼åœ¨å¸¸æ¸©ä¸‹æ¥è¿‘25åº¦å·¦å³ï¼ŒåŒæ—¶ä¸²å£å·¥å…·æ˜¾ç¤ºå®æ—¶èŠ¯ç‰‡å†…çš„æ¸©åº¦å€¼
+4ã€æ³¨æ„äº‹é¡¹
+    å½“ç³»ç»Ÿé‡‡ç”¨HSEæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSIä¹Ÿæ˜¯æ‰“å¼€çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)å¯ä»¥é…ç½®ä¸ºHSEæˆ–è€…HSI
+    å½“ç³»ç»Ÿé‡‡æ ·HSIæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSEæ˜¯å…³é—­çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)åªèƒ½é…ç½®ä¸ºHSI
+
+
+1. Function description
+    1. The ADC samples and converts the analog voltage of the internal temperature sensor and converts it into a temperature value
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+    System Configuration;
+        1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M
+        2. DMA:
+            DMA_CH1 channel is configuered as circular mode, carries a half-word of ADC1 conversion result to the ADCConvertedValue variable
+        3. ADC:
+            ADC configuration: continuous conversion, software trigger, right-aligned 12-bit data, conversion channel 17 is the analog voltage data of the internal temperature sensor
+        4. Port configuration:
+            PA9 is selected as the TX pin of USART1
+            PA10 is selected as the RX pin of USART1
+        5. USART:
+            USART1 configuration: 115200 baud rate, 8 data bits, 1 stop bit, no parity, no hardware flow control, transmit and receive enable
+        6. Function function:
+            TempValue = TempCal(ADCConvertedValue) function converts the temperature ADC raw format data to the format of the unit of degrees
+    Instructions:
+        1. Open the debug mode after compiling, and add the variables ADCConvertedValue and TempValue to the watch window to observe
+        2. Connect the serial port tool to the PA9 pin, and open the serial port receiving tool
+        3. Running at full speed, you can see that the value of the temperature variable is close to 25 degrees at room temperature, and the serial port tool displays the temperature value in the real-time chip
+4. Matters needing attention
+    When the system uses the HSE clock (HSI is generally enabled), ), RCC_ConfigAdc1mClk (RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8) can be configured as HSE or HSI
+    When the system uses the HSI clock(HSE is generally disabled), RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8) can only be configured as HSI

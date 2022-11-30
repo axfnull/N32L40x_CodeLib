@@ -1,7 +1,7 @@
 /** ----------------------------------------------------------------------------
  *         Nationz Technology Software Support  -  NATIONZ  -
  * -----------------------------------------------------------------------------
- * Copyright (c) 2019, Nationz Corporation  All rights reserved.
+ * Copyright (c) 2022, Nationz Corporation  All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -37,7 +37,7 @@
  * @file     n32l40x_lptim.c
  * @author   
  * @date     
- * @version  v1.0.0
+ * @version  v1.2.0
  * @brief          
  ******************************************************************************/
 

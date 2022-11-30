@@ -1,32 +1,68 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢ADC¹æÔò²ÉÑùPC2¡¢×Ô¶¯×¢Èë²ÉÑùPC3Òı½ÅµÄÄ£ÄâµçÑ¹£¬ÔÚTIM1 CC2ÊÂ¼şÏÂ´¥·¢²ÉÑù
-    2¡¢ÆäÖĞ¹æÔò×ª»»½á¹ûÍ¨¹ıDMA_CH1Í¨µÀ¶ÁÈ¡µ½±äÁ¿ADC_RegularConvertedValueTab[32]Êı×é
-        ×¢Èë×ª»»½á¹ûÍ¨¹ı×ª»»½áÊøÖĞ¶Ï¶ÁÈ¡µ½±äÁ¿ADC_InjectedConvertedValueTab[32]Êı×é
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€ADCè§„åˆ™é‡‡æ ·PC2ã€è‡ªåŠ¨æ³¨å…¥é‡‡æ ·PC3å¼•è„šçš„æ¨¡æ‹Ÿç”µå‹ï¼Œåœ¨TIM1 CC2äº‹ä»¶ä¸‹è§¦å‘é‡‡æ ·
+    2ã€å…¶ä¸­è§„åˆ™è½¬æ¢ç»“æœé€šè¿‡DMA_CH1é€šé“è¯»å–åˆ°å˜é‡ADC_RegularConvertedValueTab[32]æ•°ç»„
+        æ³¨å…¥è½¬æ¢ç»“æœé€šè¿‡è½¬æ¢ç»“æŸä¸­æ–­è¯»å–åˆ°å˜é‡ADC_InjectedConvertedValueTab[32]æ•°ç»„
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š         åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M,TIM1 CLK=64M
-        2¡¢ÖĞ¶Ï£º
-            ADC×¢Èë×ª»»½á¹ûÍê³ÉÖĞ¶Ï´ò¿ª£¬ÇÀ¶ÏÓÅÏÈ¼¶0£¬×ÓÓÅÏÈ¼¶0
-            ÖĞ¶Ïº¯ÊıÖĞ½«×¢Èë½á¹û¶ÁÈ¡µ½ADC_InjectedConvertedValueTab[32]Êı×é£¬²¢·­×ªPC6µçÆ½
-        3¡¢¶Ë¿ÚÅäÖÃ£º
-            PC2Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PC3Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PC6Ñ¡ÔñÎªÍ¨ÓÃIOÊä³ö
-            PA8Ñ¡ÔñÎªTIM1 CH1 PWMÊä³ö
-            PA11Ñ¡ÔñÎªTIM1 CH4 PWMÊä³ö
-        4¡¢DMA£º
-            DMA_CH1Í¨µÀ»Ø»·Ä£Ê½°áÔË32¸ö°ë×ÖµÄADC1×ª»»½á¹ûµ½ADC_RegularConvertedValueTab[32]Êı×é
-        5¡¢ADC£º
-            ADC TIM1 CC2´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬¹æÔò×ª»»Í¨µÀPC2£¬×Ô¶¯×¢Èë×ª»»Í¨µÀPC3µÄÄ£ÄâµçÑ¹Êı¾İ
-        6¡¢TIM£º
-            TIM1¿ªÆôCH1 CH4Êä³ö£¬CH2ÓÃ×÷´¥·¢ADC×ª»»		
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«±äÁ¿ADC_RegularConvertedValueTab[32],ADC_InjectedConvertedValueTab[32]Ìí¼Óµ½watch´°¿Ú¹Û²ì
-        2¡¢Í¨¹ı¸Ä±äPC2 PC3Òı½ÅµÄµçÑ¹£¬ÔÚÃ¿¸öCC2ÊÂ¼ş·¢ÉúÊ±×ª»»Ò»´Î¹æÔòºÍ×¢ÈëÍ¨µÀ£¬±äÁ¿´¢´æÔÚ¶ÔÓ¦Êı×éÖĞ¡£Í¬Ê±ÔÚPA8 PA11¿ÉÒÔ¿´µ½TIM1 CH1ºÍCH4µÄ PWM ²¨ĞÎ
-4¡¢×¢ÒâÊÂÏî
-    µ±ÏµÍ³²ÉÓÃHSEÊ±ÖÓÊ±£¨Ò»°ãHSIÒ²ÊÇ´ò¿ªµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)¿ÉÒÔÅäÖÃÎªHSE»òÕßHSI
-    µ±ÏµÍ³²ÉÑùHSIÊ±ÖÓÊ±£¨Ò»°ãHSEÊÇ¹Ø±ÕµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)Ö»ÄÜÅäÖÃÎªHSI
+        2ã€ä¸­æ–­ï¼š
+            ADCæ³¨å…¥è½¬æ¢ç»“æœå®Œæˆä¸­æ–­æ‰“å¼€ï¼ŒæŠ¢æ–­ä¼˜å…ˆçº§0ï¼Œå­ä¼˜å…ˆçº§0
+            ä¸­æ–­å‡½æ•°ä¸­å°†æ³¨å…¥ç»“æœè¯»å–åˆ°ADC_InjectedConvertedValueTab[32]æ•°ç»„ï¼Œå¹¶ç¿»è½¬PC6ç”µå¹³
+        3ã€ç«¯å£é…ç½®ï¼š
+            PC2é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PC3é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PC6é€‰æ‹©ä¸ºé€šç”¨IOè¾“å‡º
+            PA8é€‰æ‹©ä¸ºTIM1 CH1 PWMè¾“å‡º
+            PA11é€‰æ‹©ä¸ºTIM1 CH4 PWMè¾“å‡º
+        4ã€DMAï¼š
+            DMA_CH1é€šé“å¾ªç¯æ¨¡å¼æ¬è¿32ä¸ªåŠå­—çš„ADC1è½¬æ¢ç»“æœåˆ°ADC_RegularConvertedValueTab[32]æ•°ç»„
+        5ã€ADCï¼š
+            ADC TIM1 CC2è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œè§„åˆ™è½¬æ¢é€šé“PC2ï¼Œè‡ªåŠ¨æ³¨å…¥è½¬æ¢é€šé“PC3çš„æ¨¡æ‹Ÿç”µå‹æ•°æ®
+        6ã€TIMï¼š
+            TIM1å¼€å¯CH1 CH4è¾“å‡ºï¼ŒCH2ç”¨ä½œè§¦å‘ADCè½¬æ¢		
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†å˜é‡ADC_RegularConvertedValueTab[32],ADC_InjectedConvertedValueTab[32]æ·»åŠ åˆ°watchçª—å£è§‚å¯Ÿ
+        2ã€é€šè¿‡æ”¹å˜PC2 PC3å¼•è„šçš„ç”µå‹ï¼Œåœ¨æ¯ä¸ªCC2äº‹ä»¶å‘ç”Ÿæ—¶è½¬æ¢ä¸€æ¬¡è§„åˆ™å’Œæ³¨å…¥é€šé“ï¼Œå˜é‡å‚¨å­˜åœ¨å¯¹åº”æ•°ç»„ä¸­ã€‚åŒæ—¶åœ¨PA8 PA11å¯ä»¥çœ‹åˆ°TIM1 CH1å’ŒCH4çš„ PWM æ³¢å½¢
+4ã€æ³¨æ„äº‹é¡¹
+    å½“ç³»ç»Ÿé‡‡ç”¨HSEæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSIä¹Ÿæ˜¯æ‰“å¼€çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)å¯ä»¥é…ç½®ä¸ºHSEæˆ–è€…HSI
+    å½“ç³»ç»Ÿé‡‡æ ·HSIæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSEæ˜¯å…³é—­çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)åªèƒ½é…ç½®ä¸ºHSI
+
+
+
+
+1. Function description
+    1. The ADC regular channel sampling PC2, automatically inject and sample the analog voltage of PC3 pin, and trigge source is TIM1 CC2 event
+    2. The regular conversion result is read into the variable ADC_RegularConvertedValueTab[32] array through the DMA_CH1 channel
+        The injected conversion result is read into the variable ADC_InjectedConvertedValueTab[32] array through the conversion end interrupt
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+    System Configuration;
+        1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M,TIM1 CLK=64M
+        2. Interrupt:
+            ADC injection conversion complete interrupt enable, steal priority 0, sub-priority 0
+            In the interrupt function, the injection result is read into the ADC_InjectedConvertedValueTab[32] array, and the PC6 level is flipped
+        3. Port configuration:
+            PC2 is selected as the analog function, ADC1 conversion channel
+            PC3 is selected as the analog function, ADC1 conversion channel
+            PC6 is selected as general IO output
+            PA8 is selected as TIM1 CH1 PWM output
+            PA11 is selected as TIM1 CH4 PWM output
+        4. DMA:
+            DMA_CH1 channel is configuered as circular mode, carries 32 half-word of ADC1 conversion result to the ADC_RegularConvertedValueTab[32] array
+        5. ADC:
+            ADC TIM1 CC2 trigger, 12-bit data right-aligned, regular conversion channel PC2, automatic injection of analog voltage data of conversion channel PC3
+        6. TIM:
+            TIM1 turns on CH1 CH4 output, CH2 is used to trigger ADC conversion
+    Instructions:
+        1. Open the debug mode after compiling, and add the variables ADC_RegularConvertedValueTab[32], ADC_InjectedConvertedValueTab[32] to the watch window for observation
+        2. By changing the voltage of the PC2 and PC3 pins, the rules and injection channels are converted once every CC2 event occurs, and the variables are stored in the corresponding arrays. At the same time, you can see the PWM waveforms of TIM1 CH1 and CH4 in PA8 PA11
+4. Matters needing attention
+    When the system uses the HSE clock (HSI is generally enabled), ), RCC_ConfigAdc1mClk (RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8) can be configured as HSE or HSI
+    When the system uses the HSI clock(HSE is generally disabled), RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8) can only be configured as HSI

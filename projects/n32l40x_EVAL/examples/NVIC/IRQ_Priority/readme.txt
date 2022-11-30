@@ -7,7 +7,7 @@
 2、使用环境
 
 	/* 硬件环境：工程对应的开发硬件平台 */
-        开发板：N32L40XM-STBV1.0
+        开发板：N32L40XML-STBV1.0
 
 
 3、使用说明
@@ -25,3 +25,25 @@
 
 
 4、注意事项
+
+
+1. Function description
+	/* A brief description of the engineering function */
+	This routine configures and demonstrates NVIC priority Settings
+
+2. Use environment
+	/* Hardware environment: the corresponding development hardware platform */
+	Development board: N32L40XML-STBV1.0
+        
+3. Instructions for use    
+	/* Describe the related module configuration method; For example: clock, I/O, etc. */
+	SystemClock: 64 MHZ
+	USART: TX-PB4, baud rate 115200
+	EXIT: PA0 is floating input mode, external interrupt line -exit_line0, external interrupt is enabled, and the priority is 0
+	SysTick: Set the interrupt priority to 0
+
+	/* Describes the test steps and symptoms of Demo */
+	1. Reset and run the downloaded program after compilation;
+	2. In normal cases, SysTick interrupt information is displayed. If both the external interrupt and SysTick interrupt are triggered at the same time, change the SysTick interrupt priority to 2 and print related information.
+
+4. Matters needing attention

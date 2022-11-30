@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_lpuart.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_lpuart.h"
 #include "n32l40x_rcc.h"
@@ -482,6 +482,9 @@ INTStatus LPUART_GetIntStatus(uint16_t LPUART_INT)
     itmask &= LPUART->INTEN;
 
     bitpos = ((uint8_t)LPUART_INT) & 0xFF;
+    if(LPUART_INT_WUF == LPUART_INT){
+        bitpos = (bitpos << 0x01);
+    }
     bitpos &= LPUART->STS;
     if ((itmask != (uint16_t)RESET) && (bitpos != (uint16_t)RESET))
     {

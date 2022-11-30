@@ -1,21 +1,46 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢ADC²ÉÑù×ª»»PC2Òı½ÅµÄÄ£ÄâµçÑ¹£¬Èç¹û³¬¹ıÄ£Äâ¿´ÃÅ¹·¶¨ÒåµÄãĞÖµ·¶Î§£¬ÔòÌøÈëÖĞ¶Ï³ÌĞò
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€ADCé‡‡æ ·è½¬æ¢PC2å¼•è„šçš„æ¨¡æ‹Ÿç”µå‹ï¼Œå¦‚æœè¶…è¿‡æ¨¡æ‹Ÿçœ‹é—¨ç‹—å®šä¹‰çš„é˜ˆå€¼èŒƒå›´ï¼Œåˆ™è·³å…¥ä¸­æ–­ç¨‹åº
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š         åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8
-        2¡¢ADC£º
-            ADCÁ¬Ğø×ª»»¡¢Èí¼ş´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬×ª»»PC2Òı½ÅµÄÄ£ÄâµçÑ¹Êı¾İ
-        3¡¢¶Ë¿ÚÅäÖÃ£º
-            PC2Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC×ª»»Í¨µÀ8
-        4¡¢ÖĞ¶Ï£º
-            ADCÄ£Äâ¿´ÃÅ¹·ÖĞ¶Ï´ò¿ª£¬ÇÀ¶ÏÓÅÏÈ¼¶0£¬×ÓÓÅÏÈ¼¶0
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«±äÁ¿gCntAwdgÌí¼Óµ½watch´°¿Ú¹Û²ì
-        2¡¢¸Ä±äPC2Òı½ÅµçÑ¹Öµ£¬µ±µçÑ¹Öµ³¬³öÄ£Äâ¿´ÃÅ¹·¶¨ÒåµÄ0x300µ½0xB00·¶Î§Íâ£¬Ôò½øÈëÒ»´ÎÖĞ¶Ï£¬±äÁ¿×öÀÛ¼Ó²Ù×÷
-4¡¢×¢ÒâÊÂÏî
-    µ±ÏµÍ³²ÉÓÃHSEÊ±ÖÓÊ±£¨Ò»°ãHSIÒ²ÊÇ´ò¿ªµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)¿ÉÒÔÅäÖÃÎªHSE»òÕßHSI
-    µ±ÏµÍ³²ÉÑùHSIÊ±ÖÓÊ±£¨Ò»°ãHSEÊÇ¹Ø±ÕµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)Ö»ÄÜÅäÖÃÎªHSI
+        2ã€ADCï¼š
+            ADCè¿ç»­è½¬æ¢ã€è½¯ä»¶è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œè½¬æ¢PC2å¼•è„šçš„æ¨¡æ‹Ÿç”µå‹æ•°æ®
+        3ã€ç«¯å£é…ç½®ï¼š
+            PC2é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADCè½¬æ¢é€šé“8
+        4ã€ä¸­æ–­ï¼š
+            ADCæ¨¡æ‹Ÿçœ‹é—¨ç‹—ä¸­æ–­æ‰“å¼€ï¼ŒæŠ¢æ–­ä¼˜å…ˆçº§0ï¼Œå­ä¼˜å…ˆçº§0
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†å˜é‡gCntAwdgæ·»åŠ åˆ°watchçª—å£è§‚å¯Ÿ
+        2ã€æ”¹å˜PC2å¼•è„šç”µå‹å€¼ï¼Œå½“ç”µå‹å€¼è¶…å‡ºæ¨¡æ‹Ÿçœ‹é—¨ç‹—å®šä¹‰çš„0x300åˆ°0xB00èŒƒå›´å¤–ï¼Œåˆ™è¿›å…¥ä¸€æ¬¡ä¸­æ–­ï¼Œå˜é‡åšç´¯åŠ æ“ä½œ
+4ã€æ³¨æ„äº‹é¡¹
+    å½“ç³»ç»Ÿé‡‡ç”¨HSEæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSIä¹Ÿæ˜¯æ‰“å¼€çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)å¯ä»¥é…ç½®ä¸ºHSEæˆ–è€…HSI
+    å½“ç³»ç»Ÿé‡‡æ ·HSIæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSEæ˜¯å…³é—­çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)åªèƒ½é…ç½®ä¸ºHSI
+
+
+
+
+1. Function description
+    1. The ADC samples and converts the analog voltage of the PC2 pin. If it exceeds the threshold range defined by the analog watchdog, it will jump into the interrupt program
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+    System Configuration;
+        1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8
+        2. ADC:
+            ADC configuration: continuous conversion, software trigger, 12-bit data right-aligned, convert the analog voltage data of PC2 pin
+        3. Port configuration:
+            PC2 is selected as analog function, ADC conversion channel 8
+        4. Interrupt:
+            ADC analog watchdog interrupt enable, steal priority 0, sub priority 0
+    Instructions:
+        1. After compiling, open the debug mode and add the variable gCntAwdg to the watch window to observe
+        2. Change the voltage value of the PC2 pin. When the voltage value exceeds the range of 0x300 to 0xB00 defined by the analog watchdog, it will enter an interrupt and the variable will be accumulated.
+4. Matters needing attention
+    When the system uses the HSE clock (HSI is generally enabled), ), RCC_ConfigAdc1mClk (RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8) can be configured as HSE or HSI
+    When the system uses the HSI clock(HSE is generally disabled), RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8) can only be configured as HSI

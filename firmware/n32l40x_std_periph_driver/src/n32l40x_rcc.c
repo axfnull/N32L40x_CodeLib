@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_rcc.c
  * @author Nations
- * @version v1.0.3
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_rcc.h"
 
@@ -195,6 +195,12 @@
 #define PLLHSIPRE_PLLHSI_PRE_MASK    ((uint32_t)0x00000001)
 #define PLLHSIPRE_PLLSRCDIV_MASK     ((uint32_t)0x00000002)
 
+#define LSE_TRIMR_ADDR               ((uint32_t)0x40001808)
+
+#define LSE_GM_MASK_VALUE            (0x1FF)
+#define LSE_GM_MAX_VALUE             (0x1FF)
+#define LSE_GM_DEFAULT_VALUE         (0x1FF)
+
 /**
  * @}
  */
@@ -254,7 +260,7 @@ void RCC_DeInit(void)
     RCC->CFG &= (uint32_t)0xF700FFFF;
 
     /* Reset CFG2 register */
-    RCC->CFG2 = 0x00003800;
+    RCC->CFG2 = 0x00007000;
 
     /* Reset CFG3 register */
     RCC->CFG3 = 0x00003800;
@@ -266,7 +272,7 @@ void RCC_DeInit(void)
     RCC->PLLHSIPRE = 0x00000000;
 
     /* Disable all interrupts and clear pending bits  */
-    RCC->CLKINT = 0x009F0000;
+    RCC->CLKINT = 0x04BF8000;
 }
 
 /**
@@ -1235,14 +1241,32 @@ void RCC_ClrSRAMParityErrorFlag(uint32_t SramErrorflag)
 }
 
 /**
+ * @brief  Configures the External Low Speed oscillator (LSE) Xtal bias.
+ * @param LSE_Trim specifies LSE Driver Trim Level.
+ *        Trim value rang 0x0~0x1FF 
+ */
+void LSE_XtalConfig(uint16_t LSE_Trim)
+{
+    uint32_t tmpregister = 0;
+    tmpregister = *(__IO uint32_t*)LSE_TRIMR_ADDR;
+    //clear lse trim[8:0]
+    tmpregister &= (~(LSE_GM_MASK_VALUE));
+    (LSE_Trim>LSE_GM_MAX_VALUE) ? (LSE_Trim=LSE_GM_DEFAULT_VALUE):(LSE_Trim&=LSE_GM_MASK_VALUE);
+    tmpregister |= LSE_Trim;
+    *(__IO uint32_t*)LSE_TRIMR_ADDR = tmpregister;
+}
+
+/**
  * @brief  Configures the External Low Speed oscillator (LSE).
  * @param RCC_LSE specifies the new state of the LSE.
  *   This parameter can be one of the following values:
  *     @arg RCC_LSE_DISABLE LSE oscillator OFF
  *     @arg RCC_LSE_ENABLE LSE oscillator ON
  *     @arg RCC_LSE_BYPASS LSE oscillator bypassed with external clock
+ * @param LSE_Trim specifies LSE Driver Trim Level.
+ *        Trim value rang 0x00~0x1FF 
  */
-void RCC_ConfigLse(uint8_t RCC_LSE)
+void RCC_ConfigLse(uint8_t RCC_LSE,uint16_t LSE_Trim)
 {
     //PWR DBP set 1
     /* Enable PWR Clock */
@@ -1258,8 +1282,8 @@ void RCC_ConfigLse(uint8_t RCC_LSE)
     case RCC_LSE_ENABLE:
         /* Set LSEON bit */
         *(__IO uint32_t*)LDCTRL_ADDR |= RCC_LSE_ENABLE;
+        LSE_XtalConfig(LSE_Trim);
         break;
-
     case RCC_LSE_BYPASS:
         /* Set LSEBYP and LSEON bits */
         *(__IO uint32_t*)LDCTRL_ADDR |= (RCC_LSE_BYPASS | RCC_LSE_ENABLE);

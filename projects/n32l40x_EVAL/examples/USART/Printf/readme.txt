@@ -1,79 +1,79 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËUSARTxÓëPC¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-    ÖØ¶¨Ïòprintfº¯ÊıÖÁUSARTx£¬²¢Ê¹ÓÃprintfº¯ÊıÊä³öÏûÏ¢ÖÁÖÕ¶Ë¡£
-    USARTx¿ÉÒÔÊÇUSART1»òUSART2¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†USARTxä¸PCé—´é€šè¿‡æŸ¥è¯¢æ£€æµ‹æ ‡è¯†å®ç°çš„åŸºç¡€é€šä¿¡ã€‚
+    é‡å®šå‘printfå‡½æ•°è‡³USARTxï¼Œå¹¶ä½¿ç”¨printfå‡½æ•°è¾“å‡ºæ¶ˆæ¯è‡³ç»ˆç«¯ã€‚
+    USARTxå¯ä»¥æ˜¯USART1æˆ–USART2ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+    ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    USARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 115200 baud
+    - å­—é•¿ = 8æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    USARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š
     - USART1_Tx.PA9 
-    »ò
+    æˆ–
     - USART2_Tx.PA2
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬²é¿´´®¿Ú´òÓ¡ĞÅÏ¢
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼ŒæŸ¥çœ‹ä¸²å£æ‰“å°ä¿¡æ¯
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-	¸Ã²âÀıÑİÊ¾ÁËUSARTxÓëPC¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-    ÖØ¶¨Ïòprintfº¯ÊıÖÁUSARTx£¬²¢Ê¹ÓÃprintfº¯ÊıÊä³öÏûÏ¢ÖÁÖÕ¶Ë¡£
-    USARTx¿ÉÒÔÊÇUSART1»òUSART2¡£
+1. Function description
 
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+This test example demonstrates the basic communication between USARTx and PC by querying the detection identification.
+     Redirect the printf function to USARTx, and use the printf function to output messages to the terminal.
+     USARTx can be USART1 or USART2.
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+2. Use environment
+
+     Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+     Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+     The system clock configuration is as follows:
+     -Clock source = HSE + PLL
+     -System clock = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+     The USART configuration is as follows:
+     -Baud rate = 115200 baud
+     -Word length = 8 data bits
+     -1 stop bit
+     -Verification control disabled
+     -Hardware flow control disabled (RTS and CTS signals)
+     -Receiver and transmitter enable
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
-    - USART1_Tx.PA9 
-    »ò
-    - USART2_Tx.PA2
+     The USART pin connections are as follows:
+     -USART1_Tx.PA9
+     or
+     -USART2_Tx.PA2
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬²é¿´´®¿Ú´òÓ¡ĞÅÏ¢
+     Test steps and phenomena:
+     -After the Demo is compiled in the KEIL environment, download it to the MCU
+     -Reset operation, view serial port print information
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80297
+4. Matters needing attention

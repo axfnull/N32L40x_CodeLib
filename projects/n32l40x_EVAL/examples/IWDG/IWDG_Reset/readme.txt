@@ -34,3 +34,39 @@
 4、注意事项
      如果通过烧录器仿真，需要开启DBG_ConfigPeriph(DBG_IWDG_STOP,ENABLE);
 
+1. Function description
+    1. IWDG reset function.
+	
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.25.0.0
+	
+    Hardware environment: 
+		1.Developed based on the evaluation board N32G43XR-STB
+		2.MCU：N32G435RBL7
+	
+3. Instructions for use
+    System Configuration;
+        1. IWDG clock source: LSI/32
+
+		2. Timeout value: 250ms
+
+		3. Indicator light: LED1(PA8) LED2(PB4)
+
+		4. Serial port configuration:
+
+			- Serial port: USART1 (TX: PA9 RX: PA10) :
+
+			- Data bit: 8
+
+			- Stop bit: 1
+
+			- Parity check: None
+
+			- Baud rate: 115200
+
+    Instructions:
+        1. After compiling in KEIL, it was burned to the evaluation board. After powering on,the indicator controled by PB5 pin kept flashing. The IWDG feeds the dog properly and the code runs properly.
+		2. When the Delay(249) function parameter is changed to more than 250, the entire system will always be reset.LED1 is on. The serial port continuously prints reset by IWDG.
+		
+4. Matters needing attention
+   If you simulate through the burner, you need to turn on DBG_ ConfigPeriph(DBG_IWDG_STOP,ENABLE).

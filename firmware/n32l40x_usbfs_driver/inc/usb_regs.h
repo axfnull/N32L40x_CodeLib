@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file usb_regs.h
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __USB_REGS_H__
 #define __USB_REGS_H__
@@ -501,7 +501,7 @@ enum EP_BUF_NUM
         wNBlocks = wCount >> 5;                                                                                        \
         if ((wCount & 0x1f) == 0)                                                                                      \
             wNBlocks--;                                                                                                \
-        *pdwReg = (uint32_t)((wNBlocks << 11) | 0x8000);                                                               \
+        *pdwReg = (uint32_t)((wNBlocks << 10) | 0x8000);                                                               \
     } /* _BlocksOf32 */
 
 #define _BlocksOf2(dwReg, wCount, wNBlocks)                                                                            \

@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_can.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_can.h"
 #include "n32l40x_rcc.h"
@@ -616,13 +616,13 @@ void CAN_CancelTransmitMessage(CAN_Module* CANx, uint8_t Mailbox)
     switch (Mailbox)
     {
     case (CAN_TXMAILBOX_0):
-        CANx->TSTS |= CAN_TSTS_ABRQM0;
+        CANx->TSTS = CAN_TSTS_ABRQM0;
         break;
     case (CAN_TXMAILBOX_1):
-        CANx->TSTS |= CAN_TSTS_ABRQM1;
+        CANx->TSTS = CAN_TSTS_ABRQM1;
         break;
     case (CAN_TXMAILBOX_2):
-        CANx->TSTS |= CAN_TSTS_ABRQM2;
+        CANx->TSTS = CAN_TSTS_ABRQM2;
         break;
     default:
         break;

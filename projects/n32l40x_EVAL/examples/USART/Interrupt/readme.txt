@@ -1,99 +1,99 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-    ¸Ã²âÀıÑİÊ¾ÁËUSARTyÓëUSARTz¼äÍ¨¹ıÖĞ¶ÏÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-    USARTy·¢ËÍTxBuffer1Êı¾İÖÁUSARTz£¬USARTz½ÓÊÕÊı¾İ´æÖÁRxBuffer2¡£Í¬Ê±£¬
-USARTz·¢ËÍTxBuffer2Êı¾İÖÁUSARTy£¬USARTy½ÓÊÕÊı¾İ´æÖÁRxBuffer1¡£
-    Ëæºó£¬·Ö±ğ±È½ÏÁ½×é½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus1±äÁ¿
-ºÍTransferStatus2±äÁ¿¡£
-    USARTyºÍUSARTz¿ÉÒÔÊÇUSART1ºÍUSART2¡¢USART3ºÍUART4»òUART4ºÍUART5¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+    è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†USARTyä¸USARTzé—´é€šè¿‡ä¸­æ–­å®ç°çš„åŸºç¡€é€šä¿¡ã€‚
+    USARTyå‘é€TxBuffer1æ•°æ®è‡³USARTzï¼ŒUSARTzæ¥æ”¶æ•°æ®å­˜è‡³RxBuffer2ã€‚åŒæ—¶ï¼Œ
+USARTzå‘é€TxBuffer2æ•°æ®è‡³USARTyï¼ŒUSARTyæ¥æ”¶æ•°æ®å­˜è‡³RxBuffer1ã€‚
+    éšåï¼Œåˆ†åˆ«æ¯”è¾ƒä¸¤ç»„æ¥æ”¶æ•°æ®ä¸å‘é€æ•°æ®ï¼Œæ¯”è¾ƒç»“æœå­˜å…¥TransferStatus1å˜é‡
+å’ŒTransferStatus2å˜é‡ã€‚
+    USARTyå’ŒUSARTzå¯ä»¥æ˜¯USART1å’ŒUSART2ã€USART3å’ŒUART4æˆ–UART4å’ŒUART5ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+    ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    USARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 115200 baud
+    - å­—é•¿ = 8æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    USARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š
     - USART1_Tx.PA9    <------->   USART2_Rx.PB5
     - USART1_Rx.PA10   <------->   USART2_Tx.PB4 
-    »ò
+    æˆ–
     - USART3_Tx.PC10   <------->   UART4_Rx.PD12
     - USART3_Rx.PC11   <------->   UART4_Tx.PD13
-    »ò
+    æˆ–
     - UART4_Tx.PC10    <------->   UART5_Rx.PB9
     - UART4_Rx.PC11    <------->   UART5_Tx.PB8
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬ÒÀ´Î²é¿´±äÁ¿TransferStatus1ºÍTransferStatus2£¬ÆäÖĞ£¬
-      PASSEDÎª²âÊÔÍ¨¹ı£¬FAILEDÎª²âÊÔÒì³£
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼Œä¾æ¬¡æŸ¥çœ‹å˜é‡TransferStatus1å’ŒTransferStatus2ï¼Œå…¶ä¸­ï¼Œ
+      PASSEDä¸ºæµ‹è¯•é€šè¿‡ï¼ŒFAILEDä¸ºæµ‹è¯•å¼‚å¸¸
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-    ¸Ã²âÀıÑİÊ¾ÁËUSARTyÓëUSARTz¼äÍ¨¹ıÖĞ¶ÏÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-    USARTy·¢ËÍTxBuffer1Êı¾İÖÁUSARTz£¬USARTz½ÓÊÕÊı¾İ´æÖÁRxBuffer2¡£Í¬Ê±£¬
-USARTz·¢ËÍTxBuffer2Êı¾İÖÁUSARTy£¬USARTy½ÓÊÕÊı¾İ´æÖÁRxBuffer1¡£
-    Ëæºó£¬·Ö±ğ±È½ÏÁ½×é½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus1±äÁ¿
-ºÍTransferStatus2±äÁ¿¡£
-    USARTyºÍUSARTz¿ÉÒÔÊÇUSART1ºÍUSART2¡¢USART3ºÍUART4»òUART4ºÍUART5¡£
+1. Function description
 
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+    This test case demonstrates the basic communication between USARTy and USARTz through interrupts.
+    USARTy sends TxBuffer1 data to USARTz, and USARTz receives data to RxBuffer2. at the same time,
+USARTz sends TxBuffer2 data to USARTy, and USARTy receives data to RxBuffer1.
+    Subsequently, the two groups of received data and sent data are compared respectively, and the comparison 
+	results are stored in the TransferStatus1 variable and the TransferStatus2 variable.
+    USARTy and USARTz can be USART1 and USART2, USART3 and UART4 or UART4 and UART5.
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+2. Use environment
+
+        Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+        Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+    The system clock configuration is as follows:
+    -Clock source = HSE + PLL
+    -System clock = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    The USART configuration is as follows:
+    -Baud rate = 115200 baud
+    -Word length = 8 data bits
+    -1 stop bit
+    -Verification control disabled
+    -Hardware flow control disabled (RTS and CTS signals)
+    -Receiver and transmitter enable
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
-    - USART1_Tx.PA9    <------->   USART2_Rx.PB5
-    - USART1_Rx.PA10   <------->   USART2_Tx.PB4 
-    »ò
-    - USART3_Tx.PC10   <------->   UART4_Rx.PD12
-    - USART3_Rx.PC11   <------->   UART4_Tx.PD13
-    »ò
-    - UART4_Tx.PC10    <------->   UART5_Rx.PB9
-    - UART4_Rx.PC11    <------->   UART5_Tx.PB8
+    The USART pin connections are as follows:
+    -USART1_Tx.PA9 <-------> USART2_Rx.PB5
+    -USART1_Rx.PA10 <-------> USART2_Tx.PB4
+    or
+    -USART3_Tx.PC10 <-------> UART4_Rx.PD12
+    -USART3_Rx.PC11 <-------> UART4_Tx.PD13
+    or
+    -UART4_Tx.PC10 <-------> UART5_Rx.PB9
+    -UART4_Rx.PC11 <-------> UART5_Tx.PB8
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬ÒÀ´Î²é¿´±äÁ¿TransferStatus1ºÍTransferStatus2£¬ÆäÖĞ£¬
-      PASSEDÎª²âÊÔÍ¨¹ı£¬FAILEDÎª²âÊÔÒì³£
+    Test steps and phenomena:
+    -After the Demo is compiled in the KEIL environment, download it to the MCU
+    -Reset operation, check the variables TransferStatus1 and TransferStatus2 in turn, among them,
+      PASSED means the test passed, FAILED means the test is abnormal
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80297
+4. Matters needing attention

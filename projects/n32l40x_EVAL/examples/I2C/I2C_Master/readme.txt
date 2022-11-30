@@ -1,40 +1,82 @@
-1¡¢¹¦ÄÜËµÃ÷
+ï»¿1ã€åŠŸèƒ½è¯´æ˜Ž
 
-    ´ËÀý³ÌÕ¹Ê¾ÁËÍ¨¹ýI2CÄ£¿é×÷ÎªÖ÷Éè±¸ÓëÍâ²¿EEPRONµÄÍ¨ÐÅ¡£   
+    æ­¤ä¾‹ç¨‹å±•ç¤ºäº†é€šè¿‡I2Cæ¨¡å—ä½œä¸ºä¸»è®¾å¤‡ä¸Žå¤–éƒ¨I2Cä»Žè®¾å¤‡é€šä¿¡ã€‚   
 
-2¡¢Ê¹ÓÃ»·¾³
+2ã€ä½¿ç”¨çŽ¯å¢ƒ
 
-	Èí¼þ¿ª·¢»·¾³£º
-        IDE¹¤¾ß£ºKEIL MDK-ARM 5.26
+	è½¯ä»¶å¼€å‘çŽ¯å¢ƒï¼š
+        IDEå·¥å…·ï¼šKEIL MDK-ARM 5.26
     
-    Ó²¼þ»·¾³£º
-        ¿ª·¢°å N32L43XM-STB
+    ç¡¬ä»¶çŽ¯å¢ƒï¼š
+        å¼€å‘æ¿ N32L40XML-STB V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+3ã€ä½¿ç”¨è¯´æ˜Ž
 	
-    1¡¢Ê±ÖÓÔ´£ºHSE+PLL
-    2¡¢Ö÷Ê±ÖÓ£º64MHz
-    3¡¢I2C1Ö÷ÅäÖÃ£º
+    1ã€æ—¶é’Ÿæºï¼šHSE+PLL
+    2ã€ä¸»æ—¶é’Ÿï¼š64MHz
+    3ã€I2C1ä¸»é…ç½®ï¼š
             SCL   -->  PB8		AF_OD
             SDA   -->  PB9		AF_OD
-            ADDR£º0x30(7bit)
+            ADDRï¼š0x30(7bit)
             CLOCK:100KHz
             
-    4¡¢USART1ÅäÖÃ£º
+    4ã€USART1é…ç½®ï¼š
             TX  -->  PA9
-            ²¨ÌØÂÊ£º115200
-            Êý¾ÝÎ»£º8bit
-            Í£Ö¹Î»£º1bit
-            ÎÞÐ£Ñé
+            æ³¢ç‰¹çŽ‡ï¼š115200
+            æ•°æ®ä½ï¼š8bit
+            åœæ­¢ä½ï¼š1bit
+            æ— æ ¡éªŒ
 
-    5¡¢²âÊÔ²½ÖèÓëÏÖÏó
-        a£¬ÓÃÁ½¿éNS3602¿ª·¢°å£¬Ò»¿é×öÖ÷Éè±¸£¬ÁíÒ»¿é×ö´ÓÉè±¸
-        b£¬Ö÷Éè±¸ÉÕÂ¼I2C_Master³ÌÐò£¬´ÓÉè±¸ÉÕÂ¼I2C_Slave³ÌÐò
-        c£¬½«Á½¿é°å×ÓµÄPB8/PB9¶ÔÓ¦Á¬½ÓÆðÀ´
-        d£¬·Ö±ð±àÒëÏÂÔØ´úÂë£¬ÏÈ¸´Î»´ÓÉè±¸£¬ÔÙ¸´Î»Ö÷Éè±¸
-        e£¬´ÓÁ½¸ö°å×ÓµÄ´®¿Ú¿´´òÓ¡ÐÅÏ¢£¬ÑéÖ¤½á¹û
+    5ã€æµ‹è¯•æ­¥éª¤ä¸ŽçŽ°è±¡
+        aï¼Œç”¨ä¸¤å—NS3602å¼€å‘æ¿ï¼Œä¸€å—åšä¸»è®¾å¤‡ï¼Œå¦ä¸€å—åšä»Žè®¾å¤‡
+        bï¼Œä¸»è®¾å¤‡çƒ§å½•I2C_Masterç¨‹åºï¼Œä»Žè®¾å¤‡çƒ§å½•I2C_Slaveç¨‹åº
+        cï¼Œå°†ä¸¤å—æ¿å­çš„PB8/PB9å¯¹åº”è¿žæŽ¥èµ·æ¥
+        dï¼Œåˆ†åˆ«ç¼–è¯‘ä¸‹è½½ä»£ç ï¼Œå…ˆå¤ä½ä»Žè®¾å¤‡ï¼Œå†å¤ä½ä¸»è®¾å¤‡
+        eï¼Œä»Žä¸¤ä¸ªæ¿å­çš„ä¸²å£çœ‹æ‰“å°ä¿¡æ¯ï¼ŒéªŒè¯ç»“æžœ
 
-4¡¢×¢ÒâÊÂÏî
-    a£¬ÐèÒªÔÚSDAºÍSCLÉÏÍâ½ÓÉÏÀ­µç×è¡£
-    b£¬±ØÐë¹²µØ£¡
+4ã€æ³¨æ„äº‹é¡¹
+    aï¼Œéœ€è¦åœ¨SDAå’ŒSCLä¸Šå¤–æŽ¥ä¸Šæ‹‰ç”µé˜»ã€‚
+    bï¼Œå¿…é¡»å…±åœ°ï¼
+
+1. Function description
+
+    This example demonstrates the use of the I2C module as a master device to communicate with an external I2C slave device.
+
+2. Use environment
+
+Software development environment:
+        IDE tool: KEIL MDK-ARM 5.26
+    
+    Hardware environment:
+        Development board N32L40XML-STB V1.0
+
+
+3. Instructions for use
+
+    1. Clock source: HSE+PLL
+    2. Main clock: 64MHz
+    3. I2C1 main configuration:
+            SCL --> PB8 AF_OD
+            SDA --> PB9 AF_OD
+
+            ADDR: 0x30(7bit)
+            CLOCK: 100KHz
+            
+    4. USART1 configuration:
+            TX --> PA9
+            Baud rate: 115200
+            Data bit: 8bit
+            Stop bit: 1bit
+            No verification
+
+    5. Test steps and phenomena
+        a. Use two NS3602 development boards, one as the master device and the other as the slave device
+        b, the master device burns the I2C_Master program, and the slave device burns the I2C_Slave program
+        c. Connect the PB8/PB9 of the two boards correspondingly
+        d. Compile the downloaded code separately, reset the slave device first, and then reset the master device
+        e, view the printed information from the serial ports of the two boards, and verify the result
+
+4. Matters needing attention
+    a. It is necessary to connect an external pull-up resistor to SDA and SCL.
+    b, must share the ground!

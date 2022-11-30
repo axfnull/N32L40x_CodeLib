@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "log.h"
@@ -65,10 +65,10 @@ void DumpClock(const char* msg)
     log_info("--------------------------------\n");
     log_info("%s:\n", msg);
     RCC_GetClocksFreqValue(&RCC_ClockFreq);
-    log_info("SYSCLK: %d\n", RCC_ClockFreq.SysclkFreq);
-    log_info("HCLK: %d\n", RCC_ClockFreq.HclkFreq);
-    log_info("PCLK1: %d\n", RCC_ClockFreq.Pclk1Freq);
-    log_info("PCLK2: %d\n", RCC_ClockFreq.Pclk2Freq);
+    log_info("SYSCLK: %u\n",(unsigned int) RCC_ClockFreq.SysclkFreq);
+    log_info("HCLK: %u\n", (unsigned int)RCC_ClockFreq.HclkFreq);
+    log_info("PCLK1: %u\n", (unsigned int)RCC_ClockFreq.Pclk1Freq);
+    log_info("PCLK2: %u\n", (unsigned int)RCC_ClockFreq.Pclk2Freq);
 }
 
 int main(void)
@@ -597,7 +597,7 @@ void NVIC_Configuration(void)
 void assert_failed(const uint8_t* expr, const uint8_t* file, uint32_t line)
 {
     /* User can add his own implementation to report the file name and line
-       number, ex: printf("Wrong parameters value: file %s on line %d\r\n",
+       number, ex: printf("Wrong parameters value: file %s on line %u\r\n",
        file, line) */
 
     /* Infinite loop */

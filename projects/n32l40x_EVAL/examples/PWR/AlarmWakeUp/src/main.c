@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations 
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 #include <stdio.h>
@@ -76,7 +76,7 @@ int main(void)
     /* RTC time and Date default Value */
     RTC_DateAndTimeDefaultVale();
     /* RTC Clock Select, 1: HSE  2:LSE 3: LSI */
-    RTC_CLKSourceConfig(3, 0, 1);
+    RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true, true);
     RTC_PrescalerConfig();
     /* RTC Date time and Alarm value set */
     RTC_DateRegulate();

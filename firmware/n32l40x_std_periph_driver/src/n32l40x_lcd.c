@@ -1,5 +1,5 @@
 /*****************************************************************************
-* Copyright (c) 2019, Nations Technologies Inc.
+* Copyright (c) 2022, Nations Technologies Inc.
 *
 * All rights reserved.
 * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_lcd.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 
 #include "n32l40x_lcd.h"
@@ -196,7 +196,7 @@ LCD_ErrorTypeDef LCD_ClockConfig(uint32_t LCD_ClkSource)
     {
         if(RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD)==RESET)
         {
-            RCC_ConfigLse(LCD_ClkSource & (~RCC_LDCTRL_RTCSEL));
+            RCC_ConfigLse((LCD_ClkSource & (~RCC_LDCTRL_RTCSEL)),0x28);
             timeout = 0;
             while(RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
             {

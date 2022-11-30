@@ -151,13 +151,13 @@ void CAN_Recieve_Process(void)
        if(CAN_RxMessage[CAN_RxMessage_Read_Cursor].IDE==CAN_Extended_Id)
        {
           printf("\r\n Receive Frame:%X %X ",\
-                  CAN_RxMessage[CAN_RxMessage_Read_Cursor].ExtId,\
-                  CAN_RxMessage[CAN_RxMessage_Read_Cursor].DLC);
+                  (unsigned int)CAN_RxMessage[CAN_RxMessage_Read_Cursor].ExtId,\
+                   CAN_RxMessage[CAN_RxMessage_Read_Cursor].DLC);
        }
        else
        {
           printf("\r\n Receive Frame:%X %X ",\
-                  CAN_RxMessage[CAN_RxMessage_Read_Cursor].StdId,\
+                  (unsigned int)CAN_RxMessage[CAN_RxMessage_Read_Cursor].StdId,\
                   CAN_RxMessage[CAN_RxMessage_Read_Cursor].DLC);
        }
        for(i=0;i<8;i++) 

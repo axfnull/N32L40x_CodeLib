@@ -1,21 +1,44 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢OPA1 OPA2 PGAÄ£Ê½£¬·Å´óÊäÈëµçÑ¹2±¶
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€OPA1 OPA2 PGAæ¨¡å¼ï¼Œæ”¾å¤§è¾“å…¥ç”µå‹2å€
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š      åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,OPA CLK=16M
-        2¡¢¶Ë¿ÚÅäÖÃ£º
-            PA1Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA1 VP
-            PA7Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA2 VP
-            PA2Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA1 OUT
-            PA6Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA2 OUT
-        3¡¢OPA£º
-            OPA1 OPA2 PGA¹¦ÄÜ£¬±¶Êı2±¶
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬ÓÃÊ¾²¨Æ÷¹Û²ìOPA1 OPA2µÄÊäÈëºÍÊä³ö
-        2¡¢OPAÊä³ö=2*OPAÊäÈë
-4¡¢×¢ÒâÊÂÏî
-    ÎŞ
+        2ã€ç«¯å£é…ç½®ï¼š
+            PA1é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA1 VP
+            PA7é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA2 VP
+            PA2é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA1 OUT
+            PA6é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA2 OUT
+        3ã€OPAï¼š
+            OPA1 OPA2 PGAåŠŸèƒ½ï¼Œå€æ•°2å€
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œç”¨ç¤ºæ³¢å™¨è§‚å¯ŸOPA1 OPA2çš„è¾“å…¥å’Œè¾“å‡º
+        2ã€OPAè¾“å‡º=2*OPAè¾“å…¥
+4ã€æ³¨æ„äº‹é¡¹
+    æ— 
+
+
+
+1. Function description
+     1. OPA1 OPA2 PGA mode, amplify the input voltage by 2 times
+2. Use environment
+     Software development environment: KEIL MDK-ARM V5.26.2.0
+     Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+     System Configuration;
+         1. Clock source:
+             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,OPA CLK=16M
+         2. Port configuration:
+             PA1 selected as analog function, OPA1 VP
+             PA7 selected as analog function, OPA2 VP
+             PA2 is selected as analog function, OPA1 OUT
+             PA6 is selected as analog function, OPA2 OUT
+         3. OPA:
+             OPA1 OPA2 PGA function, multiple 2 times
+     Instructions:
+         1. Open the debug mode after compiling, and observe the input and output of OPA1 and OPA2 with an oscilloscope
+         2. OPA output=2*OPA input
+4. Matters needing attention
+   None

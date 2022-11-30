@@ -1,37 +1,76 @@
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜Ž
 
-    ´ËÀý³ÌÕ¹Ê¾ÁËÍ¨¹ýI2CÄ£¿éÓëÍâ²¿EEPRONµÄÍ¨ÐÅ¡£   
+    æ­¤ä¾‹ç¨‹å±•ç¤ºäº†é€šè¿‡I2Cæ¨¡å—ä¸Žå¤–éƒ¨EEPRONçš„é€šä¿¡ã€‚   
 
-2¡¢Ê¹ÓÃ»·¾³
+2ã€ä½¿ç”¨çŽ¯å¢ƒ
 
-	Èí¼þ¿ª·¢»·¾³£º
-        IDE¹¤¾ß£ºKEIL MDK-ARM 5.26
+	è½¯ä»¶å¼€å‘çŽ¯å¢ƒï¼š
+        IDEå·¥å…·ï¼šKEIL MDK-ARM 5.26
     
-    Ó²¼þ»·¾³£º
-        ¿ª·¢°å N32L43XM-STB
+    ç¡¬ä»¶çŽ¯å¢ƒï¼š
+        å¼€å‘æ¿ N32L40XML-STB V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+3ã€ä½¿ç”¨è¯´æ˜Ž
 	
-    1¡¢Ê±ÖÓÔ´£ºHSE+PLL
-    2¡¢Ö÷Ê±ÖÓ£º64MHz
-    3¡¢I2C1 ÅäÖÃ£º
+    1ã€æ—¶é’Ÿæºï¼šHSE+PLL
+    2ã€ä¸»æ—¶é’Ÿï¼š64MHz
+    3ã€I2C1 é…ç½®ï¼š
             SCL   -->  PB6
             SDA   -->  PB7
-            ADDR£º0xA0(7bit)
+            ADDRï¼š0xA0(7bit)
             CLOCK:400KHz
             
-    4¡¢USART1ÅäÖÃ£º
+    4ã€USART1é…ç½®ï¼š
             TX  -->  PA9
-            ²¨ÌØÂÊ£º115200
-            Êý¾ÝÎ»£º8bit
-            Í£Ö¹Î»£º1bit
-            ÎÞÐ£Ñé
+            æ³¢ç‰¹çŽ‡ï¼š115200
+            æ•°æ®ä½ï¼š8bit
+            åœæ­¢ä½ï¼š1bit
+            æ— æ ¡éªŒ
 
-    5¡¢²âÊÔ²½ÖèÓëÏÖÏó
-        a£¬¼ì²éÓëÍâ¹ÒEEPROMµÄÁ¬½Ó
-        b£¬±àÒëÏÂÔØ´úÂë¸´Î»ÔËÐÐ
-        c£¬´Ó´®¿Ú¿´´òÓ¡ÐÅÏ¢£¬ÑéÖ¤½á¹û
+    5ã€æµ‹è¯•æ­¥éª¤ä¸ŽçŽ°è±¡
+        aï¼Œæ£€æŸ¥ä¸Žå¤–æŒ‚EEPROMçš„è¿žæŽ¥
+        bï¼Œç¼–è¯‘ä¸‹è½½ä»£ç å¤ä½è¿è¡Œ
+        cï¼Œä»Žä¸²å£çœ‹æ‰“å°ä¿¡æ¯ï¼ŒéªŒè¯ç»“æžœ
 
-4¡¢×¢ÒâÊÂÏî
-    a£¬È·±£SCL,SDAÓÐÍâ²¿ÉÏÀ­
+4ã€æ³¨æ„äº‹é¡¹
+    aï¼Œç¡®ä¿SCL,SDAæœ‰å¤–éƒ¨ä¸Šæ‹‰
+    
+1. Function description
+
+    This example demonstrates the communication with the external EEPROM through the I2C module.
+
+2. Use environment
+
+    Software development environment:
+        IDE tool: KEIL MDK-ARM 5.26
+    
+    Hardware environment:
+        Development board N32L40XML-STB V1.0
+
+
+3. Instructions for use
+
+    1. Clock source: HSE+PLL
+    2. Main clock: 64MHz
+    3. I2C1 configuration:
+            SCL --> PB6 
+            SDA --> PB7 
+
+            ADDR: 0xA0(7bit)
+            CLOCK: 400KHz
+            
+    4. USART1 configuration:
+            TX --> PA9 50MHz, AF_PP
+            Baud rate: 115200
+            Data bit: 8bit
+            Stop bit: 1bit
+            No verification
+
+    5. Test steps and phenomena
+        a, check the EEPROM connection
+        b, compile and download the code, reset and run
+        c, view the print information from the serial port and verify the result
+
+4. Matters needing attention
+    1. Ensure that SCL\SDA has an external pull-up

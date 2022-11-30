@@ -1,39 +1,81 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢COMP1µÄÊä³öÉ²³µTIM1 TIM8µÄ»¥²¹ĞÅºÅ£¬COMP OUT±äµÍºó»Ö¸´TIM1 TIM8²¨ĞÎ
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€COMP1çš„è¾“å‡ºåˆ¹è½¦TIM1 TIM8çš„äº’è¡¥ä¿¡å·ï¼ŒCOMP OUTå˜ä½åæ¢å¤TIM1 TIM8æ³¢å½¢
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š      åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,COMP CLK=16M,TIM1 CLK=64M,TIM8 CLK=64M
-        2¡¢¶Ë¿ÚÅäÖÃ£º
-            PB10Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP INP
-            PA5Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP INM
-            PA0Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP OUT
-            PD2Ñ¡ÔñÎªIOÊä³ö
-            PD3Ñ¡ÔñÎªIOÊä³ö
-            PA8Ñ¡ÔñÎªTIM1 CH1Êä³ö
-            PA9Ñ¡ÔñÎªTIM1 CH2Êä³ö
-            PA10Ñ¡ÔñÎªTIM1 CH3Êä³ö
-            PB13Ñ¡ÔñÎªTIM1 CH1NÊä³ö
-            PB14Ñ¡ÔñÎªTIM1 CH2NÊä³ö
-            PB15Ñ¡ÔñÎªTIM1 CH3NÊä³ö
-            PA11Ñ¡ÔñÎªTIM1 CH4Êä³ö
-            PB12Ñ¡ÔñÎªTIM1 breakinÊäÈë
-            PC6Ñ¡ÔñÎªTIM8 CH1Êä³ö
-            PC7Ñ¡ÔñÎªTIM8 CH2Êä³ö
-            PC8Ñ¡ÔñÎªTIM8 CH3Êä³ö
-            PA7Ñ¡ÔñÎªTIM8 CH1NÊä³ö
-            PB0Ñ¡ÔñÎªTIM8 CH2NÊä³ö
-            PB1Ñ¡ÔñÎªTIM8 CH3NÊä³ö
-        3¡¢TIM£º
-            TIM1¿ªÆôCH1 CH2 CH3 CH1N CH2N CH3NÊä³ö,COMP×÷ÎªÉ²³µÊäÈë
-            TIM8¿ªÆôCH1 CH2 CH3 CH1N CH2N CH3NÊä³ö,COMP×÷ÎªÉ²³µÊäÈë
-        4¡¢COMP£º
-            COMP1Êä³ö´¥·¢TIM1 TIM8É²³µ£¬ÎŞÊä³öÊ±»Ö¸´TIM1 TIM8Êä³ö
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«PD2Á¬½Óµ½PB10£¬PD3Á¬½Óµ½PA5£¬ÀûÓÃÊ¾²¨Æ÷»òÕßÂß¼­·ÖÎöÒÇ¹Û²ìTIM1 TIM8Êä³ö²¨ĞÎ
-        2¡¢µ±Èí¼şÊä³öPD2µçÆ½´óÓÚPD3Ê±£¬TIM²¨ĞÎÏûÊ§£¬Ïà·´Ê±£¬²¨ĞÎÕı³£Êä³ö
-4¡¢×¢ÒâÊÂÏî
-    ÎŞ
+        2ã€ç«¯å£é…ç½®ï¼š
+            PB10é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP INP
+            PA5é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP INM
+            PA0é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP OUT
+            PD2é€‰æ‹©ä¸ºIOè¾“å‡º
+            PD3é€‰æ‹©ä¸ºIOè¾“å‡º
+            PA8é€‰æ‹©ä¸ºTIM1 CH1è¾“å‡º
+            PA9é€‰æ‹©ä¸ºTIM1 CH2è¾“å‡º
+            PA10é€‰æ‹©ä¸ºTIM1 CH3è¾“å‡º
+            PB13é€‰æ‹©ä¸ºTIM1 CH1Nè¾“å‡º
+            PB14é€‰æ‹©ä¸ºTIM1 CH2Nè¾“å‡º
+            PB15é€‰æ‹©ä¸ºTIM1 CH3Nè¾“å‡º
+            PA11é€‰æ‹©ä¸ºTIM1 CH4è¾“å‡º
+            PB12é€‰æ‹©ä¸ºTIM1 breakinè¾“å…¥
+            PC6é€‰æ‹©ä¸ºTIM8 CH1è¾“å‡º
+            PC7é€‰æ‹©ä¸ºTIM8 CH2è¾“å‡º
+            PC8é€‰æ‹©ä¸ºTIM8 CH3è¾“å‡º
+            PA7é€‰æ‹©ä¸ºTIM8 CH1Nè¾“å‡º
+            PB0é€‰æ‹©ä¸ºTIM8 CH2Nè¾“å‡º
+            PB1é€‰æ‹©ä¸ºTIM8 CH3Nè¾“å‡º
+        3ã€TIMï¼š
+            TIM1å¼€å¯CH1 CH2 CH3 CH1N CH2N CH3Nè¾“å‡º,COMPä½œä¸ºåˆ¹è½¦è¾“å…¥
+            TIM8å¼€å¯CH1 CH2 CH3 CH1N CH2N CH3Nè¾“å‡º,COMPä½œä¸ºåˆ¹è½¦è¾“å…¥
+        4ã€COMPï¼š
+            COMP1è¾“å‡ºè§¦å‘TIM1 TIM8åˆ¹è½¦ï¼Œæ— è¾“å‡ºæ—¶æ¢å¤TIM1 TIM8è¾“å‡º
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†PD2è¿æ¥åˆ°PB10ï¼ŒPD3è¿æ¥åˆ°PA5ï¼Œåˆ©ç”¨ç¤ºæ³¢å™¨æˆ–è€…é€»è¾‘åˆ†æä»ªè§‚å¯ŸTIM1 TIM8è¾“å‡ºæ³¢å½¢
+        2ã€å½“è½¯ä»¶è¾“å‡ºPD2ç”µå¹³å¤§äºPD3æ—¶ï¼ŒTIMæ³¢å½¢æ¶ˆå¤±ï¼Œç›¸åæ—¶ï¼Œæ³¢å½¢æ­£å¸¸è¾“å‡º
+4ã€æ³¨æ„äº‹é¡¹
+    æ— 
+
+
+
+1. Function description
+    1. The output of COMP1 brakes the complementary signal of TIM1 and TIM8. After COMP OUT becomes low, the waveform of TIM1 and TIM8 is restored.
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the evaluation board N32L40XML-STB V1.0
+3. Instructions for use
+    System Configuration;
+        1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,COMP CLK=16M,TIM1 CLK=64M,TIM8 CLK=64M
+        2. Port configuration:
+            PB10 is selected as analog function, COMP INP
+            PA5 is selected as analog function, COMP INM
+            PA0 is selected as analog function, COMP OUT
+            PD2 is selected as IO output
+            PD3 is selected as IO output
+            PA8 is selected as TIM1 CH1 output
+            PA9 is selected as TIM1 CH2 output
+            PA10 is selected as TIM1 CH3 output
+            PB13 is selected as TIM1 CH1N output
+            PB14 is selected as TIM1 CH2N output
+            PB15 is selected as TIM1 CH3N output
+            PA11 is selected as TIM1 CH4 output
+            PB12 is selected as TIM1 breakin input
+            PC6 is selected as TIM8 CH1 output
+            PC7 is selected as TIM8 CH2 output
+            PC8 is selected as TIM8 CH3 output
+            PA7 is selected as TIM8 CH1N output
+            PB0 is selected as TIM8 CH2N output
+            PB1 is selected as TIM8 CH3N output
+        3. TIM:
+            TIM1 turns on CH1 CH2 CH3 CH1N CH2N CH3N output, COMP is used as brake input
+            TIM8 turns on CH1 CH2 CH3 CH1N CH2N CH3N output, COMP is used as brake input
+        4. COMP:
+            The output of COMP1 triggers the brake of TIM1 and TIM8, and the output of TIM1 and TIM8 is restored when there is no output.
+    Instructions:
+        1. Open the debug mode after compiling, connect PD2 to PB10, connect PD3 to PA5, and use an oscilloscope or logic analyzer to observe the output waveforms of TIM1 and TIM8
+        2. When the software output PD2 level is greater than PD3, the TIM waveform disappears, on the contrary, the waveform is output normally
+4. Matters needing attention
+    without

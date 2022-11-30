@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_tsc.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_tsc.h"
@@ -119,7 +119,7 @@ TSC_ErrorTypeDef TSC_ClockConfig(uint32_t TSC_ClkSource)
     {
         if(RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD)==RESET)
         {
-            RCC_ConfigLse(TSC_ClkSource & (~RCC_LDCTRL_LSXSEL));
+            RCC_ConfigLse((TSC_ClkSource & (~RCC_LDCTRL_LSXSEL)),0x28);
             timeout = 0;
             while(RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
             {

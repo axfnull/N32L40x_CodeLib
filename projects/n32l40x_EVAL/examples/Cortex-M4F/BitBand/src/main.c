@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 #include <stdio.h>
@@ -87,16 +87,16 @@ int main(void)
         {
             /* Modify Data variable bit i */
             Data_SetBit_BB(DataAddr, i); /* Data = (0x00000001 << i) */
-            printf("%d SetBit Data = 0x%08X \r\n", i, DataBitValue);
+            printf("%d SetBit Data = 0x%08X \r\n", i, (unsigned int)DataBitValue);
             /* Get Data variable bit i value */
             DataBitValue = Data_GetBit_BB(DataAddr, i); /* DataBitValue = 0x00000001 */
-            printf("%d SetBit DataBitValue = 0x%08X \r\n", i, DataBitValue);
+            printf("%d SetBit DataBitValue = 0x%08X \r\n", i, (unsigned int)DataBitValue);
 
             Data_ResetBit_BB(DataAddr, i); /* Data = 0x00000000 */
-            printf("%d ResetBit Data = 0x%08X \r\n", i, DataBitValue);
+            printf("%d ResetBit Data = 0x%08X \r\n", i, (unsigned int)DataBitValue);
             /* Get Data variable bit i value */
             DataBitValue = Data_GetBit_BB(DataAddr, i); /* DataBitValue = 0x00000000 */
-            printf("%d ResetBit DataBitValue = 0x%08X \r\n", i, DataBitValue);
+            printf("%d ResetBit DataBitValue = 0x%08X \r\n", i, (unsigned int)DataBitValue);
         }
     }
 }

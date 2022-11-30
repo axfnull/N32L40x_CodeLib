@@ -1,137 +1,137 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËUSARTy£¨Í¬²½Ä£Ê½£©ÓëSPIy¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-USARTyºÍSPIy¿ÉÒÔÊÇUSART1ºÍSPI1¡¢USART3ºÍSPI1»òUSART2ºÍSPI2¡£
-    Ê×ÏÈ£¬Í¨¹ıTXC¼ì²â±êÖ¾£¬USARTy·¢ËÍTxBuffer1Êı¾İÖÁSPIy£¬¶øSPIy½ÓÊÕÊı¾İ£¬
-Ôò²éÑ¯RNE¼ì²â±êÖ¾£¬½ÓÊÕµÄÊı¾İ´æÖÁRxBuffer1¡£
-    Ëæºó£¬SPIyÍ¨¹ı²éÑ¯TE¼ì²â±êÖ¾£¬·¢ËÍTxBuffer2Êı¾İÖÁUSARTy¡£USARTyÔòÀûÓÃ
-RXDNE¼ì²â±êÖ¾½ÓÊÕÊı¾İ£¬½«Æä´æÈëRxBuffer2¡£
-    ×îºó£¬·Ö±ğ±È½ÏÁ½×éÊÕ¡¢·¢Êı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus1±äÁ¿
-ºÍTransferStatus2±äÁ¿¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†USARTyï¼ˆåŒæ­¥æ¨¡å¼ï¼‰ä¸SPIyé—´é€šè¿‡æŸ¥è¯¢æ£€æµ‹æ ‡è¯†å®ç°çš„åŸºç¡€é€šä¿¡ã€‚
+USARTyå’ŒSPIyå¯ä»¥æ˜¯USART1å’ŒSPI1ã€USART3å’ŒSPI1æˆ–USART2å’ŒSPI2ã€‚
+    é¦–å…ˆï¼Œé€šè¿‡TXCæ£€æµ‹æ ‡å¿—ï¼ŒUSARTyå‘é€TxBuffer1æ•°æ®è‡³SPIyï¼Œè€ŒSPIyæ¥æ”¶æ•°æ®ï¼Œ
+åˆ™æŸ¥è¯¢RNEæ£€æµ‹æ ‡å¿—ï¼Œæ¥æ”¶çš„æ•°æ®å­˜è‡³RxBuffer1ã€‚
+    éšåï¼ŒSPIyé€šè¿‡æŸ¥è¯¢TEæ£€æµ‹æ ‡å¿—ï¼Œå‘é€TxBuffer2æ•°æ®è‡³USARTyã€‚USARTyåˆ™åˆ©ç”¨
+RXDNEæ£€æµ‹æ ‡å¿—æ¥æ”¶æ•°æ®ï¼Œå°†å…¶å­˜å…¥RxBuffer2ã€‚
+    æœ€åï¼Œåˆ†åˆ«æ¯”è¾ƒä¸¤ç»„æ”¶ã€å‘æ•°æ®ï¼Œæ¯”è¾ƒç»“æœå­˜å…¥TransferStatus1å˜é‡
+å’ŒTransferStatus2å˜é‡ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+	ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
-    - Ê±ÖÓÊ¹ÄÜ
-    - Ê±ÖÓ¼«ĞÔ£º²»¶ÔÍâ·¢ËÍÊ±±£³Ö¸ßµçÆ½
-    - Ê±ÖÓÏàÎ»£ºÔÚµÚ¶ş¸öÊ±ÖÓ±ßÑØ²ÉÑùµÚÒ»¸öÊı¾İ
-    - ×îºóÒ»Î»Ê±ÖÓÂö³å£º×îºóÒ»Î»Êı¾İµÄÊ±ÖÓÂö³å´ÓCKÊä³ö
+    USARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 115200 baud
+    - å­—é•¿ = 8æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
+    - æ—¶é’Ÿä½¿èƒ½
+    - æ—¶é’Ÿææ€§ï¼šä¸å¯¹å¤–å‘é€æ—¶ä¿æŒé«˜ç”µå¹³
+    - æ—¶é’Ÿç›¸ä½ï¼šåœ¨ç¬¬äºŒä¸ªæ—¶é’Ÿè¾¹æ²¿é‡‡æ ·ç¬¬ä¸€ä¸ªæ•°æ®
+    - æœ€åä¸€ä½æ—¶é’Ÿè„‰å†²ï¼šæœ€åä¸€ä½æ•°æ®çš„æ—¶é’Ÿè„‰å†²ä»CKè¾“å‡º
     
-    SPIÅäÖÃÈçÏÂ£º
-    - ·½Ïò = ¡°Ë«ÏßË«Ïò¡±Ä£Ê½
-    - Ä£Ê½ = ´ÓÄ£Ê½
-    - Êı¾İ´óĞ¡ = 8Î»Êı¾İÖ¡
-    - CPOL = ¿ÕÏĞ×´Ì¬Ê±£¬Ê±ÖÓ±£³Ö¸ßµçÆ½
-    - CPHA = Êı¾İ²ÉÑù´ÓµÚ¶ş¸öÊ±ÖÓ±ßÑØ¿ªÊ¼
-    - NSS = ÆôÓÃÈí¼ş´ÓÉè±¸¹ÜÀí
-    - µÚ1Î» = µÚ1Î»ÎªLSB
+    SPIé…ç½®å¦‚ä¸‹ï¼š
+    - æ–¹å‘ = â€œåŒçº¿åŒå‘â€æ¨¡å¼
+    - æ¨¡å¼ = ä»æ¨¡å¼
+    - æ•°æ®å¤§å° = 8ä½æ•°æ®å¸§
+    - CPOL = ç©ºé—²çŠ¶æ€æ—¶ï¼Œæ—¶é’Ÿä¿æŒé«˜ç”µå¹³
+    - CPHA = æ•°æ®é‡‡æ ·ä»ç¬¬äºŒä¸ªæ—¶é’Ÿè¾¹æ²¿å¼€å§‹
+    - NSS = å¯ç”¨è½¯ä»¶ä»è®¾å¤‡ç®¡ç†
+    - ç¬¬1ä½ = ç¬¬1ä½ä¸ºLSB
     
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
+    USARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š    
     - USART1_Tx.PA9    <------->   SPI1_MOSI.PA7
     - USART1_Rx.PA10   <------->   SPI1_MISO.PA6
     - USART1_Clk.PA8   <------->   SPI1_SCK.PA5     
-    »ò
+    æˆ–
     - USART3_Tx.PC10   <------->   SPI1_MOSI.PD6
     - USART3_Rx.PC11   <------->   SPI1_MISO.PD5
     - USART3_Clk.PC12  <------->   SPI1_SCK.PD4
-    »ò
+    æˆ–
     - USART2_Tx.PA2    <------->   SPI2_MOSI.PB15
     - USART2_Rx.PA3    <------->   SPI2_MISO.PB14
     - USART2_Clk.PA4   <------->   SPI2_SCK.PB13
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬ÒÀ´Î²é¿´±äÁ¿TransferStatus1ºÍTransferStatus2£¬ÆäÖĞ£¬
-      PASSEDÎª²âÊÔÍ¨¹ı£¬FAILEDÎª²âÊÔÒì³£
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼Œä¾æ¬¡æŸ¥çœ‹å˜é‡TransferStatus1å’ŒTransferStatus2ï¼Œå…¶ä¸­ï¼Œ
+      PASSEDä¸ºæµ‹è¯•é€šè¿‡ï¼ŒFAILEDä¸ºæµ‹è¯•å¼‚å¸¸
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-	¸Ã²âÀıÑİÊ¾ÁËUSARTy£¨Í¬²½Ä£Ê½£©ÓëSPIy¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£
-USARTyºÍSPIy¿ÉÒÔÊÇUSART1ºÍSPI1¡¢USART3ºÍSPI1»òUSART2ºÍSPI2¡£
-    Ê×ÏÈ£¬Í¨¹ıTXC¼ì²â±êÖ¾£¬USARTy·¢ËÍTxBuffer1Êı¾İÖÁSPIy£¬¶øSPIy½ÓÊÕÊı¾İ£¬
-Ôò²éÑ¯RNE¼ì²â±êÖ¾£¬½ÓÊÕµÄÊı¾İ´æÖÁRxBuffer1¡£
-    Ëæºó£¬SPIyÍ¨¹ı²éÑ¯TE¼ì²â±êÖ¾£¬·¢ËÍTxBuffer2Êı¾İÖÁUSARTy¡£USARTyÔòÀûÓÃ
-RXDNE¼ì²â±êÖ¾½ÓÊÕÊı¾İ£¬½«Æä´æÈëRxBuffer2¡£
-    ×îºó£¬·Ö±ğ±È½ÏÁ½×éÊÕ¡¢·¢Êı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus1±äÁ¿
-ºÍTransferStatus2±äÁ¿¡£
+1. Function description
 
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+This test example demonstrates the basic communication between USARTy (synchronous mode) and SPIy by querying the detection identifier.
+USARTy and SPIy can be USART1 and SPI1, USART3 and SPI1 or USART2 and SPI2.
+    First, through the TXC detection flag, USARTy sends TxBuffer1 data to SPIy, and SPIy receives the data, it queries the RNE detection flag, 
+	and the received data is stored in RxBuffer1.
+    Subsequently, SPIy sends TxBuffer2 data to USARTy by querying the TE detection flag. USARTy uses the RXDNE detection flag to receive 
+	data and stores it in RxBuffer2.
+    Finally, compare the two groups of receiving and sending data respectively, and store the comparison results in the TransferStatus1 
+	variable and the TransferStatus2 variable.
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+2. Use environment
+
+    Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+    Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+The system clock configuration is as follows:
+    -Clock source = HSE + PLL
+    -System clock = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
-    - Ê±ÖÓÊ¹ÄÜ
-    - Ê±ÖÓ¼«ĞÔ£º²»¶ÔÍâ·¢ËÍÊ±±£³Ö¸ßµçÆ½
-    - Ê±ÖÓÏàÎ»£ºÔÚµÚ¶ş¸öÊ±ÖÓ±ßÑØ²ÉÑùµÚÒ»¸öÊı¾İ
-    - ×îºóÒ»Î»Ê±ÖÓÂö³å£º×îºóÒ»Î»Êı¾İµÄÊ±ÖÓÂö³å´ÓCKÊä³ö
+    The USART configuration is as follows:
+    -Baud rate = 115200 baud
+    -Word length = 8 data bits
+    -1 stop bit
+    -Verification control disabled
+    -Hardware flow control disabled (RTS and CTS signals)
+    -Receiver and transmitter enable
+    -Clock enable
+    -Clock polarity: keep high level when not sending out
+    -Clock phase: sample the first data on the second clock edge
+    -The last clock pulse: the clock pulse of the last data is output from CK
     
-    SPIÅäÖÃÈçÏÂ£º
-    - ·½Ïò = ¡°Ë«ÏßË«Ïò¡±Ä£Ê½
-    - Ä£Ê½ = ´ÓÄ£Ê½
-    - Êı¾İ´óĞ¡ = 8Î»Êı¾İÖ¡
-    - CPOL = ¿ÕÏĞ×´Ì¬Ê±£¬Ê±ÖÓ±£³Ö¸ßµçÆ½
-    - CPHA = Êı¾İ²ÉÑù´ÓµÚ¶ş¸öÊ±ÖÓ±ßÑØ¿ªÊ¼
-    - NSS = ÆôÓÃÈí¼ş´ÓÉè±¸¹ÜÀí
-    - µÚ1Î» = µÚ1Î»ÎªLSB
+    The SPI configuration is as follows:
+    -Direction = "Two-wire two-way" mode
+    -Mode = slave mode
+    -Data size = 8-bit data frame
+    -CPOL = In idle state, the clock stays high
+    -CPHA = data sampling starts from the second clock edge
+    -NSS = Enable software management from the device
+    -1st bit = 1st bit is LSB
     
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
-    - USART1_Tx.PA9    <------->   SPI1_MOSI.PA7
-    - USART1_Rx.PA10   <------->   SPI1_MISO.PA6
-    - USART1_Clk.PA8   <------->   SPI1_SCK.PA5     
-    »ò
-    - USART3_Tx.PC10   <------->   SPI1_MOSI.PD6
-    - USART3_Rx.PC11   <------->   SPI1_MISO.PD5
-    - USART3_Clk.PC12  <------->   SPI1_SCK.PD4
-    »ò
-    - USART2_Tx.PA2    <------->   SPI2_MOSI.PB15
-    - USART2_Rx.PA3    <------->   SPI2_MISO.PB14
-    - USART2_Clk.PA4   <------->   SPI2_SCK.PB13
+    The USART pin connections are as follows:
+    -USART1_Tx.PA9 <-------> SPI1_MOSI.PA7
+    -USART1_Rx.PA10 <-------> SPI1_MISO.PA6
+    -USART1_Clk.PA8 <-------> SPI1_SCK.PA5
+    or
+    -USART3_Tx.PC10 <-------> SPI1_MOSI.PD6
+    -USART3_Rx.PC11 <-------> SPI1_MISO.PD5
+    -USART3_Clk.PC12 <-------> SPI1_SCK.PD4
+    or
+    -USART2_Tx.PA2 <-------> SPI2_MOSI.PB15
+    -USART2_Rx.PA3 <-------> SPI2_MISO.PB14
+    -USART2_Clk.PA4 <-------> SPI2_SCK.PB13
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬ÒÀ´Î²é¿´±äÁ¿TransferStatus1ºÍTransferStatus2£¬ÆäÖĞ£¬
-      PASSEDÎª²âÊÔÍ¨¹ı£¬FAILEDÎª²âÊÔÒì³£
+    Test steps and phenomena:
+    -After the Demo is compiled in the KEIL environment, download it to the MCU
+    -Reset operation, check the variables TransferStatus1 and TransferStatus2 in turn, among them,
+      PASSED means the test passed, FAILED means the test is abnormal
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80297
+4. Matters needing attention

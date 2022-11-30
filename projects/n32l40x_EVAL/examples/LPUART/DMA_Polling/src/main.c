@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include <stdio.h>
 #include "main.h"
@@ -161,7 +161,7 @@ void RCC_Configuration(uint32_t LPUART_CLK_SRC)
             RCC_EnableAPB1PeriphClk (RCC_APB1_PERIPH_PWR, ENABLE); 
             PWR->CTRL1 |= PWR_CTRL1_DRBP;
             /* Configures the External Low Speed oscillator (LSE) */
-            RCC_ConfigLse(RCC_LSE_ENABLE);
+            RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
             while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
             {
             }

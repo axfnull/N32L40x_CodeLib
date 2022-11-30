@@ -7,7 +7,7 @@
 2、使用环境
 
 	/* 硬件环境：工程对应的开发硬件平台 */
-	开发板：N32L43XM-STB N32L40XM-STB V1.1
+	开发板：N32L40XM-STB V1.1
 
 3、使用说明
 	
@@ -23,3 +23,33 @@
 
 4、注意事项
 	当检测到 PA8 口为低电平时，关闭 JTAG，PA8 口为高电平时，开启 JTAG
+	
+	
+	
+	
+1. Function description
+
+	1. This example shows the high and low levels of the read port and controls the flashing of the LEDs (D2, D3)
+	
+	2. Control IO port level flip
+
+
+2. Use environment
+
+	/* Hardware environment: the development hardware platform corresponding to the project */
+	Development board: N32L40XM-STB V1.1
+
+3. Instructions for use
+
+	/* Describe related module configuration methods; for example: clock, I/O, etc. */
+	SystemClock: 64MHz
+	GPIO: PA8 is selected as the read level port, PB4, PB5 control LED (D2, D3) to flash
+
+
+	/* Describe the test steps and phenomena of the Demo */
+	1. After compiling, download the program to reset and run;
+	2. Check the level of the PA8 port, if it is a low level, the LED (D2) flashes, connect PA8 to 3.3V, and the LED (D3) is always on;
+
+
+4. Matters needing attention
+	When it is detected that the PA8 port is at a low level, close JTAG, and when the PA8 port is at a high level, open the JTAG.

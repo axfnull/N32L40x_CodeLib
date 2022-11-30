@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file system_n32l40x.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 
@@ -233,7 +233,7 @@ void SystemInit(void)
     RCC->CFG &= (uint32_t)0x0700FFFF;
 
     /* Reset CFG2 register */
-    RCC->CFG2 = 0x00000000;
+    RCC->CFG2 = 0x00007000;
 
     /* Reset CFG3 register */
     RCC->CFG3 = 0x00003800;
@@ -413,18 +413,13 @@ void SystemCoreClockUpdate(void)
  */
 void ConfigMRVoltage1V(void)
 {
-
+    uint32_t  i=0;
     ConfigSRAMVoltage(1);                  //SRAM read margin setting switch in 0.9/lprun mode: use low voltage mode settings and 1.0v use normal mode
     PWR->CTRL1 &= (uint32_t)(~PWR_CTRL1_MRSEL);
     PWR->CTRL1 |= PWR_CTRL1_MRSEL2;        //MR=1.0V
-    while((PWR->STS2 &0X2) != 0)           // wait VOSF to be 0 first
-    {
-    }
-    while((PWR->STS2 &0X2) != 2)           // wait VOSF to be 1 then
-    {
-    }
-
-
+    while((PWR->STS2 &PWR_STS2_MRF) != 0);               // wait VOSF to be 0 first
+    for(i=0;i<0x2A;i++);
+    while((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF);   // wait VOSF to be 1 then
 }
 /**
  * @brief  Configures the System clock frequency, HCLK, PCLK2 and PCLK1
@@ -437,10 +432,15 @@ static void SetSysClock(void)
     uint32_t StartUpCounter = 0;
 
 #if (SYSCLK_SRC == SYSCLK_USE_MSI)
-
+    uint8_t i=0;
     bool MSIStatus = 0;
     /* Config MSI */
+    RCC->CTRLSTS &= 0xFFFFFF8F;
+    /*Delay for while*/
+    for(i=0;i<0x30;i++);
     RCC->CTRLSTS |= (((uint32_t)MSI_CLK) << 4);
+    /*Delay for while*/
+    for(i=0;i<0x30;i++);
     /* Enable MSI */
     RCC->CTRLSTS |= ((uint32_t)RCC_CTRLSTS_MSIEN);
 
@@ -517,7 +517,7 @@ static void SetSysClock(void)
     /* HCLK = SYSCLK */
     RCC->CFG |= (uint32_t)RCC_CFG_AHBPRES_DIV1;
 
-    /* PCLK2 max 54M */
+    /* PCLK2 max 32M */
     if (SYSCLK_FREQ > 54000000)
     {
         RCC->CFG |= (uint32_t)RCC_CFG_APB2PRES_DIV2;
@@ -527,7 +527,7 @@ static void SetSysClock(void)
         RCC->CFG |= (uint32_t)RCC_CFG_APB2PRES_DIV1;
     }
 
-    /* PCLK1 max 27M */
+    /* PCLK1 max 16M */
     if (SYSCLK_FREQ > 54000000)
     {
         RCC->CFG |= (uint32_t)RCC_CFG_APB1PRES_DIV4;

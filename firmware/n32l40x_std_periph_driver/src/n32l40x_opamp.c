@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_opamp.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_opamp.h"
 #include "n32l40x_rcc.h"
@@ -87,7 +87,7 @@
 /** @addtogroup OPAMP_Private_Functions
  * @{
  */
-#define SetBitMsk(reg, bit, msk) ((reg) = ((reg) & ~(msk) | (bit)))
+#define SetBitMsk(reg, bit, msk) ((reg) = (((reg) & ~(msk)) | (bit)))
 #define ClrBit(reg, bit)         ((reg) &= ~(bit))
 #define SetBit(reg, bit)         ((reg) |= (bit))
 #define GetBit(reg, bit)         ((reg) & (bit))

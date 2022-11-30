@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file User_RTCBKP_Config.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_rtc.h"
@@ -65,7 +65,7 @@ void User_RTCBKP_Init(void)
     /* Enable the LSE OSC32_IN PC14 
        LSI is turned off here to ensure that only one clock is turned on */
     RCC_EnableLsi(DISABLE);  
-    RCC_ConfigLse(RCC_LSE_ENABLE);
+    RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
     while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET){}
     RCC_ConfigRtcClk(RCC_RTCCLK_SRC_LSE);
     /* Enable the RTC Clock */

@@ -4,11 +4,11 @@
 
 2、使用环境
 
-	软件开发环境：
+    软件开发环境：
         IDE工具：KEIL MDK-ARM 5.26
     
     硬件环境：
-        开发板 N32L43XM-STB
+        开发板 N32L40XML-STB V1.0
 
 3、使用说明
 	
@@ -41,3 +41,40 @@
 
 4、注意事项
     在SDA，SCL上需要加上拉电阻
+
+
+1. Function description
+    This routine provides a DMA usage for transferring data between peripherals and RAM.
+
+2. Use environment
+    Software Development environment:
+	IDE tool: KEIL MDK-ARM 5.26   
+    Hardware environment:
+	Development Board N32L40XML-STB V1.0
+3. Instructions for use
+    1. Clock source: HSE+PLL
+    2. Master clock: 108MHz
+    3. DMA channels: DMA_CH5, DMA_CH6
+    4. I2C1 configuration:
+        SCL   -->  PB8
+        SDA   -->  PB9
+        ADDR：0x30(7bit)
+        CLOCK：100K   
+    5. I2C2 configuration:
+        SCL   -->  PB10
+        SDA   -->  PB11
+        ADDR：0xA0(7bit)
+        CLOCK：100K    
+    6. USART1 configuration:
+	TX --> PA9
+	Baud rate: 115200
+	Data bit: 8 bits
+	Stop bit: 1bit
+	No check            
+    7. Test steps and phenomena
+	A, Connect PB8 to PB10, connect PB9 to PB11
+	B, Compile download code reset run
+	C, View the printed information from the serial port and verify the result
+
+4. Matters needing attention
+    Pull resistors are required on SDA and SCL

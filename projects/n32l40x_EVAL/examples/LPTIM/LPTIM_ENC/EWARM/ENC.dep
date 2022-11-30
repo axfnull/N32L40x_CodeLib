@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3019572412</fileChecksum>
+  <configuration>
+    <name>N32L40x</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_can.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32l40x.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_adc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_pwr.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_tim.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_tsc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32l40x_conf.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_version.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_comp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_dac.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_dma.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\template_project.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lptim.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_iccarm.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_iwdg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lcd.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lpuart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_opamp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_usart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_wwdg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_n32l40x_EWARM.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_pwr.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rcc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rtc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_spi.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tim.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tsc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32l40x.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_adc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_can.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_comp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_crc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dac.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dbg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dma.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_exti.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lpuart.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lptim.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_opamp.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_pwr.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tsc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rcc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_spi.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_usart.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_wwdg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tim.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rtc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_can.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32l40x.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_crc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dac.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lcd.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_iwdg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_i2c.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_gpio.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_flash.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_exti.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dma.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dbg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_adc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_comp.__cstat.et</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_lptim.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_flash.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32l40x.o</file>
+      <file>$PROJ_DIR$\..\inc\main.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_adc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_comp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_exti.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dma.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dac.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_dbg.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_crc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_crc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_can.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_lpuart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32l40x.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_iwdg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_exti.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_rtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\misc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_compiler.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32l40x.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_can.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_dbg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_comp.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_crc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dac.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dbg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dma.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_exti.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_iwdg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lcd.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lptim.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lpuart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_opamp.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_pwr.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_rcc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_rtc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_spi.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_tim.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_tsc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_usart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_wwdg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32l40x_EWARM.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_flash.pbi</file>
+      <file>$PROJ_DIR$\..\src\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_gpio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_i2c.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lptim.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_opamp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lpuart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_pwr.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rcc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_lcd.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_iwdg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_rtc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_spi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tim.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_tsc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_wwdg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32l40x_usart.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_i2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_opamp.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_rcc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_usart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_wwdg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc\n32l40x_lcd.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Exe\ENC.bin</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\mpu_armv7.h</file>
+      <file>$PROJ_DIR$\Debug\List\template_project.map</file>
+      <file>$TOOLKIT_DIR$\config\linker\Nations\N32L40x\N32L406xB.icf</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 17 161</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_can.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 91</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 104 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99 16 12 90 155 102 93 13 151 95 14 148 153 88 11 20 19 15 147 149 152 154 103 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32l40x.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 60</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 103 86 7 90 92 10 94 95 99 8 160 96 97 98 102 93 100 9 101 88 104 105 106 4 5 6 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_adc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90 12 155 99 16 93 13 151 102 95 14 148 153 88 11 20 19 15 147 149 152 154 103 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13 151 95 102 99 12 90 16 155 93 14 148 153 103 88 11 20 19 15 147 149 152 154 98 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\template_project.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 161</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 159</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 162 38 89 80 91 81 87 84 85 83 82 77 21 26 22 23 18 24 25 30 31 32 33 34 35 27 28 29 78 156 158 163 157</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_comp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 14 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 160 98 8 96 95 97 102 93 7 90 10 86 94 92 151 103 99 100 9 101 88 104 105 106 4 5 6 14 13 11 20 12 19 15 16 147 148 149 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_crc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 105 99 6 101 88 4 103 100 9 104 106 5 102 93 95 7 8 160 90 10 86 96 94 97 92 98 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dac.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 62</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 102 99 16 12 90 155 13 151 103 14 148 153 93 95 88 11 20 19 15 147 149 152 154 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dbg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 105 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 99 106 100 104 5 103 101 88 105 4 6 102 93 95 7 8 160 90 10 86 96 94 97 92 98 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_dma.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 83</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 16 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90 15 20 102 95 88 154 149 93 11 19 147 152 151 103 99 13 12 14 16 148 153 155 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_exti.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 82</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 96 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 103 99 14 102 153 148 13 12 90 16 151 155 93 95 88 11 20 19 15 147 149 152 154 96 7 8 100 160 9 10 101 104 86 105 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 130</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 147 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90 92 7 86 10 94 95 102 99 8 160 96 97 98 103 100 9 101 88 104 105 106 4 5 6 147 93 13 11 20 12 19 14 15 16 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 132</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 152 102 11 95 19 147 88 90 20 15 149 154 151 93 99 13 12 14 16 148 153 155 106 103 7 8 100 160 9 10 101 104 86 105 96 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_i2c.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 148 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 100 5 9 106 95 102 103 101 88 99 105 4 6 151 7 8 160 90 10 86 96 94 97 92 98 148 93 13 11 20 12 19 14 15 16 147 149 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_iwdg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 140</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 86 93 90 92 10 94 95 8 160 96 97 98 102 103 99 100 9 101 88 104 105 106 4 5 6 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 155 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99 102 16 12 90 155 95 13 151 103 14 148 153 93 88 11 20 19 15 147 149 152 154 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lptim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 134</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 48</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 102 148 99 14 153 95 93 13 12 90 16 151 155 88 11 20 19 15 147 149 152 154 73 103 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_lpuart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 136</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 47</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97 103 8 160 96 98 95 102 99 7 90 10 86 94 92 151 93 100 9 101 88 104 105 106 4 5 6 13 11 20 12 19 14 15 16 147 148 149 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_opamp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 135</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 149 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 106 9 93 100 104 5 102 95 101 88 99 105 4 6 151 103 7 8 160 90 10 86 96 94 97 92 98 149 13 11 20 12 19 14 15 16 147 148 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_pwr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 137</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 4 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 101 88 4 102 95 99 105 6 93 100 9 104 106 5 103 7 8 160 90 10 86 96 94 97 92 98 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 138</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 151 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 106 100 104 5 102 103 101 88 99 105 4 6 95 7 8 160 90 10 86 96 94 97 92 98 151 93 13 11 20 12 19 14 15 16 147 148 149 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_rtc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 141</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 57</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 99 105 103 101 88 4 102 100 9 104 106 5 95 151 7 8 160 90 10 86 96 94 97 92 98 93 13 11 20 12 19 14 15 16 147 148 149 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_spi.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 142</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 53</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 152 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86 7 102 93 90 92 10 94 95 8 160 96 97 98 151 103 99 100 9 101 88 104 105 106 4 5 6 152 13 11 20 12 19 14 15 16 147 148 149 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_tim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 143</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 102 148 99 14 153 95 93 13 12 90 16 151 155 88 11 20 19 15 147 149 152 154 5 103 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_tsc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 144</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86 7 90 92 103 10 94 95 99 8 160 96 97 98 102 6 93 100 9 101 88 104 105 106 4 5 13 11 20 12 19 14 15 16 147 148 149 151 152 153 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_usart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 146</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 153 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 92 154 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97 95 8 160 96 98 102 93 7 90 10 86 94 92 151 103 99 100 9 101 88 104 105 106 4 5 6 153 13 11 20 12 19 14 15 16 147 148 149 152 154 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\src\n32l40x_wwdg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 145</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 154 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 6 155 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 103 102 148 99 14 153 95 13 12 90 16 151 155 93 88 11 20 19 15 147 149 152 154 7 8 100 160 9 10 101 104 86 105 96 106 94 4 97 5 92 6 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32l40x_EWARM.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 150</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 164</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79 102 103 99 90 88 9 13 11 10 101 8 100 20 12 160 93 95 7 19 104 14 86 15 105 16 96 147 106 148 94 149 4 151 97 152 5 153 92 154 6 155 98 76 74 75 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86 7 90 92 10 94 95 151 99 8 160 96 97 98 102 103 100 9 101 88 104 105 106 4 5 6 74 76 73 93 13 11 20 12 19 14 15 16 147 148 149 152 153 154 155 75 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

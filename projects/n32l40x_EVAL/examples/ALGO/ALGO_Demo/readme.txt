@@ -1,27 +1,57 @@
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	/* ¼òµ¥ÃèÊö¹¤³Ì¹¦ÄÜ */
-        Õâ¸öÀı³ÌÅäÖÃ²¢ÑİÊ¾Ê¹ÓÃ¸÷ÖÖËã·¨Ê±µÄ¼ÆËã½á¹û
+	/* ç®€å•æè¿°å·¥ç¨‹åŠŸèƒ½ */
+        è¿™ä¸ªä¾‹ç¨‹é…ç½®å¹¶æ¼”ç¤ºä½¿ç”¨å„ç§ç®—æ³•æ—¶çš„è®¡ç®—ç»“æœ
 
 
-2¡¢Ê¹ÓÃ»·¾³
+2ã€ä½¿ç”¨ç¯å¢ƒ
 
-        Èí¼ş¿ª·¢»·¾³£º
-        IDE¹¤¾ß£ºKEIL MDK-ARM 5.26
+        è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š
+        IDEå·¥å…·ï¼šKEIL MDK-ARM 5.26
     
-        Ó²¼ş»·¾³£º
-        ¿ª·¢°å N32L40XM-STB
+        ç¡¬ä»¶ç¯å¢ƒï¼š
+        å¼€å‘æ¿ N32L40XML-STB V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+3ã€ä½¿ç”¨è¯´æ˜
 	
-	/* ÃèÊöÏà¹ØÄ£¿éÅäÖÃ·½·¨£»ÀıÈç:Ê±ÖÓ£¬I/OµÈ */
-        SystemClock£º64MHz
-        USART£ºTX - PA9£¬²¨ÌØÂÊ115200
+	/* æè¿°ç›¸å…³æ¨¡å—é…ç½®æ–¹æ³•ï¼›ä¾‹å¦‚:æ—¶é’Ÿï¼ŒI/Oç­‰ */
+        SystemClockï¼š64MHz
+        USARTï¼šTX - PA9ï¼Œæ³¢ç‰¹ç‡115200
 	
-	/* ÃèÊöDemoµÄ²âÊÔ²½ÖèºÍÏÖÏó */
-        1.±àÒëºóÏÂÔØ³ÌĞò¸´Î»ÔËĞĞ£»
-        2.²é¿´´®¿Ú´òÓ¡ĞÅÏ¢£¬·Ö±ğÈ·ÈÏËæ»úÊı¼ÆËã½á¹ûÊÇ·ñËæ»ú£¬¹şÏ£Ëã·¨µÄSHA1¡¢SHA224¡¢SHA256¼ÆËã½á¹ûÓëÍøÉÏÈí¼ş¼ÆËã½á¹û¶Ô±ÈÊÇ·ñÒ»ÖÂ£¬DES/AESËã·¨µÄÃ÷ÎÄplainÓëÃÜÎÄ½âÃÜ½á¹ûdecrypt outÊÇ·ñÒ»ÖÂ£»
+	/* æè¿°Demoçš„æµ‹è¯•æ­¥éª¤å’Œç°è±¡ */
+        1.ç¼–è¯‘åä¸‹è½½ç¨‹åºå¤ä½è¿è¡Œï¼›
+        2.æŸ¥çœ‹ä¸²å£æ‰“å°ä¿¡æ¯ï¼Œåˆ†åˆ«ç¡®è®¤éšæœºæ•°è®¡ç®—ç»“æœæ˜¯å¦éšæœºï¼Œå“ˆå¸Œç®—æ³•çš„SHA1ã€SHA224ã€SHA256è®¡ç®—ç»“æœä¸ç½‘ä¸Šè½¯ä»¶è®¡ç®—ç»“æœå¯¹æ¯”æ˜¯å¦ä¸€è‡´ï¼ŒDES/AESç®—æ³•çš„æ˜æ–‡plainä¸å¯†æ–‡è§£å¯†ç»“æœdecrypt outæ˜¯å¦ä¸€è‡´ï¼›
 
 
-4¡¢×¢ÒâÊÂÏî
+4ã€æ³¨æ„äº‹é¡¹
+
+1. Function description
+
+         /* Briefly describe the project function */
+         This routine configures and demonstrates the computation results when using various algorithms
+
+
+2. Use environment
+
+         Software development environment:
+         IDE tool: KEIL MDK-ARM 5.26
+    
+         Hardware environment:
+         Development Board N32L40XML-STB V1.0
+
+
+3. Instructions for use
+
+         /* Describe related module configuration methods; for example: clock, I/O, etc. */
+         SystemClock: 64MHz
+         USART: TX - PA9, baud rate 115200
+
+         /* Describe the test steps and phenomena of the Demo */
+         1. After compiling, download the program to reset and run;
+         2. Check the serial port printing information to confirm whether the random number calculation result is random, 
+             whether the SHA1, SHA224, SHA256 calculation results of the hash algorithm are consistent with the online software calculation results, 
+             and the plaintext plain and ciphertext decryption results of the DES/AES algorithm are decrypted out. Is it consistent;
+
+
+4. Matters needing attention

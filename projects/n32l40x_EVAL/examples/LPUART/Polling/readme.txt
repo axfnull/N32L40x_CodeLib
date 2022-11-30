@@ -1,109 +1,109 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËLPUARTÓëUSARTz¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£USARTz
-¿ÉÒÔÊÇUSART1»òUART4¡£
-    Ê×ÏÈ£¬LPUART·¢ËÍTxBuffer1Êı¾İÖÁUSARTz£¬USARTz½ÓÊÕÊı¾İ´æÖÁRxBuffer1¡£
-±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
-    Ëæºó£¬USARTz·¢ËÍTxBuffer2Êı¾İÖÁLPUART£¬LPUART½ÓÊÕÊı¾İ´æÖÁRxBuffer2¡£
-±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†LPUARTä¸USARTzé—´é€šè¿‡æŸ¥è¯¢æ£€æµ‹æ ‡è¯†å®ç°çš„åŸºç¡€é€šä¿¡ã€‚USARTz
+å¯ä»¥æ˜¯USART1æˆ–UART4ã€‚
+    é¦–å…ˆï¼ŒLPUARTå‘é€TxBuffer1æ•°æ®è‡³USARTzï¼ŒUSARTzæ¥æ”¶æ•°æ®å­˜è‡³RxBuffer1ã€‚
+æ¯”è¾ƒæ¥æ”¶æ•°æ®ä¸å‘é€æ•°æ®ï¼Œæ¯”è¾ƒç»“æœå­˜å…¥TransferStatuså˜é‡ã€‚
+    éšåï¼ŒUSARTzå‘é€TxBuffer2æ•°æ®è‡³LPUARTï¼ŒLPUARTæ¥æ”¶æ•°æ®å­˜è‡³RxBuffer2ã€‚
+æ¯”è¾ƒæ¥æ”¶æ•°æ®ä¸å‘é€æ•°æ®ï¼Œæ¯”è¾ƒç»“æœå­˜å…¥TransferStatuså˜é‡ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+    ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    LPUARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»£¨¹Ì¶¨£©
-    - 1Í£Ö¹Î»£¨¹Ì¶¨£©
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    LPUARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 9600 baud
+    - å­—é•¿ = 8æ•°æ®ä½ï¼ˆå›ºå®šï¼‰
+    - 1åœæ­¢ä½ï¼ˆå›ºå®šï¼‰
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    USARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 9600 baud
+    - å­—é•¿ = 8æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
-    LPUART¼°USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    LPUARTåŠUSARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š
     - LPUART_Tx.PA4   <------->   USART1_Rx.PA10
     - LPUART_Rx.PA3   <------->   USART1_Tx.PA9
-    »ò
+    æˆ–
     - LPUART_Tx.PB6   <------->   UART4_Rx.PD12
     - LPUART_Rx.PB7   <------->   UART4_Tx.PD13
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬·ÖÁ½´Î²é¿´±äÁ¿TransferStatus£¬ÆäÖĞ£¬PASSEDÎª²âÊÔÍ¨¹ı£¬
-      FAILEDÎª²âÊÔÒì³£
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼Œåˆ†ä¸¤æ¬¡æŸ¥çœ‹å˜é‡TransferStatusï¼Œå…¶ä¸­ï¼ŒPASSEDä¸ºæµ‹è¯•é€šè¿‡ï¼Œ
+      FAILEDä¸ºæµ‹è¯•å¼‚å¸¸
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-	¸Ã²âÀıÑİÊ¾ÁËLPUARTÓëUSARTz¼äÍ¨¹ı²éÑ¯¼ì²â±êÊ¶ÊµÏÖµÄ»ù´¡Í¨ĞÅ¡£USARTz
-¿ÉÒÔÊÇUSART1»òUART4¡£
-    Ê×ÏÈ£¬LPUART·¢ËÍTxBuffer1Êı¾İÖÁUSARTz£¬USARTz½ÓÊÕÊı¾İ´æÖÁRxBuffer1¡£
-±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
-    Ëæºó£¬USARTz·¢ËÍTxBuffer2Êı¾İÖÁLPUART£¬LPUART½ÓÊÕÊı¾İ´æÖÁRxBuffer2¡£
-±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
+1. Function description
 
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+    This test example demonstrates basic communication between the LPUART and USARTz through query detection flag. 
+    USARTz can be USART1 or UART4.
+    First, LPUART sends TxBuffer1 data to USARTz, and USARTz receives data to RxBuffer1. 
+Compare the received data with the sent data, and the comparison result is stored in the TransferStatus variable.
+    Then, USARTz sends TxBuffer2 data to LPUART, and LPUART receives data to RxBuffer2.
+Compare the received data with the sent data, and the comparison result is stored in the TransferStatus variable.
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+2. Use environment
+
+        Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+        Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+    The system clock configuration is as follows:
+    - Clock source = HSE + PLL
+    - System Clock = 108MHz
     
-    LPUARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»£¨¹Ì¶¨£©
-    - 1Í£Ö¹Î»£¨¹Ì¶¨£©
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    The LPUART configuration is as follows:
+    - Baud rate = 9600 baud
+    - Word length = 8 data bits (fixed)
+    - 1 stop bit (fixed)
+    - checksum control disabled
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receiver and transmitter enable
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    USART is configured as follows:
+    - Baud rate = 9600 baud
+    - Word length = 8 data bits
+    - 1 stop bit
+    - checksum control disabled
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receiver and transmitter enable
     
-    LPUART¼°USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    The LPUART and USART pins are connected as follows:
     - LPUART_Tx.PA4   <------->   USART1_Rx.PA10
     - LPUART_Rx.PA3   <------->   USART1_Tx.PA9
-    »ò
+    or
     - LPUART_Tx.PB6   <------->   UART4_Rx.PD12
     - LPUART_Rx.PB7   <------->   UART4_Tx.PD13
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬·ÖÁ½´Î²é¿´±äÁ¿TransferStatus£¬ÆäÖĞ£¬PASSEDÎª²âÊÔÍ¨¹ı£¬
-      FAILEDÎª²âÊÔÒì³£
+    Test steps and phenomena:
+    - Demo is compiled in KEIL environment and downloaded to MCU
+    - Resets the run and views the variable TransferStatus twice, where PASSED indicates that the test passes,
+    FAILED indicates a test exception
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80294
+4. Matters needing attention

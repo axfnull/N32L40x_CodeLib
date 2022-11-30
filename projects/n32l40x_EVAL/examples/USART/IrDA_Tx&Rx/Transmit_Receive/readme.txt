@@ -1,48 +1,97 @@
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-    ¸Ã²âÀıÑİÊ¾ÁËUSARTyÓëUSARTz¼äÍ¨ÊµÏÖ´®ĞĞIrDAºìÍâ½âÂë¹¦ÄÜµÄ»ù´¡Í¨ĞÅ¡£
-    Ê×ÏÈ£¬USARTy·¢ËÍTxBuffer1Êı¾İÖÁUSARTz£¬USARTÍ¨¹ıÖĞ¶Ï½ÓÊÕÊı¾İ´æÖÁRxBuffer1¡£
-    Ëæºó£¬±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
-    USARTyºÍUSARTz¿ÉÒÔÊÇUSART1ºÍUSART2¡¢USART3ºÍUART4»òUART4ºÍUART5¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1¡¢IrDA·¢ËÍÆ÷¼°½ÓÊÕÆ÷
+    è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†USARTyä¸USARTzé—´é€šå®ç°ä¸²è¡ŒIrDAçº¢å¤–è§£ç åŠŸèƒ½çš„åŸºç¡€é€šä¿¡ã€‚
+    é¦–å…ˆï¼ŒUSARTyå‘é€TxBuffer1æ•°æ®è‡³USARTzï¼ŒUSARTé€šè¿‡ä¸­æ–­æ¥æ”¶æ•°æ®å­˜è‡³RxBuffer1ã€‚
+    éšåï¼Œæ¯”è¾ƒæ¥æ”¶æ•°æ®ä¸å‘é€æ•°æ®ï¼Œæ¯”è¾ƒç»“æœå­˜å…¥TransferStatuså˜é‡ã€‚
+    USARTyå’ŒUSARTzå¯ä»¥æ˜¯USART1å’ŒUSART2ã€USART3å’ŒUART4æˆ–UART4å’ŒUART5ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0ã€IrDAå‘é€å™¨åŠæ¥æ”¶å™¨
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-    ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+    ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    USARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 1200 baud
-    - ×Ö³¤ = 8Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
-    - IrDAÄ£Ê½Ê¹ÄÜ
+    USARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 1200 baud
+    - å­—é•¿ = 8æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
+    - IrDAæ¨¡å¼ä½¿èƒ½
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º
+    USARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š
     - USART1_Tx.PB8    <------->   IrDA Transmitter
     - USART2_Rx.PA3    <------->   IrDA Receiver
-    »ò
+    æˆ–
     - USART3_Tx.PC10   <------->   IrDA Transmitter
     - UART4_Rx.PB15    <------->   IrDA Receiver
-    »ò
+    æˆ–
     - UART4_Tx.PC10    <------->    IrDA Transmitter
     - UART5_Rx.PB5     <------->    IrDA Receiver
     
     - GPIO.PD9        <------->    38kHz carrier
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-	- ¸´Î»ÔËĞĞMCU£¬²é¿´±äÁ¿TransferStatus£¬ÆäÖĞ£¬PASSEDÎª²âÊÔÍ¨¹ı£¬FAILEDÎª²âÊÔÒì³£
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+	- å¤ä½è¿è¡ŒMCUï¼ŒæŸ¥çœ‹å˜é‡TransferStatusï¼Œå…¶ä¸­ï¼ŒPASSEDä¸ºæµ‹è¯•é€šè¿‡ï¼ŒFAILEDä¸ºæµ‹è¯•å¼‚å¸¸
 
 
-4¡¢×¢ÒâÊÂÏî
+4ã€æ³¨æ„äº‹é¡¹
+
+1. Function description
+
+    This test example demonstrates the basic communication between USARTy and USARTz to realize the serial IrDA infrared decoding function.
+    First, USARTy sends TxBuffer1 data to USARTz, and USARTz receives data through interrupt and stores it in RxBuffer1.
+    Subsequently, compare the received data with the sent data, and the result of the comparison is stored in the TransferStatus variable.
+    USARTy and USARTz can be USART1 and USART2, USART3 and UART4 or UART4 and UART5.
+
+
+2. Use environment
+
+        Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+        Hardware environment: minimum system board N32L40XML-STB_V1.0, IrDA transmitter and receiver
+
+
+3. Instructions for use
+
+    The system clock configuration is as follows:
+    -Clock source = HSE + PLL
+    -System clock = 64MHz
+    
+    The USART configuration is as follows:
+    -Baud rate = 1200 baud
+    -Word length = 8 data bits
+    -1 stop bit
+    -Verification control disabled
+    -Hardware flow control disabled (RTS and CTS signals)
+    -Receiver and transmitter enable
+    -IrDA mode enable
+    
+    The USART pin connections are as follows:
+    -USART1_Tx.PB8 <-------> IrDA Transmitter
+    -USART2_Rx.PA3 <-------> IrDA Receiver
+    or
+    -USART3_Tx.PC10 <-------> IrDA Transmitter
+    -UART4_Rx.PB15 <-------> IrDA Receiver
+    or
+    -UART4_Tx.PC10 <-------> IrDA Transmitter
+    -UART5_Rx.PB5 <-------> IrDA Receiver
+    
+    -GPIO.PD9 <-------> 38kHz carrier
+
+    
+    Test steps and phenomena:
+-Reset and run the MCU, check the variable TransferStatus, where PASSED means the test passed and FAILED means the test is abnormal
+
+
+4. Matters needing attention

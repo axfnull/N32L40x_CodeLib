@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_flash.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_flash.h"
 
@@ -725,7 +725,6 @@ FLASH_STS FLASH_ConfigALLOptionByte(uint8_t OB_RDP1,    uint8_t OB_IWDG,    uint
 FLASH_STS FLASH_ProgramWord(uint32_t Address, uint32_t Data)
 {
     FLASH_STS status  = FLASH_COMPL;
-    __IO uint32_t tmp = 0;
 
     /* Check the parameters */
     assert_param(IS_FLASH_ADDRESS(Address));

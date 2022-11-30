@@ -29,3 +29,28 @@
 4、注意事项
      无
 
+1. Function description
+    1. WWDG reset function.
+	
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.25.
+	
+    Hardware environment: 
+		1.Developed based on the evaluation board N32L40XRL-STB V1.0
+		2.N32L406RBL7
+	
+3. Instructions for use
+    System Configuration;
+        1. WWDG clock source: PCLK1
+
+		2. window value: 96.3ms < n <131.1ms
+
+		3. Indicator light: PA8(LED1)   PB4(LED2)
+
+
+    Instructions:
+        1. After compiling under KEIL, it is burned to the evaluation board. After powering on, the indicator light LED2 keeps flashing. The window value is refreshed properly, and the code is running properly.
+		2. When the parameter of Delay(110) function  is changed to more than 132, the whole system will always be reset. LED1,LED2 are always on.
+		
+4. Matters needing attention
+    None.

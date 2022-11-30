@@ -311,7 +311,6 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\..\..\..\bsp</state>
           <state>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core</state>
           <state>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device</state>
           <state>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc</state>
@@ -1029,9 +1028,6 @@
   </group>
   <group>
     <name>USER</name>
-    <file>
-      <name>$PROJ_DIR$\..\src\bsp_usart.c</name>
-    </file>
     <file>
       <name>$PROJ_DIR$\..\src\hw_config.c</name>
     </file>

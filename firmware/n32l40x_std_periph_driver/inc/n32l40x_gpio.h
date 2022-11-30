@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_gpio.h
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __N32L40X_GPIO_H__
 #define __N32L40X_GPIO_H__
@@ -83,10 +83,10 @@ typedef enum
 
 typedef enum
 {
-    GPIO_DC_2mA = 0,
-    GPIO_DC_4mA = 1,
-    GPIO_DC_8mA ,
-    GPIO_DC_12mA
+    GPIO_DC_2mA = 0x00,
+    GPIO_DC_4mA = 0x10,
+    GPIO_DC_8mA = 0x01,
+    GPIO_DC_12mA= 0x11
 }GPIO_CurrentType;
 
 #define IS_GPIO_CURRENT(CURRENT)  \

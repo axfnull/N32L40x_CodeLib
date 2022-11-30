@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -54,34 +54,6 @@ int main(void)
 
     /* GPIO Configuration */
     GPIO_Configuration();
-
-    /* Timers synchronisation in parallel mode ----------------------------
-     1/TIM2 is configured as Master Timer:
-     - PWM Mode is used
-     - The TIM2 Update event is used as Trigger Output
-     2/TIM3 and TIM4 are slaves for TIM2,
-     - PWM Mode is used
-     - The ITR1(TIM2) is used as input trigger for both slaves
-     - Gated mode is used, so starts and stops of slaves counters
-      are controlled by the Master trigger output signal(update event).
-
-    * For Low-density, Medium-density, High-density and Connectivity line devices:
-     The TIMxCLK is fixed to 64 MHz, the TIM2 counter clock is 64 MHz.
-     The Master Timer TIM2 is running at 250 KHz and the duty cycle
-     is equal to 25%
-     The TIM3 is running:
-     - At (TIM2 frequency)/ (TIM3 period + 1) = 25 KHz and a duty cycle
-     equal to TIM3_CCR1/(TIM3_ARR + 1) = 30%
-     The TIM4 is running:
-     - At (TIM2 frequency)/ (TIM4 period + 1) = 50 KHz and a duty cycle
-     equal to TIM4_CCR1/(TIM4_ARR + 1) = 60%
-
-    * For Value line devices:
-     The TIMxCLK is fixed to 24 MHz, the TIM2 counter clock is 24 MHz.
-     TIM2 frequency = 93.750 KHz,
-     TIM3 frequency = 23.437 KHz,
-     TIM4 frequency = 18.75 KHz
-    -------------------------------------------------------------------- */
 
     /* Time base configuration */
     TIM_TimeBaseStructure.Period    = 255;

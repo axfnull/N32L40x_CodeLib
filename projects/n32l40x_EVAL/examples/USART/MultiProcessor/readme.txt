@@ -1,46 +1,45 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËÈçºÎÊ¹ÓÃUSART¶à´¦ÀíÆ÷Ä£Ê½¡£USARTyºÍUSARTz¿ÉÒÔÊÇUSART1
-ºÍUSART2¡¢USART3ºÍUART4»òUART4ºÍUART5¡£
-    Ê×ÏÈ£¬·Ö±ğÉèÖÃUSARTyºÍUSARTzµÄµØÖ·Îª0x1ºÍ0x2¡£USARTyÁ¬Ğø¸øUSARTz
-·¢ËÍ×Ö·û0x33¡£USARTzÊÕµ½0x33£¬±ã·­×ªLED1¡¢LED2ºÍLED3µÄÒı½Å¡£
-    Ò»µ©KEY1_INT_EXTI_LINEÏß¼ì²âµ½ÉÏÉıÑØ£¬Ôò²úÉúEXTI0ÖĞ¶Ï£¬ÔÚ
-EXTI0_IRQHandlerÖĞ¶Ï´¦Àíº¯ÊıÖĞ(the ControlFlag = 0)£¬USARTz½øÈë¾²Ä¬
-Ä£Ê½£¬ÔÚ¾²Ä¬Ä£Ê½ÖĞ£¬LEDÒı½ÅÍ£Ö¹·­×ª£¬Ö±µ½KEY1_INT_EXTI_LINEÏß¼ì²âµ½
-ÉÏÉıÑØ(the ControlFlag = 1)¡£ÔÚEXTI0_IRQHandlerÖĞ¶Ï´¦Àíº¯ÊıÖĞ£¬USARTy
-·¢ËÍµØÖ·0x102»½ĞÑUSARTz¡£LEDÒı½ÅÖØĞÂÆô¶¯·­×ª¡£
-
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†å¦‚ä½•ä½¿ç”¨USARTå¤šå¤„ç†å™¨æ¨¡å¼ã€‚USARTyå’ŒUSARTzå¯ä»¥æ˜¯USART1
+å’ŒUSART2ã€USART3å’ŒUART4æˆ–UART4å’ŒUART5ã€‚
+    é¦–å…ˆï¼Œåˆ†åˆ«è®¾ç½®USARTyå’ŒUSARTzçš„åœ°å€ä¸º0x1å’Œ0x2ã€‚USARTyè¿ç»­ç»™USARTz
+å‘é€å­—ç¬¦0x33ã€‚USARTzæ”¶åˆ°0x33ï¼Œä¾¿ç¿»è½¬LED1ã€LED2å’ŒLED3çš„å¼•è„šã€‚
+    ä¸€æ—¦KEY1_INT_EXTI_LINEçº¿æ£€æµ‹åˆ°ä¸Šå‡æ²¿ï¼Œåˆ™äº§ç”ŸEXTI0ä¸­æ–­ï¼Œåœ¨
+EXTI0_IRQHandlerä¸­æ–­å¤„ç†å‡½æ•°ä¸­(the ControlFlag = 0)ï¼ŒUSARTzè¿›å…¥é™é»˜
+æ¨¡å¼ï¼Œåœ¨é™é»˜æ¨¡å¼ä¸­ï¼ŒLEDå¼•è„šåœæ­¢ç¿»è½¬ï¼Œç›´åˆ°KEY1_INT_EXTI_LINEçº¿æ£€æµ‹åˆ°
+ä¸Šå‡æ²¿(the ControlFlag = 1)ã€‚åœ¨EXTI0_IRQHandlerä¸­æ–­å¤„ç†å‡½æ•°ä¸­ï¼ŒUSARTy
+å‘é€åœ°å€0x102å”¤é†’USARTzã€‚LEDå¼•è„šé‡æ–°å¯åŠ¨ç¿»è½¬ã€‚
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+2ã€ä½¿ç”¨ç¯å¢ƒ
+
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
+
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
+
+
+3ã€ä½¿ç”¨è¯´æ˜
 	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+	ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    USARTyÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 9Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ  
+    USARTyé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 115200 baud
+    - å­—é•¿ = 9æ•°æ®ä½
+    - 1åœæ­¢ä½
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½  
     
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
+    USARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š    
     - USART1_Tx.PA9    <------->   USART2_Rx.PA3
     - USART1_Rx.PA10   <------->   USART2_Tx.PA2 
-    »ò
+    æˆ–
     - USART3_Tx.PB10   <------->   UART4_Rx.PC11
     - USART3_Rx.PB11   <------->   UART4_Tx.PC10
-    »ò
+    æˆ–
     - UART4_Tx.PD13    <------->   UART5_Rx.PB9
     - UART4_Rx.PD12    <------->   UART5_Tx.PB8   
     
@@ -51,72 +50,71 @@ EXTI0_IRQHandlerÖĞ¶Ï´¦Àíº¯ÊıÖĞ(the ControlFlag = 0)£¬USARTz½øÈë¾²Ä¬
     LED3    <------->   PA8
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬¹Û²ìLED1~3ÊÇ·ñ´¦ÓÚÉÁË¸×´Ì¬
-    - °´°´¼üKEY£¬¹Û²ìLED1~3ÊÇ·ñÍ£Ö¹ÉÁË¸
-    - ÔÙ´Î°´°´¼üKEY£¬¹Û²ìLED1~3ÊÇ·ñ»Ö¸´ÉÁË¸
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼Œè§‚å¯ŸLED1~3æ˜¯å¦å¤„äºé—ªçƒçŠ¶æ€
+    - æŒ‰æŒ‰é”®KEYï¼Œè§‚å¯ŸLED1~3æ˜¯å¦åœæ­¢é—ªçƒ
+    - å†æ¬¡æŒ‰æŒ‰é”®KEYï¼Œè§‚å¯ŸLED1~3æ˜¯å¦æ¢å¤é—ªçƒ
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-	¸Ã²âÀıÑİÊ¾ÁËÈçºÎÊ¹ÓÃUSART¶à´¦ÀíÆ÷Ä£Ê½¡£USARTyºÍUSARTz¿ÉÒÔÊÇUSART1
-ºÍUSART2¡¢USART3ºÍUART4»òUART4ºÍUART5¡£
-    Ê×ÏÈ£¬·Ö±ğÉèÖÃUSARTyºÍUSARTzµÄµØÖ·Îª0x1ºÍ0x2¡£USARTyÁ¬Ğø¸øUSARTz
-·¢ËÍ×Ö·û0x33¡£USARTzÊÕµ½0x33£¬±ã·­×ªLED1¡¢LED2ºÍLED3µÄÒı½Å¡£
-    Ò»µ©KEY1_INT_EXTI_LINEÏß¼ì²âµ½ÉÏÉıÑØ£¬Ôò²úÉúEXTI0ÖĞ¶Ï£¬ÔÚ
-EXTI0_IRQHandlerÖĞ¶Ï´¦Àíº¯ÊıÖĞ(the ControlFlag = 0)£¬USARTz½øÈë¾²Ä¬
-Ä£Ê½£¬ÔÚ¾²Ä¬Ä£Ê½ÖĞ£¬LEDÒı½ÅÍ£Ö¹·­×ª£¬Ö±µ½KEY1_INT_EXTI_LINEÏß¼ì²âµ½
-ÉÏÉıÑØ(the ControlFlag = 1)¡£ÔÚEXTI0_IRQHandlerÖĞ¶Ï´¦Àíº¯ÊıÖĞ£¬USARTy
-·¢ËÍµØÖ·0x102»½ĞÑUSARTz¡£LEDÒı½ÅÖØĞÂÆô¶¯·­×ª¡£
-    Ëæºó£¬±È½Ï½ÓÊÕÊı¾İÓë·¢ËÍÊı¾İ£¬±È½Ï½á¹û´æÈëTransferStatus±äÁ¿¡£
+1. Function description
 
-
-2¡¢Ê¹ÓÃ»·¾³
-
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
-
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+This test example demonstrates how to use the USART multi-processor mode. 
+USARTy and USARTz can be USART1 and USART2, USART3 and UART4 or UART4 and UART5.
+    First, set the addresses of USARTy and USARTz to 0x1 and 0x2 respectively. USARTy continuously sends the 
+	character 0x33 to USARTz. When USARTz receives 0x33, it flips the pins of LED1, LED2, and LED3.
+    Once the KEY1_INT_EXTI_LINE line detects the rising edge, the EXTI0 interrupt is generated, and the
+    In the EXTI0_IRQHandler interrupt processing function (the ControlFlag = 0), USARTz enters the silent mode. 
+	In the silent mode, the LED pin stops toggling until the KEY1_INT_EXTI_LINE line detects a rising edge (the ControlFlag = 1). 
+	In the EXTI0_IRQHandler interrupt processing function, USARTy sends address 0x102 to wake up USARTz. The LED pin restarts toggling.
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+2. Use environment
+
+        Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
+
+        Hardware environment: minimum system board N32L40XML-STB_V1.0
+
+
+3. Instructions for use
+
+The system clock configuration is as follows:
+    -Clock source = HSE + PLL
+    -System clock = 64MHz
     
-    USARTyÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 115200 baud
-    - ×Ö³¤ = 9Êı¾İÎ»
-    - 1Í£Ö¹Î»
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ  
+    The USARTy configuration is as follows:
+    -Baud rate = 115200 baud
+    -Word length = 9 data bits
+    -1 stop bit
+    -Verification control disabled
+    -Hardware flow control disabled (RTS and CTS signals)
+    -Receiver and transmitter enable
     
     
-    USARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
-    - USART1_Tx.PA9    <------->   USART2_Rx.PA3
-    - USART1_Rx.PA10   <------->   USART2_Tx.PA2 
-    »ò
-    - USART3_Tx.PB10   <------->   UART4_Rx.PC11
-    - USART3_Rx.PB11   <------->   UART4_Tx.PC10
-    »ò
-    - UART4_Tx.PD13    <------->   UART5_Rx.PB9
-    - UART4_Rx.PD12    <------->   UART5_Tx.PB8   
+    The USART pin connections are as follows:
+    -USART1_Tx.PA9 <-------> USART2_Rx.PA3
+    -USART1_Rx.PA10 <-------> USART2_Tx.PA2
+    or
+    -USART3_Tx.PB10 <-------> UART4_Rx.PC11
+    -USART3_Rx.PB11 <-------> UART4_Tx.PC10
+    or
+    -UART4_Tx.PD13 <-------> UART5_Rx.PB9
+    -UART4_Rx.PD12 <-------> UART5_Tx.PB8
     
-    KEY1_INT_EXTI_LINE.PA0    <------->   WAKEUP_KEY
+    KEY1_INT_EXTI_LINE.PA0 <-------> WAKEUP_KEY
     
-    LED1    <------->   PB5
-    LED2    <------->   PB4
-    LED3    <------->   PA8
+    LED1 <-------> PB5
+    LED2 <-------> PB4
+    LED3 <-------> PA8
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬¹Û²ìLED1~3ÊÇ·ñ´¦ÓÚÉÁË¸×´Ì¬
-    - °´°´¼üKEY£¬¹Û²ìLED1~3ÊÇ·ñÍ£Ö¹ÉÁË¸
-    - ÔÙ´Î°´°´¼üKEY£¬¹Û²ìLED1~3ÊÇ·ñ»Ö¸´ÉÁË¸
+    Test steps and phenomena:
+    -After the Demo is compiled in the KEIL environment, download it to the MCU
+    -Reset operation, observe whether LED1~3 are blinking
+    -Press the KEY button and observe whether LED1~3 stop flashing
+    -Press the KEY button again and observe whether LED1~3 resume blinking
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80297
+4. Matters needing attention

@@ -1,43 +1,87 @@
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜Ž
 
-    ´ËÀý³ÌÕ¹Ê¾ÁËI2CÄ£¿é10bitµØÖ·Ä£Ê½µÄ¶ÁÐ´²Ù×÷¡£   
+    æ­¤ä¾‹ç¨‹å±•ç¤ºäº†I2Cæ¨¡å—10bitåœ°å€æ¨¡å¼çš„è¯»å†™æ“ä½œã€‚   
 
-2¡¢Ê¹ÓÃ»·¾³
+2ã€ä½¿ç”¨çŽ¯å¢ƒ
 
-	Èí¼þ¿ª·¢»·¾³£º
-        IDE¹¤¾ß£ºKEIL MDK-ARM 5.26
+	è½¯ä»¶å¼€å‘çŽ¯å¢ƒï¼š
+        IDEå·¥å…·ï¼šKEIL MDK-ARM 5.26
     
-    Ó²¼þ»·¾³£º
-        ¿ª·¢°å N32L43XM-STB
+    ç¡¬ä»¶çŽ¯å¢ƒï¼š
+        å¼€å‘æ¿ N32L40XML-STB V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+3ã€ä½¿ç”¨è¯´æ˜Ž
 	
-    1¡¢Ê±ÖÓÔ´£ºHSE+PLL
-    2¡¢Ö÷Ê±ÖÓ£º64MHz
-    3¡¢I2C1Ö÷ÅäÖÃ£º
+    1ã€æ—¶é’Ÿæºï¼šHSE+PLL
+    2ã€ä¸»æ—¶é’Ÿï¼š64MHz
+    3ã€I2C1ä¸»é…ç½®ï¼š
             SCL   -->  PB8
             SDA   -->  PB9
-            ADDR£º0x230(10bit)
+            ADDRï¼š0x230(10bit)
             CLOCK:100KHz
 
-    4¡¢I2C2´ÓÅäÖÃ£º
+    4ã€I2C2ä»Žé…ç½®ï¼š
             SCL   -->  PB10
             SDA   -->  PB11
-            ADDR£º0x2A0(10bit)
+            ADDRï¼š0x2A0(10bit)
             CLOCK:100KHz            
 
-    5¡¢USART1ÅäÖÃ£º
+    5ã€USART1é…ç½®ï¼š
             TX  -->  PA9
-            ²¨ÌØÂÊ£º115200
-            Êý¾ÝÎ»£º8bit
-            Í£Ö¹Î»£º1bit
-            ÎÞÐ£Ñé
+            æ³¢ç‰¹çŽ‡ï¼š115200
+            æ•°æ®ä½ï¼š8bit
+            åœæ­¢ä½ï¼š1bit
+            æ— æ ¡éªŒ
 
-    6¡¢²âÊÔ²½ÖèÓëÏÖÏó
-        a£¬ÓÃ¶Å°îÏßÁ¬½ÓPB8-PB10ºÍPB9-PB11
-        b£¬±àÒëÏÂÔØ´úÂë¸´Î»ÔËÐÐ
-        c£¬´Ó´®¿Ú¿´´òÓ¡ÐÅÏ¢£¬ÑéÖ¤½á¹û
+    6ã€æµ‹è¯•æ­¥éª¤ä¸ŽçŽ°è±¡
+        aï¼Œç”¨æœé‚¦çº¿è¿žæŽ¥PB8-PB10å’ŒPB9-PB11
+        bï¼Œç¼–è¯‘ä¸‹è½½ä»£ç å¤ä½è¿è¡Œ
+        cï¼Œä»Žä¸²å£çœ‹æ‰“å°ä¿¡æ¯ï¼ŒéªŒè¯ç»“æžœ
 
-4¡¢×¢ÒâÊÂÏî
-    ÐèÒªÔÚSDAºÍSCLÉÏÍâ½ÓÉÏÀ­µç×è¡£
+4ã€æ³¨æ„äº‹é¡¹
+    éœ€è¦åœ¨SDAå’ŒSCLä¸Šå¤–æŽ¥ä¸Šæ‹‰ç”µé˜»ã€‚
+    
+1. Function description
+
+    This example shows the read and write operations in the 10-bit address mode of the I2C module.
+
+2. Use environment
+
+    Software development environment:
+        IDE tool: KEIL MDK-ARM 5.26
+    
+    Hardware environment:
+        Development board N32L40XML-STB V1.0
+
+
+3. Instructions for use
+    
+    1. Clock source: HSE+PLL
+    2. Main clock: 64MHz
+    3. I2C1 master configuration:
+            SCL --> PB8 
+            SDA --> PB9 
+            ADDR: 0x230(10bit)
+            CLOCK: 100KHz
+
+    4. I2C2 slave configuration:
+            SCL --> PB10 
+            SDA --> PB11 
+            ADDR: 0x2A0(10bit)
+            CLOCK: 100KHz
+
+    5. USART1 configuration:
+            TX --> PA9 
+            Baud rate: 115200
+            Data bit: 8bit
+            Stop bit: 1bit
+            No verification
+
+    6. Test steps and phenomena
+        a. Connect PB8-PB10 and PB9-PB11 with DuPont cable
+        b, compile and download the code, reset and run
+        c, view the print information from the serial port and verify the result
+
+4. Matters needing attention
+    Ensure that SCL\SDA has an external pull-up

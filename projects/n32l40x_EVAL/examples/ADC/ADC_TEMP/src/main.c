@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include <stdio.h>
 #include "main.h"
@@ -116,7 +116,7 @@ int main(void)
     
     /* Enable DMA channel1 */
     DMA_EnableChannel(DMA_CH1, ENABLE);
-
+    ADC_DeInit(ADC);
     /* ADC1 configuration ------------------------------------------------------*/
     ADC_InitStructure.MultiChEn      = ENABLE;
     ADC_InitStructure.ContinueConvEn = ENABLE;

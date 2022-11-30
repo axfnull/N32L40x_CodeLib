@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file spi_flash.h
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __SPI_FLASH_H__
 #define __SPI_FLASH_H__
@@ -76,8 +76,10 @@ extern "C" {
 #define sFLASH_CMD_READ  0x03 /*!< Read from Memory instruction */
 #define sFLASH_CMD_RDSR  0x05 /*!< Read Status Register instruction  */
 #define sFLASH_CMD_RDID  0x9F /*!< Read identification */
-#define sFLASH_CMD_SE    0xD8 /*!< Sector Erase instruction */
-#define sFLASH_CMD_BE    0xC7 /*!< Bulk Erase instruction */
+#define sFLASH_CMD_SE    0x20 /*!< Sector Erase instruction */
+#define sFLASH_CMD_BE    0x52 /*!< Block Erase instruction (32k)*/
+#define sFLASH_CMD_CE    0xC7 /*!< Chip Erase instruction */
+//#define sFLASH_CMD_BE    0xD8 /*!< Block Erase instruction (64k)*/
 
 #define sFLASH_WIP_FLAG 0x01 /*!< Write In Progress (WIP) flag */
 

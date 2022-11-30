@@ -1,32 +1,68 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢ADC¹æÔòÍ¨µÀ²ÉÑùPC2¡¢PC3Òı½ÅµÄÄ£ÄâµçÑ¹£¬×¢ÈëÍ¨µÀ²ÉÑùPA0¡¢PA1Òı½ÅµÄÄ£ÄâµçÑ¹
-    2¡¢ÆäÖĞ¹æÔò×ª»»½á¹ûÍ¨¹ıDMA_CH1Í¨µÀ¶ÁÈ¡µ½±äÁ¿ADC_RegularConvertedValueTab[64]Êı×é
-        ×¢Èë×ª»»½á¹ûÍ¨¹ı×ª»»½áÊøÖĞ¶Ï¶ÁÈ¡µ½±äÁ¿ADC_InjectedConvertedValueTab[32]Êı×é
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€ADCè§„åˆ™é€šé“é‡‡æ ·PC2ã€PC3å¼•è„šçš„æ¨¡æ‹Ÿç”µå‹ï¼Œæ³¨å…¥é€šé“é‡‡æ ·PA0ã€PA1å¼•è„šçš„æ¨¡æ‹Ÿç”µå‹
+    2ã€å…¶ä¸­è§„åˆ™è½¬æ¢ç»“æœé€šè¿‡DMA_CH1é€šé“è¯»å–åˆ°å˜é‡ADC_RegularConvertedValueTab[64]æ•°ç»„
+        æ³¨å…¥è½¬æ¢ç»“æœé€šè¿‡è½¬æ¢ç»“æŸä¸­æ–­è¯»å–åˆ°å˜é‡ADC_InjectedConvertedValueTab[32]æ•°ç»„
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š         åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M
-        2¡¢ÖĞ¶Ï£º
-            ADC×¢Èë×ª»»½á¹ûÍê³ÉÖĞ¶Ï´ò¿ª£¬ÇÀ¶ÏÓÅÏÈ¼¶0£¬×ÓÓÅÏÈ¼¶0
-            ÖĞ¶Ï´¦Àí½ÓÊÕ×¢Èë×ª»»½á¹ûµ½ADC_InjectedConvertedValueTab[32]Êı×é
-        3¡¢¶Ë¿ÚÅäÖÃ£º
-            PC2Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PC3Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PA0Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PA1Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜADC1×ª»»Í¨µÀ
-            PD11Ñ¡ÔñÎªÍâ²¿EXTIÊÂ¼şÉÏÉıÑØ´¥·¢
-            PA15Ñ¡ÔñÎªÍâ²¿EXTIÊÂ¼şÉÏÉıÑØ´¥·¢
-        4¡¢DMA£º
-            DMA_CH1Í¨µÀ»Ø»·Ä£Ê½°áÔË64¸ö°ë×ÖµÄADC1¹æÔòÍ¨µÀ×ª»»½á¹ûµ½ADC_RegularConvertedValueTab[64]Êı×é
-        5¡¢ADC£º
-            ADC¹æÔòÍ¨µÀÉ¨Ãè¼ä¶ÏÄ£Ê½¡¢EXTI11´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬×ª»»Í¨µÀPC2ºÍPC3µÄÄ£ÄâµçÑ¹Êı¾İ
-            ADC×¢ÈëÍ¨µÀÉ¨ÃèÄ£Ê½¡¢EXTI15´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬×ª»»Í¨µÀPA0ºÍPA1µÄÄ£ÄâµçÑ¹Êı¾İ
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«±äÁ¿ADC_RegularConvertedValueTab[64],ADC_InjectedConvertedValueTab[32]Ìí¼Óµ½watch´°¿Ú¹Û²ì
-        2¡¢Í¨¹ıPD11¸øÉÏÉıÑØ¿ÉÒÔ´¥·¢¹æÔòÍ¨µÀÊı¾İ²ÉÑù£¬PA15¸øÉÏÉıÑØ¿ÉÒÔ´¥·¢×¢ÈëÍ¨µÀÊı¾İ²ÉÑù
-4¡¢×¢ÒâÊÂÏî
-    µ±ÏµÍ³²ÉÓÃHSEÊ±ÖÓÊ±£¨Ò»°ãHSIÒ²ÊÇ´ò¿ªµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)¿ÉÒÔÅäÖÃÎªHSE»òÕßHSI
-    µ±ÏµÍ³²ÉÑùHSIÊ±ÖÓÊ±£¨Ò»°ãHSEÊÇ¹Ø±ÕµÄ£©£¬RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)Ö»ÄÜÅäÖÃÎªHSI
+        2ã€ä¸­æ–­ï¼š
+            ADCæ³¨å…¥è½¬æ¢ç»“æœå®Œæˆä¸­æ–­æ‰“å¼€ï¼ŒæŠ¢æ–­ä¼˜å…ˆçº§0ï¼Œå­ä¼˜å…ˆçº§0
+            ä¸­æ–­å¤„ç†æ¥æ”¶æ³¨å…¥è½¬æ¢ç»“æœåˆ°ADC_InjectedConvertedValueTab[32]æ•°ç»„
+        3ã€ç«¯å£é…ç½®ï¼š
+            PC2é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PC3é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PA0é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PA1é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½ADC1è½¬æ¢é€šé“
+            PD11é€‰æ‹©ä¸ºå¤–éƒ¨EXTIäº‹ä»¶ä¸Šå‡æ²¿è§¦å‘
+            PA15é€‰æ‹©ä¸ºå¤–éƒ¨EXTIäº‹ä»¶ä¸Šå‡æ²¿è§¦å‘
+        4ã€DMAï¼š
+            DMA_CH1é€šé“å¾ªç¯æ¨¡å¼æ¬è¿64ä¸ªåŠå­—çš„ADC1è§„åˆ™é€šé“è½¬æ¢ç»“æœåˆ°ADC_RegularConvertedValueTab[64]æ•°ç»„
+        5ã€ADCï¼š
+            ADCè§„åˆ™é€šé“æ‰«æé—´æ–­æ¨¡å¼ã€EXTI11è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œè½¬æ¢é€šé“PC2å’ŒPC3çš„æ¨¡æ‹Ÿç”µå‹æ•°æ®
+            ADCæ³¨å…¥é€šé“æ‰«ææ¨¡å¼ã€EXTI15è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œè½¬æ¢é€šé“PA0å’ŒPA1çš„æ¨¡æ‹Ÿç”µå‹æ•°æ®
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†å˜é‡ADC_RegularConvertedValueTab[64],ADC_InjectedConvertedValueTab[32]æ·»åŠ åˆ°watchçª—å£è§‚å¯Ÿ
+        2ã€é€šè¿‡PD11ç»™ä¸Šå‡æ²¿å¯ä»¥è§¦å‘è§„åˆ™é€šé“æ•°æ®é‡‡æ ·ï¼ŒPA15ç»™ä¸Šå‡æ²¿å¯ä»¥è§¦å‘æ³¨å…¥é€šé“æ•°æ®é‡‡æ ·
+4ã€æ³¨æ„äº‹é¡¹
+    å½“ç³»ç»Ÿé‡‡ç”¨HSEæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSIä¹Ÿæ˜¯æ‰“å¼€çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8)å¯ä»¥é…ç½®ä¸ºHSEæˆ–è€…HSI
+    å½“ç³»ç»Ÿé‡‡æ ·HSIæ—¶é’Ÿæ—¶ï¼ˆä¸€èˆ¬HSEæ˜¯å…³é—­çš„ï¼‰ï¼ŒRCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8)åªèƒ½é…ç½®ä¸ºHSI
+
+
+
+
+1. Function description
+    1. The ADC regular channel samples the analog voltage of the PC2 and PC3 pins, and the injection channel samples the analog voltage of the PA0 and PA1 pins
+    2. The regular conversion result is read into the variable ADC_RegularConvertedValueTab[64] array through the DMA_CH1 channel
+        The injected conversion result is read into the variable ADC_InjectedConvertedValueTab[32] array through the conversion end interrupt
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+    System Configuration;
+        1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/16,ADC 1M CLK=HSE/8,DMA CLK=64M
+        2. Interrupt:
+            ADC injection conversion result completion interrupt open, steal priority 0, sub-priority 0
+            The interrupt handler receives the injected conversion result into the ADC_InjectedConvertedValueTab[32] array
+        3. Port configuration:
+            PC2 is selected as the analog function, ADC1 conversion channel
+            PC3 is selected as the analog function, ADC1 conversion channel
+            PA0 is selected as the analog function, ADC1 conversion channel
+            PA1 is selected as the analog function, ADC1 conversion channel
+            PD11 is selected as external EXTI event rising edge trigger
+            PA15 is selected as external EXTI event rising edge trigger
+        4. DMA:
+            DMA_CH1 channel is configured as circular mode, carries 64 half-word of ADC regular conversion channel results to the ADC_RegularConvertedValueTab[64] array
+        5. ADC:
+            ADC regular channel configuration: scan discontinuous mode, EXTI11 trigger, 12-bit data right alignment, convert analog voltage data of channels PC2 and PC3
+            ADC injection channel configuration: scan mode, EXTI15 trigger, 12-bit data right alignment, convert analog voltage data of channels PA0 and PA1
+    Instructions:
+        1. Open the debug mode after compiling, and add the variables ADC_RegularConvertedValueTab[64], ADC_InjectedConvertedValueTab[32] to the watch window for observation
+        2. The rising edge of PD11 can trigger regular channel data sampling, and the rising edge of PA15 can trigger injection channel data sampling
+4. Matters needing attention
+    When the system uses the HSE clock (HSI is generally enabled), ), RCC_ConfigAdc1mClk (RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8) can be configured as HSE or HSI
+    When the system uses the HSI clock(HSE is generally disabled), RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8) can only be configured as HSI

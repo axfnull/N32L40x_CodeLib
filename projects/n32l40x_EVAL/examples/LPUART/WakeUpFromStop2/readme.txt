@@ -1,95 +1,95 @@
-<<<<<<< .mine
-1¡¢¹¦ÄÜËµÃ÷
+1ã€åŠŸèƒ½è¯´æ˜
 
-	¸Ã²âÀıÑİÊ¾ÁËLPUARTÈçºÎÍ¨¹ıÓëPCµÄÍ¨ĞÅ»½ĞÑSTOP2Ä£Ê½¡£
-    MCU½øÈëSTOP2Ä£Ê½£¬ÔÙÓÉPC·¢ËÍÕıÈ·µÄÊı¾İ»½ĞÑMCU¡£µ±Ê¶±ğµ½ÕıÈ·µÄ»½ĞÑÊÂ¼ş
-Ê±£¬WUFÖĞ¶Ï½«´¥·¢²¢»½ĞÑMCU¡£
-    ÎªÁËÈ·ÈÏÊÇ·ñ»½ĞÑ£¬MCU½«·¢ËÍÈ·ÈÏÏûÏ¢¸øPC£¬²¢ÓÉPC¼ì²éÊÇ·ñÊÇÔ¤ÆÚµÄÏûÏ¢¡£
-    Á÷³Ì½«ÖØ¸´4´Î½øĞĞ£¬ÒÔÑéÖ¤²»Í¬µÄ»½ĞÑÊÂ¼ş£º
-    1 ÆğÊ¼Î»¼ì²â
-    2 ½ÓÊÕ»º³åÆ÷·Ç¿Õ¼ì²â
-    3 Ò»¸ö¿ÉÅäÖÃµÄ½ÓÊÕ×Ö½Ú
-    4 Ò»¸ö¿Æ±à³ÌµÄ4×Ö½ÚÖ¡
+	è¯¥æµ‹ä¾‹æ¼”ç¤ºäº†LPUARTå¦‚ä½•é€šè¿‡ä¸PCçš„é€šä¿¡å”¤é†’STOP2æ¨¡å¼ã€‚
+    MCUè¿›å…¥STOP2æ¨¡å¼ï¼Œå†ç”±PCå‘é€æ­£ç¡®çš„æ•°æ®å”¤é†’MCUã€‚å½“è¯†åˆ«åˆ°æ­£ç¡®çš„å”¤é†’äº‹ä»¶
+æ—¶ï¼ŒWUFä¸­æ–­å°†è§¦å‘å¹¶å”¤é†’MCUã€‚
+    ä¸ºäº†ç¡®è®¤æ˜¯å¦å”¤é†’ï¼ŒMCUå°†å‘é€ç¡®è®¤æ¶ˆæ¯ç»™PCï¼Œå¹¶ç”±PCæ£€æŸ¥æ˜¯å¦æ˜¯é¢„æœŸçš„æ¶ˆæ¯ã€‚
+    æµç¨‹å°†é‡å¤4æ¬¡è¿›è¡Œï¼Œä»¥éªŒè¯ä¸åŒçš„å”¤é†’äº‹ä»¶ï¼š
+    1 èµ·å§‹ä½æ£€æµ‹
+    2 æ¥æ”¶ç¼“å†²å™¨éç©ºæ£€æµ‹
+    3 ä¸€ä¸ªå¯é…ç½®çš„æ¥æ”¶å­—èŠ‚
+    4 ä¸€ä¸ªç§‘ç¼–ç¨‹çš„4å­—èŠ‚å¸§
     
 
-2¡¢Ê¹ÓÃ»·¾³
+2ã€ä½¿ç”¨ç¯å¢ƒ
 
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
+	è½¯ä»¶å¼€å‘ç¯å¢ƒï¼šKEIL MDK-ARM Professional Version 5.26.2.0
 
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+        ç¡¬ä»¶ç¯å¢ƒï¼šæœ€å°ç³»ç»Ÿæ¿N32L40XML-STB_V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
+3ã€ä½¿ç”¨è¯´æ˜
 	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+	ç³»ç»Ÿæ—¶é’Ÿé…ç½®å¦‚ä¸‹ï¼š
+    - æ—¶é’Ÿæº = HSE + PLL
+    - ç³»ç»Ÿæ—¶é’Ÿ = 64MHz
     
-    LPUARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»£¨¹Ì¶¨£©
-    - 1Í£Ö¹Î»£¨¹Ì¶¨£©
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    LPUARTé…ç½®å¦‚ä¸‹ï¼š
+    - æ³¢ç‰¹ç‡ = 9600 baud
+    - å­—é•¿ = 8æ•°æ®ä½ï¼ˆå›ºå®šï¼‰
+    - 1åœæ­¢ä½ï¼ˆå›ºå®šï¼‰
+    - æ ¡éªŒæ§åˆ¶ç¦ç”¨
+    - ç¡¬ä»¶æµæ§åˆ¶ç¦ç”¨ï¼ˆRTSå’ŒCTSä¿¡å·ï¼‰
+    - æ¥æ”¶å™¨å’Œå‘é€å™¨ä½¿èƒ½
     
     
-    LPUARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
+    LPUARTå¼•è„šè¿æ¥å¦‚ä¸‹ï¼š    
     - LPUART_Tx.PC10   
     - LPUART_Rx.PC11     
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬²é¿´´®¿Ú´òÓ¡ĞÅÏ¢£¬Í¨¹ı´®¿Ú·¢ËÍÏàÓ¦µÄ×Ö·û£¬»½ĞÑMCU£¬ÔÙ´Î
-      ²é¿´´®¿Ú´òÓ¡ĞÅÏ¢£¨ÌáÊ¾¡°»½ĞÑ¡±£©£¬¸Ã²½ÖèĞèÖØ¸´4´Î
+    æµ‹è¯•æ­¥éª¤ä¸ç°è±¡ï¼š
+    - Demoåœ¨KEILç¯å¢ƒä¸‹ç¼–è¯‘åï¼Œä¸‹è½½è‡³MCU
+    - å¤ä½è¿è¡Œï¼ŒæŸ¥çœ‹ä¸²å£æ‰“å°ä¿¡æ¯ï¼Œé€šè¿‡ä¸²å£å‘é€ç›¸åº”çš„å­—ç¬¦ï¼Œå”¤é†’MCUï¼Œå†æ¬¡
+      æŸ¥çœ‹ä¸²å£æ‰“å°ä¿¡æ¯ï¼ˆæç¤ºâ€œå”¤é†’â€ï¼‰ï¼Œè¯¥æ­¥éª¤éœ€é‡å¤4æ¬¡
 
 
-4¡¢×¢ÒâÊÂÏî=======
-1¡¢¹¦ÄÜËµÃ÷
+4ã€æ³¨æ„äº‹é¡¹
 
-	¸Ã²âÀıÑİÊ¾ÁËLPUARTÈçºÎÍ¨¹ıÓëPCµÄÍ¨ĞÅ»½ĞÑSTOP2Ä£Ê½¡£
-    MCU½øÈëSTOP2Ä£Ê½£¬ÔÙÓÉPC·¢ËÍÕıÈ·µÄÊı¾İ»½ĞÑMCU¡£µ±Ê¶±ğµ½ÕıÈ·µÄ»½ĞÑÊÂ¼ş
-Ê±£¬WUFÖĞ¶Ï½«´¥·¢²¢»½ĞÑMCU¡£
-    ÎªÁËÈ·ÈÏÊÇ·ñ»½ĞÑ£¬MCU½«·¢ËÍÈ·ÈÏÏûÏ¢¸øPC£¬²¢ÓÉPC¼ì²éÊÇ·ñÊÇÔ¤ÆÚµÄÏûÏ¢¡£
-    Á÷³Ì½«ÖØ¸´4´Î½øĞĞ£¬ÒÔÑéÖ¤²»Í¬µÄ»½ĞÑÊÂ¼ş£º
-    1 ÆğÊ¼Î»¼ì²â
-    2 ½ÓÊÕ»º³åÆ÷·Ç¿Õ¼ì²â
-    3 Ò»¸ö¿ÉÅäÖÃµÄ½ÓÊÕ×Ö½Ú
-    4 Ò»¸ö¿Æ±à³ÌµÄ4×Ö½ÚÖ¡
+1. Function description
+
+This test case demonstrates how the LPUART wakes up from STOP2 mode by communicating with the PC.
+    The MCU enters the STOP2 mode, and then the PC sends the correct data to wake up the MCU. When the correct wake-up event is recognized
+, the WUF interrupt will trigger and wake up the MCU.
+    In order to confirm whether to wake up, the MCU will send a confirmation message to the PC, and the PC will check whether it is the expected message.
+    The process will be repeated 4 times to verify different wake-up events:
+    1 Start bit detection
+    2 Receive buffer non-empty detection
+    3 A configurable receive byte
+    4 A section of programmed 4-byte frames
     
 
-2¡¢Ê¹ÓÃ»·¾³
+2. Use environment
 
-	Èí¼ş¿ª·¢»·¾³£ºKEIL MDK-ARM Professional Version 5.26.2.0
+Software development environment: KEIL MDK-ARM Professional Version 5.26.2.0
 
-        Ó²¼ş»·¾³£º×îĞ¡ÏµÍ³°åN32L43XM-STB_V1.1/N32L40XM-STB_V1.1
+        Hardware environment: minimum system board N32L40XML-STB_V1.0
 
 
-3¡¢Ê¹ÓÃËµÃ÷
-	
-	ÏµÍ³Ê±ÖÓÅäÖÃÈçÏÂ£º
-    - Ê±ÖÓÔ´ = HSE + PLL
-    - ÏµÍ³Ê±ÖÓ = 64MHz
+3. Instructions for use
+
+The system clock configuration is as follows:
+    - Clock source = HSE + PLL
+    - System Clock = 64MHz
     
-    LPUARTÅäÖÃÈçÏÂ£º
-    - ²¨ÌØÂÊ = 9600 baud
-    - ×Ö³¤ = 8Êı¾İÎ»£¨¹Ì¶¨£©
-    - 1Í£Ö¹Î»£¨¹Ì¶¨£©
-    - Ğ£Ñé¿ØÖÆ½ûÓÃ
-    - Ó²¼şÁ÷¿ØÖÆ½ûÓÃ£¨RTSºÍCTSĞÅºÅ£©
-    - ½ÓÊÕÆ÷ºÍ·¢ËÍÆ÷Ê¹ÄÜ
+    The LPUART configuration is as follows:
+    - Baud rate = 9600 baud
+    - Word length = 8 data bits (fixed)
+    - 1 stop bit (fixed)
+    - checksum control disabled
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receiver and transmitter enable
     
     
-    LPUARTÒı½ÅÁ¬½ÓÈçÏÂ£º    
-    - LPUART_Tx.PC10   
-    - LPUART_Rx.PC11     
+    The LPUART pins are connected as follows:
+    - LPUART_Tx.PC10
+    - LPUART_Rx.PC11
 
     
-    ²âÊÔ²½ÖèÓëÏÖÏó£º
-    - DemoÔÚKEIL»·¾³ÏÂ±àÒëºó£¬ÏÂÔØÖÁMCU
-    - ¸´Î»ÔËĞĞ£¬²é¿´´®¿Ú´òÓ¡ĞÅÏ¢£¬Í¨¹ı´®¿Ú·¢ËÍÏàÓ¦µÄ×Ö·û£¬»½ĞÑMCU£¬ÔÙ´Î
-      ²é¿´´®¿Ú´òÓ¡ĞÅÏ¢£¨ÌáÊ¾¡°»½ĞÑ¡±£©£¬¸Ã²½ÖèĞèÖØ¸´4´Î
+    Test steps and phenomena:
+    - Demo is compiled in KEIL environment and downloaded to MCU
+    - Reset operation, check the printing information of the serial port, send the corresponding characters through the serial port, wake up the MCU, and again
+      Check the serial port printing information (prompt "wake up"), this step needs to be repeated 4 times
 
 
-4¡¢×¢ÒâÊÂÏî>>>>>>> .r80294
+4. Matters needing attention

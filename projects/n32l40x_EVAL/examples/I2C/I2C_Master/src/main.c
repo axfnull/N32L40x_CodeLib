@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_i2c.h"
@@ -524,7 +524,7 @@ void IIC_RCCReset(void)
         RCC_EnableAPB1PeriphReset(RCC_APB1_PERIPH_I2C1, DISABLE);
         
         RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_I2C1, DISABLE );
-        GPIOB->PMODE |= 0x0000000F;
+        GPIOB->PMODE |= 0x000F0000;
         RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_AFIO, DISABLE);
         RCC_EnableAPB2PeriphClk (RCC_APB2_PERIPH_GPIOB, DISABLE );
         

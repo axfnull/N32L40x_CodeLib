@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -60,18 +60,6 @@ int main(void)
     /* Configure the GPIO ports */
     GPIO_Configuration();
 
-    /* ---------------------------------------------------------------
-    TIM3 Configuration:
-    TIM3CLK = SystemCoreClock / 2,
-    The objective is to get TIM3 counter clock at 1 KHz:
-     - Prescaler = (TIM3CLK / TIM3 counter clock) - 1
-    And generate 4 signals with 4 different delays:
-    TIM3_CH1 delay = CCR1_Val/TIM3 counter clock = 1000 ms
-    TIM3_CH2 delay = CCR2_Val/TIM3 counter clock = 500 ms
-    TIM3_CH3 delay = CCR3_Val/TIM3 counter clock = 250 ms
-    TIM3_CH4 delay = CCR4_Val/TIM3 counter clock = 125 ms
-
-    --------------------------------------------------------------- */
     /*Compute the prescaler value */
     PrescalerValue = (uint16_t)(SystemCoreClock / 2000) - 1;
     /* Time base configuration */

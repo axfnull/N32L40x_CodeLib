@@ -1,42 +1,85 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢TIM1 CH4´¥·¢ADC×¢Èë²ÉÑùOPA1 OPA2µÄµçÑ¹Êı¾İ£¬²¢ÇÒTIM1Êä³öÊÜCOMP1É²³µ¿ØÖÆ
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€TIM1 CH4è§¦å‘ADCæ³¨å…¥é‡‡æ ·OPA1 OPA2çš„ç”µå‹æ•°æ®ï¼Œå¹¶ä¸”TIM1è¾“å‡ºå—COMP1åˆ¹è½¦æ§åˆ¶
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š      åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/10,ADC 1M CLK=HSE/8,OPA CLK=16M,COMP CLK=16M,TIM1 CLK=64M,TIM8 CLK=64M
-        2¡¢ÖĞ¶Ï£º
-            ADC×¢ÈëÖĞ¶Ï´ò¿ª£¬ÇÀ¶ÏÓÅÏÈ¼¶0£¬×ÓÓÅÏÈ¼¶0
-            ¶ÁÈ¡×ª»»½á¹û
-        3¡¢¶Ë¿ÚÅäÖÃ£º
-            PA4Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA1 VP
-            PA7Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA2 VP
-            PA2Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA1 OUT
-            PA6Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜOPA2 OUT
-            PA0Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP1 INP
-            PB5Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP1 INM
-            PA11Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP1 OUT	
-            PA8Ñ¡ÔñÎªTIM1 CH1Êä³ö
-            PA9Ñ¡ÔñÎªTIM1 CH2Êä³ö
-            PA10Ñ¡ÔñÎªTIM1 CH3Êä³ö
-            PB13Ñ¡ÔñÎªTIM1 CH1NÊä³ö
-            PB14Ñ¡ÔñÎªTIM1 CH2NÊä³ö
-            PB15Ñ¡ÔñÎªTIM1 CH3NÊä³ö
-            PB12Ñ¡ÔñÎªTIM1 BreakinÊäÈë
-            PA0Ñ¡ÔñÎªADC1_CH1Í¨µÀÊäÈë
-            PC0Ñ¡ÔñÎªADC12_CH6Í¨µÀÊäÈë
-        4¡¢OPA£º
-            OPA1 OPA2µçÑ¹¸úËæÆ÷¹¦ÄÜ£¬VMÎŞÒı½Å
-        5¡¢ADC£º
-            ADC×¢ÈëÄ£Ê½¡¢É¨Ãè×ª»»¡¢TIM1 CC4´¥·¢¡¢12Î»Êı¾İÓÒ¶ÔÆë£¬×¢Èë×ª»»OPA1ºÍOPA2Êä³öÄ£ÄâµçÑ¹Êı¾İ
-        6¡¢COMP£º
-            COMP1 INPÑ¡ÔñPA0£¬INMÑ¡ÔñPB5£¬Êä³ö´¥·¢TIM1ºÍTIM8É²³µ
-        7¡¢TIM£º
-            TIM1 6Â·»¥²¹´ò¿ª£¬É²³µÊ¹ÄÜÇÒ´ò¿ªÖĞ¶Ï£¬CH4´¥·¢Êä³ö
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬ÓÃÊ¾²¨Æ÷»òÕßÂß¼­·ÖÎöÒÇ¹Û²ìTIM1µÄÊä³ö²¨ĞÎºÍADC¶ÁÈ¡µÄ²É¼¯Êı¾İ
-        2¡¢¸Ä±äCOMP1 µÄÊä³ö×´Ì¬¿ÉÒÔÉ²³µTIM1£¬¸Ä±äOPA1 OPA2µÄÊäÈëµçÑ¹¿ÉÒÔ¸Ä±äADC¶ÁÈ¡µÄÊı¾İ
-4¡¢×¢ÒâÊÂÏî
-    ÎŞ
+        2ã€ä¸­æ–­ï¼š
+            ADCæ³¨å…¥ä¸­æ–­æ‰“å¼€ï¼ŒæŠ¢æ–­ä¼˜å…ˆçº§0ï¼Œå­ä¼˜å…ˆçº§0
+            è¯»å–è½¬æ¢ç»“æœ
+        3ã€ç«¯å£é…ç½®ï¼š
+            PA4é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA1 VP
+            PA7é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA2 VP
+            PA2é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA1 OUT
+            PA6é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½OPA2 OUT
+            PA0é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP1 INP
+            PB5é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP1 INM
+            PA11é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP1 OUT	
+            PA8é€‰æ‹©ä¸ºTIM1 CH1è¾“å‡º
+            PA9é€‰æ‹©ä¸ºTIM1 CH2è¾“å‡º
+            PA10é€‰æ‹©ä¸ºTIM1 CH3è¾“å‡º
+            PB13é€‰æ‹©ä¸ºTIM1 CH1Nè¾“å‡º
+            PB14é€‰æ‹©ä¸ºTIM1 CH2Nè¾“å‡º
+            PB15é€‰æ‹©ä¸ºTIM1 CH3Nè¾“å‡º
+            PB12é€‰æ‹©ä¸ºTIM1 Breakinè¾“å…¥
+            PA0é€‰æ‹©ä¸ºADC1_CH1é€šé“è¾“å…¥
+            PC0é€‰æ‹©ä¸ºADC12_CH6é€šé“è¾“å…¥
+        4ã€OPAï¼š
+            OPA1 OPA2ç”µå‹è·Ÿéšå™¨åŠŸèƒ½ï¼ŒVMæ— å¼•è„š
+        5ã€ADCï¼š
+            ADCæ³¨å…¥æ¨¡å¼ã€æ‰«æè½¬æ¢ã€TIM1 CC4è§¦å‘ã€12ä½æ•°æ®å³å¯¹é½ï¼Œæ³¨å…¥è½¬æ¢OPA1å’ŒOPA2è¾“å‡ºæ¨¡æ‹Ÿç”µå‹æ•°æ®
+        6ã€COMPï¼š
+            COMP1 INPé€‰æ‹©PA0ï¼ŒINMé€‰æ‹©PB5ï¼Œè¾“å‡ºè§¦å‘TIM1å’ŒTIM8åˆ¹è½¦
+        7ã€TIMï¼š
+            TIM1 6è·¯äº’è¡¥æ‰“å¼€ï¼Œåˆ¹è½¦ä½¿èƒ½ä¸”æ‰“å¼€ä¸­æ–­ï¼ŒCH4è§¦å‘è¾“å‡º
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œç”¨ç¤ºæ³¢å™¨æˆ–è€…é€»è¾‘åˆ†æä»ªè§‚å¯ŸTIM1çš„è¾“å‡ºæ³¢å½¢å’ŒADCè¯»å–çš„é‡‡é›†æ•°æ®
+        2ã€æ”¹å˜COMP1 çš„è¾“å‡ºçŠ¶æ€å¯ä»¥åˆ¹è½¦TIM1ï¼Œæ”¹å˜OPA1 OPA2çš„è¾“å…¥ç”µå‹å¯ä»¥æ”¹å˜ADCè¯»å–çš„æ•°æ®
+4ã€æ³¨æ„äº‹é¡¹
+    æ— 
+
+1. Function description
+     1. TIM1 CH4 triggers ADC to inject and sample the voltage data of OPA1 OPA2, and TIM1 output is controlled by COMP1 brake
+2. Use environment
+    Software development environment: KEIL MDK-ARM V5.26.2.0
+    Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+     System Configuration;
+         1. Clock source:
+            HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,ADC CLK=64M/10,ADC 1M CLK=HSE/8,OPA CLK=16M,COMP CLK=16M,TIM1 CLK=64M, TIM8 CLK=64M
+         2. Interrupt:
+            ADC injection interrupt on, steal priority 0, sub-priority 0
+            Read conversion result
+         3. Port configuration:
+            PA4 is selected as analog function, OPA1 VP
+            PA7 selected as analog function, OPA2 VP
+            PA2 is selected as analog function, OPA1 OUT
+            PA6 is selected as analog function, OPA2 OUT
+            PA0 is selected as analog function, COMP1 INP
+            PB5 is selected as analog function, COMP1 INM
+            PA11 is selected as analog function, COMP1 OUT
+            PA8 is selected as TIM1 CH1 output
+            PA9 is selected as TIM1 CH2 output
+            PA10 is selected as TIM1 CH3 output
+            PB13 is selected as TIM1 CH1N output
+            PB14 is selected as TIM1 CH2N output
+            PB15 is selected as TIM1 CH3N output
+            PB12 is selected as TIM1 Breakin input
+            PA0 is selected as ADC1_CH1 channel input
+            PC0 is selected as ADC12_CH6 channel input
+         4. OPA:
+            OPA1 OPA2 voltage follower function, VM has no pins
+        5. ADC:
+            ADC injection mode, scan conversion, TIM1 CC4 trigger, 12-bit data right justification, injection conversion OPA1 and OPA2 output analog voltage data
+        6. COMP:
+            COMP1 INP selects PA0, INM selects PB5, output triggers TIM1 and TIM8 to brake
+        7. TIM:
+            TIM1 6-channel complementary open, brake enable and open interrupt, CH4 trigger output
+    Instructions:
+        1. Open the debug mode after compiling, and use an oscilloscope or logic analyzer to observe the output waveform of TIM1 and the acquired data read by ADC
+        2. Changing the output state of COMP1 can brake TIM1, and changing the input voltage of OPA1 and OPA2 can change the data read by ADC
+4. Matters needing attention
+   None

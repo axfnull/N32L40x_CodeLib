@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_it.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_it.h"
 #include "n32l40x.h"
@@ -130,10 +130,10 @@ void DMA_IRQ_HANDLER(void)
  */
 void RTC_WKUP_IRQHandler(void)
 {
+    EXTI_ClrITPendBit(EXTI_LINE20);
     if (RTC_GetITStatus(RTC_INT_WUT) != RESET)
     {
        RTC_ClrIntPendingBit(RTC_INT_WUT);
-       EXTI_ClrITPendBit(EXTI_LINE20);
     }
 }
 

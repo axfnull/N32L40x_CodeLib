@@ -25,9 +25,9 @@ void RTC_AlarmShow(uint8_t AlarmX)
     else
         RTC_GetAlarm(RTC_FORMAT_BIN, RTC_B_ALARM, &RTC_AlarmStructure);
     printf("\n\r //=========== Current Alarm Display ==============// \n\r");
-    printf("\n\r The current alarm is :  %0.2d:%0.2d:%0.2d \n\r",
-           RTC_AlarmStructure.AlarmTime.Hours,
-           RTC_AlarmStructure.AlarmTime.Minutes,
+    printf("\n\r The current alarm is :  %2u:%2u:%2u \n\r",\
+           RTC_AlarmStructure.AlarmTime.Hours,\
+           RTC_AlarmStructure.AlarmTime.Minutes,\
            RTC_AlarmStructure.AlarmTime.Seconds);
 }
 
@@ -39,10 +39,10 @@ void RTC_DateShow(void)
     /* Get the current Date */
     RTC_GetDate(RTC_FORMAT_BIN, &RTC_DateStructure);
     log_info("\n\r //=========== Current Date Display ==============// \n\r");
-    log_info("\n\r The current date (WeekDay-Date-Month-Year) is :  %0.2d-%0.2d-%0.2d-%0.2d \n\r",
-             RTC_DateStructure.WeekDay,
-             RTC_DateStructure.Date,
-             RTC_DateStructure.Month,
+    log_info("\n\r The current date (WeekDay-Date-Month-Year) is :  %2u-%2u-%2u-%2u \n\r",\
+             RTC_DateStructure.WeekDay,\
+             RTC_DateStructure.Date,\
+             RTC_DateStructure.Month,\
              RTC_DateStructure.Year);
 }
 
@@ -54,9 +54,9 @@ void RTC_TimeShow(void)
     /* Get the current Time and Date */
     RTC_GetTime(RTC_FORMAT_BIN, &RTC_TimeStructure);
     log_info("\n\r //============ Current Time Display ===============// \n\r");
-    log_info("\n\r The current time (Hour-Minute-Second) is :  %0.2d:%0.2d:%0.2d \n\r",
-             RTC_TimeStructure.Hours,
-             RTC_TimeStructure.Minutes,
+    log_info("\n\r The current time (Hour-Minute-Second) is :  %2u:%2u:%2u \n\r",\
+             RTC_TimeStructure.Hours,\
+             RTC_TimeStructure.Minutes,\
              RTC_TimeStructure.Seconds);
     /* Unfreeze the RTC DAT Register */
     (void)RTC->DATE;
@@ -89,7 +89,7 @@ void RTC_DateAndTimeDefaultVale(void)
  */
 ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
 {
-    uint32_t tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
+    unsigned int tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
     /* Disable the AlarmX */
     RTC_EnableAlarm(RTC_Alarm, DISABLE);
     printf("\n\r //==============Alarm X Settings================// \n\r");
@@ -105,7 +105,7 @@ ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
     {
        RTC_AlarmStructure.AlarmTime.Hours = tmp_hh;
     }
-    printf(": %0.2d\n\r", tmp_hh);
+    printf(": %2u\n\r", tmp_hh);
     printf("\n\r Please Set Alarm Minutes \n\r");
     tmp_mm = RTC_AlarmDefault.AlarmTime.Minutes;
     if (tmp_mm == 0xff)
@@ -116,7 +116,7 @@ ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
     {
        RTC_AlarmStructure.AlarmTime.Minutes = tmp_mm;
     }
-    printf(": %0.2d\n\r", tmp_mm);
+    printf(": %2u\n\r", tmp_mm);
     printf("\n\r Please Set Alarm Seconds \n\r");
     tmp_ss = RTC_AlarmDefault.AlarmTime.Seconds;
     if (tmp_ss == 0xff)
@@ -127,7 +127,7 @@ ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
     {
        RTC_AlarmStructure.AlarmTime.Seconds = tmp_ss;
     }
-    printf(": %0.2d\n\r", tmp_ss);
+    printf(": %2u\n\r", tmp_ss);
     /* Set the Alarm X */
     RTC_AlarmStructure.DateWeekValue = 0x31;
     RTC_AlarmStructure.DateWeekMode = RTC_AlarmDefault.DateWeekMode;
@@ -156,7 +156,7 @@ ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
  */
 ErrorStatus RTC_DateRegulate(void)
 {
-    uint32_t tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
+    unsigned int tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
     log_info("\n\r //=============Date Settings================// \n\r");
     log_info("\n\r Please Set WeekDay (01-07) \n\r");
     tmp_hh = RTC_DateDefault.WeekDay;
@@ -168,7 +168,7 @@ ErrorStatus RTC_DateRegulate(void)
     {
       RTC_DateStructure.WeekDay = tmp_hh;
     }
-    log_info(": %0.2d\n\r", tmp_hh);
+    log_info(": %2u\n\r", tmp_hh);
     tmp_hh = 0xFF;
     log_info("\n\r Please Set Date (01-31) \n\r");
     tmp_hh = RTC_DateDefault.Date;
@@ -180,7 +180,7 @@ ErrorStatus RTC_DateRegulate(void)
     {
       RTC_DateStructure.Date = tmp_hh;
     }
-    log_info(": %0.2d\n\r", tmp_hh);
+    log_info(": %2u\n\r", tmp_hh);
     log_info("\n\r Please Set Month (01-12)\n\r");
     tmp_mm = RTC_DateDefault.Month;
     if (tmp_mm == 0xff)
@@ -191,7 +191,7 @@ ErrorStatus RTC_DateRegulate(void)
     {
       RTC_DateStructure.Month = tmp_mm;
     }
-    log_info(": %0.2d\n\r", tmp_mm);
+    log_info(": %2u\n\r", tmp_mm);
     log_info("\n\r Please Set Year (00-99)\n\r");
     tmp_ss = RTC_DateDefault.Year;
     if (tmp_ss == 0xff)
@@ -202,7 +202,7 @@ ErrorStatus RTC_DateRegulate(void)
     {
       RTC_DateStructure.Year = tmp_ss;
     }
-    log_info(": %0.2d\n\r", tmp_ss);
+    log_info(": %2u\n\r", tmp_ss);
     /* Configure the RTC date register */
     if (RTC_SetDate(RTC_FORMAT_BIN, &RTC_DateStructure) == ERROR)
     {
@@ -222,7 +222,7 @@ ErrorStatus RTC_DateRegulate(void)
  */
 ErrorStatus RTC_TimeRegulate(void)
 {
-    uint32_t tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
+    unsigned int tmp_hh = 0xFF, tmp_mm = 0xFF, tmp_ss = 0xFF;
     log_info("\n\r //==============Time Settings=================// \n\r");
     RTC_TimeStructure.H12 = RTC_TimeDefault.H12;
     log_info("\n\r Please Set Hours \n\r");
@@ -235,7 +235,7 @@ ErrorStatus RTC_TimeRegulate(void)
     {
        RTC_TimeStructure.Hours = tmp_hh;
     }
-    log_info(": %0.2d\n\r", tmp_hh);
+    log_info(": %2u\n\r", tmp_hh);
     log_info("\n\r Please Set Minutes \n\r");
     tmp_mm = RTC_TimeDefault.Minutes;
     if (tmp_mm == 0xff)
@@ -246,7 +246,7 @@ ErrorStatus RTC_TimeRegulate(void)
     {
       RTC_TimeStructure.Minutes = tmp_mm;
     }
-    log_info(": %0.2d\n\r", tmp_mm);
+    log_info(": %2u\n\r", tmp_mm);
     log_info("\n\r Please Set Seconds \n\r");
     tmp_ss = RTC_TimeDefault.Seconds;
     if (tmp_ss == 0xff)
@@ -257,7 +257,7 @@ ErrorStatus RTC_TimeRegulate(void)
     {
        RTC_TimeStructure.Seconds = tmp_ss;
     }
-    log_info(": %0.2d\n\r", tmp_ss);
+    log_info(": %2u\n\r", tmp_ss);
     /* Configure the RTC time register */
     if (RTC_ConfigTime(RTC_FORMAT_BIN, &RTC_TimeStructure) == ERROR)
     {
@@ -306,8 +306,6 @@ void RTC_PrescalerConfig(void)
  */
 void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, bool Is_Rst_Bkp)
 {
-    assert_param(IS_CLKSRC_VALUE(ClkSrc));
-    assert_param(IS_FLCFG_VALUE(FirstLastCfg));
     /* Enable the PWR clock */
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_AFIO, ENABLE);
@@ -349,9 +347,9 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
           /* Enable the LSE OSC32_IN PC14 */
           RCC_EnableLsi(DISABLE); // LSI is turned off here to ensure that only one clock is turned on
     #if (_TEST_LSE_BYPASS_)
-         RCC_ConfigLse(RCC_LSE_BYPASS);
+         RCC_ConfigLse(RCC_LSE_BYPASS,0x28);
     #else
-         RCC_ConfigLse(RCC_LSE_ENABLE);
+         RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
     #endif
          while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
          {
@@ -364,9 +362,9 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
           RCC_EnableLsi(DISABLE);
           RCC_ConfigRtcClk(RCC_RTCCLK_SRC_LSE);
     #if (_TEST_LSE_BYPASS_)
-          RCC_ConfigLse(RCC_LSE_BYPASS);
+          RCC_ConfigLse(RCC_LSE_BYPASS,0x28);
     #else
-          RCC_ConfigLse(RCC_LSE_ENABLE);
+          RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
     #endif
           while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
           {

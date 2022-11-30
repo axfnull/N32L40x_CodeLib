@@ -28,7 +28,7 @@
 /*****************************************************************************
 * File Name: HASH.h
 * Function: Declaring HASH algorithm library API
-* version: V1.1
+* version: V1.2.0
 * Author: zhang.zhenshan
 * date: 2020-4-8
 * ****************************************************************************/

@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -58,7 +58,7 @@ int main(void)
 
     /* GPIO configuration ------------------------------------------------------*/
     GPIO_Configuration();
-
+    ADC_DeInit(ADC);
     /* ADC Configuration ------------------------------------------------------*/
     ADC_InitStructure.MultiChEn      = DISABLE;
     ADC_InitStructure.ContinueConvEn = ENABLE;

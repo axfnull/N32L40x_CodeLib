@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>N32L40X, USE_STDPERIPH_DRIVER,USE_FULL_ASSERT=1</Define>
+              <Define>N32L40X, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>..\inc;..\..\..\..\..\..\firmware\CMSIS\core;..\..\..\..\..\..\firmware\CMSIS\device;..\..\..\..\..\..\firmware\n32l40x_std_periph_driver\inc;..\..\..\..\..\..\firmware\n32l40x_usbfs_driver\inc</IncludePath>
             </VariousControls>
@@ -483,11 +483,6 @@
               <FileName>usb_pwr.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\usb_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>

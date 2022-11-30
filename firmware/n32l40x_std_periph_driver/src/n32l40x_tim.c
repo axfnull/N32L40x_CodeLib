@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_tim.c
  * @author Nations
- * @version v1.0.2
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_tim.h"
 #include "n32l40x_rcc.h"
@@ -1058,8 +1058,7 @@ void TIM_GenerateEvent(TIM_Module* TIMx, uint16_t TIM_EventSource)
  *          TIM_DMABASE_CNT, TIM_DMABASE_PSC, TIM_DMABASE_AR,
  *          TIM_DMABASE_REPCNT, TIM_DMABASE_CAPCMPDAT1, TIM_DMABASE_CAPCMPDAT2,
  *          TIM_DMABASE_CAPCMPDAT3, TIM_DMABASE_CAPCMPDAT4, TIM_DMABASE_BKDT,
- *          TIM_DMABASE_CAPCMPMOD3, TIM_DMABASE_CAPCMPDAT5, TIM_DMABASE_CAPCMPDAT6,
- *          TIM_DMABASE_DMACTRL.
+ *          TIM_DMABASE_DMACTRL. 
  * @param TIM_DMABurstLength DMA Burst length.
  *   This parameter can be one value between:
  *   TIM_DMABURST_LENGTH_1TRANSFER and TIM_DMABURST_LENGTH_18TRANSFERS.

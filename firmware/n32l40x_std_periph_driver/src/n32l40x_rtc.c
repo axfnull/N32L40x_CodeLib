@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file n32l40x_rtc.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x_rtc.h"
 
@@ -1392,7 +1392,6 @@ uint32_t RTC_GetStoreOperation(void)
  */
 void RTC_ConfigOutput(uint32_t RTC_Output, uint32_t RTC_OutputPolarity)
 {
-    __IO uint32_t temp = 0;
     /* Check the parameters */
     assert_param(IS_RTC_OUTPUT_MODE(RTC_Output));
     assert_param(IS_RTC_OUTPUT_POL(RTC_OutputPolarity));

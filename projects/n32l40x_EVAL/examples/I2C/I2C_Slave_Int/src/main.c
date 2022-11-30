@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_i2c.h"
@@ -104,7 +104,7 @@ void NVIC_Configuration(uint8_t ch)
  */
 int i2c_slave_init(void)
 {
-    I2C_InitType i2c1_master;
+    I2C_InitType i2c1_slave;
     GPIO_InitType i2c1_gpio;
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_I2C1, ENABLE);
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOB, ENABLE);
@@ -115,18 +115,18 @@ int i2c_slave_init(void)
     i2c1_gpio.GPIO_Slew_Rate    = GPIO_Slew_Rate_High;
     i2c1_gpio.GPIO_Mode         = GPIO_Mode_AF_OD;
     i2c1_gpio.GPIO_Alternate    = GPIO_AF4_I2C1;
-    i2c1_gpio.GPIO_Pull         = GPIO_Pull_Up;	  
+    i2c1_gpio.GPIO_Pull         = GPIO_Pull_Up;
     GPIO_InitPeripheral(GPIOB, &i2c1_gpio);
     
     I2C_DeInit(I2C1);
-    i2c1_master.BusMode     = I2C_BUSMODE_I2C;
-    i2c1_master.FmDutyCycle = I2C_FMDUTYCYCLE_2;
-    i2c1_master.OwnAddr1    = I2C_SLAVE_ADDR;
-    i2c1_master.AckEnable   = I2C_ACKEN;
-    i2c1_master.AddrMode    = I2C_ADDR_MODE_7BIT;
-    i2c1_master.ClkSpeed    = 100000; //100K
+    i2c1_slave.BusMode     = I2C_BUSMODE_I2C;
+    i2c1_slave.FmDutyCycle = I2C_FMDUTYCYCLE_2;
+    i2c1_slave.OwnAddr1    = I2C_SLAVE_ADDR;
+    i2c1_slave.AckEnable   = I2C_ACKEN;
+    i2c1_slave.AddrMode    = I2C_ADDR_MODE_7BIT;
+    i2c1_slave.ClkSpeed    = 100000; //100K
 
-    I2C_Init(I2C1, &i2c1_master);
+    I2C_Init(I2C1, &i2c1_slave);
     // int enable
     I2C_ConfigInt(I2C1, I2C_INT_EVENT | I2C_INT_BUF | I2C_INT_ERR, ENABLE);
     NVIC_Configuration((uint8_t)1);
@@ -229,10 +229,10 @@ void I2C1_EV_IRQHandler(void)
 
 void I2C1_ER_IRQHandler(void)
 {
-	uint32_t last_event;
+    uint32_t last_event;
     last_event = I2C_GetLastEvent(I2C1);
     if(last_event == I2C_EVT_SLAVE_ACK_MISS)   
-    {	
+    {    
         I2C_ClrFlag(I2C1, I2C_FLAG_ACKFAIL);
         if(rxDataNum != 0)  //slave send the last data and recv NACK 
         {
@@ -265,7 +265,7 @@ void IIC_RCCReset(void)
         RCC_EnableAPB1PeriphReset(RCC_APB1_PERIPH_I2C1, DISABLE);
         
         RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_I2C1, DISABLE );
-        GPIOB->PMODE |= 0x0000000F;
+        GPIOB->PMODE |= 0x000F0000;
         RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_AFIO, DISABLE);
         RCC_EnableAPB2PeriphClk (RCC_APB2_PERIPH_GPIOB, DISABLE );
         
@@ -286,7 +286,7 @@ void IIC_SWReset(void)
     i2cx_gpio.GPIO_Slew_Rate    = GPIO_Slew_Rate_High;
     i2cx_gpio.GPIO_Mode         = GPIO_Mode_Input;
     i2cx_gpio.GPIO_Alternate    = GPIO_NO_AF;
-    i2cx_gpio.GPIO_Pull         = GPIO_No_Pull;	  
+    i2cx_gpio.GPIO_Pull         = GPIO_No_Pull;      
     GPIO_InitPeripheral(GPIOx, &i2cx_gpio);
     
     I2CTimeout = I2CT_LONG_TIMEOUT;

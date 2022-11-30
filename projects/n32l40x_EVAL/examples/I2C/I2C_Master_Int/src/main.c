@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_i2c.h"
@@ -270,7 +270,7 @@ int main(void)
  */
 void I2C1_EV_IRQHandler(void)
 {
-    uint32_t last_event = 0;
+    unsigned int last_event = 0;
     
     last_event = I2C_GetLastEvent(I2C1);
     if ((last_event & I2C_ROLE_MASTER) == I2C_ROLE_MASTER) // master mode
@@ -362,6 +362,18 @@ void I2C1_EV_IRQHandler(void)
 }
 
 /**
+ * @brief  i2c err Interrupt service function
+ */
+void I2C1_ER_IRQHandler(void)
+{  
+   if(I2C_GetFlag(I2C1, I2C_FLAG_ACKFAIL))
+   {
+      I2C_ClrFlag(I2C1, I2C_FLAG_ACKFAIL);
+      I2C_GenerateStop(I2C1, ENABLE); // Send I2C1 STOP Condition.
+   }
+}
+
+/**
  * @brief  Compares two buffers.
  * @param  pBuffer, pBuffer1: buffers to be compared.
  * @param BufferLength buffer's length
@@ -450,7 +462,7 @@ void IIC_RCCReset(void)
         RCC_EnableAPB1PeriphReset(RCC_APB1_PERIPH_I2C1, DISABLE);
         
         RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_I2C1, DISABLE );
-        GPIOB->PMODE |= 0x0000000F;
+        GPIOB->PMODE |= 0x000F0000;
         RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_AFIO, DISABLE);
         RCC_EnableAPB2PeriphClk (RCC_APB2_PERIPH_GPIOB, DISABLE );
         

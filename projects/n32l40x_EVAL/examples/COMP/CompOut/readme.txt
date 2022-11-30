@@ -1,22 +1,50 @@
-1¡¢¹¦ÄÜËµÃ÷
-    1¡¢COMP1µÄÊä³öPA11ÊÜÊäÈëINP PB10ºÍINM PA5µÄÓ°Ïì
-2¡¢Ê¹ÓÃ»·¾³
-    Èí¼ş¿ª·¢»·¾³£º  KEIL MDK-ARM V5.26.2.0
-    Ó²¼ş»·¾³£º      »ùÓÚN32L43XM-STB¿ª·¢
-3¡¢Ê¹ÓÃËµÃ÷
-    ÏµÍ³ÅäÖÃ£»
-        1¡¢Ê±ÖÓÔ´£º
+1ã€åŠŸèƒ½è¯´æ˜
+    1ã€COMP1çš„è¾“å‡ºPA11å—è¾“å…¥INP PB10å’ŒINM PA5çš„å½±å“
+2ã€ä½¿ç”¨ç¯å¢ƒ
+    è½¯ä»¶å¼€å‘ç¯å¢ƒï¼š  KEIL MDK-ARM V5.26.2.0
+    ç¡¬ä»¶ç¯å¢ƒï¼š      åŸºäºN32L40XML-STB V1.0å¼€å‘
+3ã€ä½¿ç”¨è¯´æ˜
+    ç³»ç»Ÿé…ç½®ï¼›
+        1ã€æ—¶é’Ÿæºï¼š
             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,COMP CLK=16M
-        2¡¢¶Ë¿ÚÅäÖÃ£º
-            PB10Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP INP
-            PA5Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP INM
-            PA11Ñ¡ÔñÎªÄ£Äâ¹¦ÄÜCOMP OUT
-            PD2Ñ¡ÔñÎªIOÊä³ö
-            PD3Ñ¡ÔñÎªIOÊä³ö
-        3¡¢COMP£º
-            COMP1ÊäÈëPB10£¬PA5£¬Êä³öPA11
-    Ê¹ÓÃ·½·¨£º
-        1¡¢±àÒëºó´ò¿ªµ÷ÊÔÄ£Ê½£¬½«PD2Á¬½Óµ½PB10£¬PD3Á¬½Óµ½PA5£¬ÀûÓÃÊ¾²¨Æ÷»òÕßÂß¼­·ÖÎöÒÇ¹Û²ìPA11Êä³ö²¨ĞÎ
-        2¡¢µ±Èí¼şÊä³öPD2µçÆ½´óÓÚPD3Ê±£¬PA11Êä³ö¸ßµçÆ½£¬Ïà·´Ê±£¬Êä³öµÍµçÆ½
-4¡¢×¢ÒâÊÂÏî
-    ÎŞ
+        2ã€ç«¯å£é…ç½®ï¼š
+            PB10é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP INP
+            PA5é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP INM
+            PA11é€‰æ‹©ä¸ºæ¨¡æ‹ŸåŠŸèƒ½COMP OUT
+            PD2é€‰æ‹©ä¸ºIOè¾“å‡º
+            PD3é€‰æ‹©ä¸ºIOè¾“å‡º
+        3ã€COMPï¼š
+            COMP1è¾“å…¥PB10ï¼ŒPA5ï¼Œè¾“å‡ºPA11
+    ä½¿ç”¨æ–¹æ³•ï¼š
+        1ã€ç¼–è¯‘åæ‰“å¼€è°ƒè¯•æ¨¡å¼ï¼Œå°†PD2è¿æ¥åˆ°PB10ï¼ŒPD3è¿æ¥åˆ°PA5ï¼Œåˆ©ç”¨ç¤ºæ³¢å™¨æˆ–è€…é€»è¾‘åˆ†æä»ªè§‚å¯ŸPA11è¾“å‡ºæ³¢å½¢
+        2ã€å½“è½¯ä»¶è¾“å‡ºPD2ç”µå¹³å¤§äºPD3æ—¶ï¼ŒPA11è¾“å‡ºé«˜ç”µå¹³ï¼Œç›¸åæ—¶ï¼Œè¾“å‡ºä½ç”µå¹³
+4ã€æ³¨æ„äº‹é¡¹
+    æ— 
+
+
+
+
+
+
+1. Function description
+     1. The output PA11 of COMP1 is affected by the input INP PB10 and INM PA5
+2. Use environment
+     Software development environment: KEIL MDK-ARM V5.26.2.0
+     Hardware environment: Developed based on the development board N32L40XML-STB V1.0
+3. Instructions for use
+     System Configuration;
+         1. Clock source:
+             HSE=8M,PLL=64M,AHB=64M,APB1=16M,APB2=32M,COMP CLK=16M
+         2. Port configuration:
+             PB10 is selected as analog function, COMP INP
+             PA5 is selected as analog function, COMP INM
+             PA11 is selected as analog function, COMP OUT
+             PD2 is selected as IO output
+             PD3 is selected as IO output
+         3. COMP:
+             COMP1 input PB10, PA5, output PA11
+     Instructions:
+         1. After compiling, open the debug mode, connect PD2 to PB10, connect PD3 to PA5, and use an oscilloscope or logic analyzer to observe the output waveform of PA11
+         2. When the software output PD2 level is greater than PD3, PA11 outputs a high level, on the contrary, it outputs a low level
+4. Matters needing attention
+     without

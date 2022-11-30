@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -64,18 +64,6 @@ int main(void)
     /* GPIO Configuration */
     GPIO_Configuration();
 
-    /* ---------------------------------------------------------------
-    TIM2 Configuration:
-    TIM2CLK = SystemCoreClock / 2,
-    The objective is to get TIM2 counter clock at 1 KHz:
-     - Prescaler = (TIM2CLK / TIM2 counter clock) - 1
-    And generate 4 signals with 4 different delays:
-    TIM2_CH1 delay = CCR1_Val/TIM2 counter clock = 1000 ms
-    TIM2_CH2 delay = CCR2_Val/TIM2 counter clock = 500 ms
-    TIM2_CH3 delay = CCR3_Val/TIM2 counter clock = 250 ms
-    TIM2_CH4 delay = CCR4_Val/TIM2 counter clock = 125 ms
-
-    --------------------------------------------------------------- */
     /* Compute the prescaler value */
     PrescalerValue = (uint16_t)(SystemCoreClock / 2000) - 1;
     /* Time base configuration */

@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include "n32l40x_rcc.h"
@@ -50,7 +50,7 @@ void DumpWords(const uint32_t* words, uint32_t len)
 {
     for (uint32_t i = 0; i < len; ++i)
     {
-        log_info("0x%08x, ", words[i]);
+        log_info("0x%08x, ", (unsigned int)words[i]);
     }
 }
 
@@ -58,7 +58,7 @@ void DumpBytes(const uint8_t* bytes, uint32_t len)
 {
     for (uint32_t i = 0; i < len; ++i)
     {
-        log_info("%02x", bytes[i]);
+        log_info("%02x", (unsigned int)bytes[i]);
     }
 }
 
@@ -161,7 +161,7 @@ void TestSHA256()
 void TestDES(void)
 {
   DES_PARM DES_Parm;
-#ifdef __IAR_ARM
+#if  (defined __IAR_ARM) || (defined __GCC_ARM)
 
     uint8_t key[8]   = {1, 2, 3, 4, 5, 6, 7, 8};
     uint8_t plain[8] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};

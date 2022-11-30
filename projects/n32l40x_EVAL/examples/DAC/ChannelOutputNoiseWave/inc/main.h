@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -27,14 +27,9 @@
 
 /**
  * @file main.h
-<<<<<<< .mine
- * @author Nations 
-=======
  * @author Nations
->>>>>>> .r78072
- * @version v1.0.0
- *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @version v1.2.0
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __MAIN_H__
 #define __MAIN_H__

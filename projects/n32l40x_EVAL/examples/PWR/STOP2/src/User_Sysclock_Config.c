@@ -20,16 +20,16 @@
  */
 void SetSysClockToPLL(uint32_t freq, uint32_t RCC_SYSCLKSource)
 {
-    uint32_t pllsrcclk;
-    uint32_t pllsrc;
-    uint32_t pllmul;
+    uint32_t pllsrcclk=0;
+    uint32_t pllsrc=0;
+    uint32_t pllmul=0;
     uint32_t plldiv = RCC_PLLDIVCLK_DISABLE;
-    uint32_t latency;
-    uint32_t pclk1div, pclk2div;
+    uint32_t latency=0;
+    uint32_t pclk1div=0, pclk2div=0;
     uint32_t msi_ready_flag = RESET;
     uint8_t src = SYSCLK_PLLSRC_HSE;
-    ErrorStatus HSEStartUpStatus;
-    ErrorStatus HSIStartUpStatus;
+    ErrorStatus HSEStartUpStatus=ERROR;
+    ErrorStatus HSIStartUpStatus=ERROR;
     if (HSE_VALUE != 8000000)
     {
        /* HSE_VALUE == 8000000 is needed in this project! */

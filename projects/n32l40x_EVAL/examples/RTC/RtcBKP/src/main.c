@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32l40x.h"
 #include <stdio.h>
@@ -66,7 +66,7 @@ int main(void)
     for(i=0;i<BACKUP_REGISTER_SIZE;i++)
     {
        Read_Backup_Datas[i]=BKP_ReadBkpData(BKP_Datas[i]);
-       printf("\r\n BKP_DAT%d=%x\r\n",i+1,Read_Backup_Datas[i]);
+       printf("\r\n BKP_DAT%u=%x\r\n",i+1,(unsigned int)Read_Backup_Datas[i]);
     }
     while (1);
 }

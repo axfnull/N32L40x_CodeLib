@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -54,40 +54,6 @@ int main(void)
 
     /* Configure the GPIO ports */
     GPIO_Configuration();
-
-    /* Timers synchronisation in cascade mode with an external trigger -----
-    1/TIM1 is configured as Master Timer:
-     - Toggle Mode is used
-     - The TIM1 Enable event is used as Trigger Output
-
-    2/TIM1 is configured as Slave Timer for an external Trigger connected
-     to TIM1 TI2 pin (TIM1 CH2 configured as input pin):
-     - The TIM1 TI2FP2 is used as Trigger Input
-     - Rising edge is used to start and stop the TIM1: Gated Mode.
-
-    3/TIM3 is slave for TIM1 and Master for TIM4,
-     - Toggle Mode is used
-     - The ITR1(TIM1) is used as input trigger
-     - Gated mode is used, so start and stop of slave counter
-       are controlled by the Master trigger output signal(TIM1 enable event).
-     - The TIM3 enable event is used as Trigger Output.
-
-    4/TIM4 is slave for TIM3,
-     - Toggle Mode is used
-     - The ITR2(TIM3) is used as input trigger
-     - Gated mode is used, so start and stop of slave counter
-       are controlled by the Master trigger output signal(TIM3 enable event).
-
-    * The TIMxCLK is fixed to 64 MHZ, the Prescaler is equal to 1 so the TIMx clock
-      counter is equal to 32 MHz.
-      The Three Timers are running at:
-      TIMx frequency = TIMx clock counter/ 2*(TIMx_Period + 1) = 216.2 KHz.
-
-    The starts and stops of the TIM1 counters are controlled by the
-    external trigger.
-    The TIM3 starts and stops are controlled by the TIM1, and the TIM4
-    starts and stops are controlled by the TIM3.
-    -------------------------------------------------------------------- */
 
     /* Time base configuration */
     TIM_TimeBaseStructure.Period    = 73;

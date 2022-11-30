@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019, Nations Technologies Inc.
+ * Copyright (c) 2022, Nations Technologies Inc.
  *
  * All rights reserved.
  * ****************************************************************************
@@ -28,9 +28,9 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.0.0
+ * @version v1.2.0
  *
- * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
+ * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "main.h"
 
@@ -64,16 +64,6 @@ int main(void)
     /* GPIO Configuration */
     GPIO_Configuration();
 
-    /* ---------------------------------------------------------------------------
-    TIM3 Configuration: Output Compare Toggle Mode:
-    TIM3CLK = SystemCoreClock / 2,
-    The objective is to get TIM3 counter clock at 12 MHz:
-     - Prescaler = (TIM3CLK / TIM3 counter clock) - 1
-    CC1 update rate = TIM3 counter clock / CCR1_Val = 366.2 Hz
-    CC2 update rate = TIM3 counter clock / CCR2_Val = 732.4 Hz
-    CC3 update rate = TIM3 counter clock / CCR3_Val = 1464.8 Hz
-    CC4 update rate = TIM3 counter clock / CCR4_Val = 2929.6 Hz
-    ----------------------------------------------------------------------------*/
     /* Compute the prescaler value */
     PrescalerValue = (uint16_t)(SystemCoreClock / 24000000) - 1;
 
