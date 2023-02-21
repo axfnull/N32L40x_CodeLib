@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version v1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -39,7 +39,9 @@
 #include "n32l40x_rtc.h"
 #include "User_LED_Config.h"
 #include "User_RTC_Config.h"
+#include "User_Sysclock_Config.h"
 #include "log.h"
+#include "User_RTCBKP_Config.h"
 
 /**
  * @brief  Delay function.
@@ -69,24 +71,38 @@ int main(void)
     /* Initialize USART,TX: PC10 RX: PC11*/
     log_init();
     log_info("\r\n RTC Init \r\n");
-    /* Enable PWR Clock */
-    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
     /* RTC date time alarm default value*/
     RTC_DateAndTimeDefaultVale();
-    /* RTC clock source select */
-    RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true, true);
-    RTC_PrescalerConfig();
-    log_info("\r\n RTC configured....");
-    /* Adjust time by values entered by the user on the hyperterminal */
-    RTC_DateRegulate();
-    RTC_TimeRegulate();
-    /* wake up clock select */
-    RTC_ConfigWakeUpClock(RTC_WKUPCLK_CK_SPRE_16BITS);
-    /* wake up timer value */
-    RTC_SetWakeUpCounter(4);
+    /* Enable the PWR clock */
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
+    /* Allow access to RTC */
+    PWR_BackupAccessEnable(ENABLE);
+    if (USER_WRITE_BKP_DAT1_DATA != BKP_ReadBkpData(BKP_DAT1) )
+    {
+        /* RTC clock source select */
+        if(SUCCESS==RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true))
+        {
+           RTC_PrescalerConfig();
+           /* Adjust time by values entered by the user on the hyperterminal */
+           RTC_DateRegulate();
+           RTC_TimeRegulate();
+           /* wake up clock select */
+           RTC_ConfigWakeUpClock(RTC_WKUPCLK_CK_SPRE_16BITS);
+           /* wake up timer value */
+           RTC_SetWakeUpCounter(4);
+           BKP_WriteBkpData(BKP_DAT1, USER_WRITE_BKP_DAT1_DATA);
+           log_info("\r\n RTC Init Success\r\n");
+        }
+        else
+        {
+            log_info("\r\n RTC Init Faile\r\n");
+        }
+    }
 #if (RTC_ALARM_TEST_TYPE   ==  RTC_ALARM_TEST_TYPE_IRQ) // 1.WakeUp interrupt test
+    EXTI_ClrITPendBit(EXTI_LINE20);
     EXTI20_RTCWKUP_Configuration(ENABLE);
     /* Enable the RTC Wakeup Interrupt */
+    RTC_ClrIntPendingBit(RTC_INT_WUT);
     RTC_ConfigInt(RTC_INT_WUT, ENABLE);
     RTC_EnableWakeUp(ENABLE);
     DBG_ConfigPeriph(DBG_STOP, ENABLE);
@@ -94,10 +110,15 @@ int main(void)
     {
         /* Insert a long delay */
         delay(20);
+        /* when system clock HSE is selected,advise that the system clock configure as SYSCLK_PLLSRC_HSE,
+        when exit the stop2,system clock can configure back as SYSCLK_PLLSRC_HSE_PLLDIV2 */
+        SetSysClockToPLL(SystemCoreClock,SYSCLK_PLLSRC_HSE);
         /* Request to enter STOP2 mode*/
         PWR_EnterSTOP2Mode(PWR_STOPENTRY_WFI,PWR_CTRL3_RAM1RET|PWR_CTRL3_RAM2RET); 
+        SetSysClockToPLL(SystemCoreClock,SYSCLK_PLLSRC_HSE_PLLDIV2);
         /* Insert a long delay */
         delay(20);
+        log_init();
         log_info("\r\n Stop2 Wakeup From RTC \r\n");
         RTC_TimeShow();
         LEDBlink(LED1_PORT,LED1_PIN);

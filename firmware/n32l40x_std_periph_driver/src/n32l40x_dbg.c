@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_dbg.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -95,7 +95,14 @@ void GetUCID(uint8_t *UCIDbuf)
 	uint32_t* ucid_addr = (void*)0;
     uint32_t temp = 0;
 
-    ucid_addr = (uint32_t*)UCID_BASE;
+    if (0xFFFFFFFF == *(uint32_t*)(0x1FFFF260))
+    {
+        ucid_addr = (uint32_t*)UCID_BASE;
+    }
+    else
+    {
+        ucid_addr = (uint32_t*)(0x1FFFF260);
+    }
     
 	for (num = 0; num < UCID_LENGTH;)
     {
@@ -118,7 +125,14 @@ void GetUID(uint8_t *UIDbuf)
 	uint32_t* uid_addr = (void*)0;
     uint32_t temp = 0;
     
-    uid_addr = (uint32_t*)UID_BASE;
+    if (0xFFFFFFFF == *(uint32_t*)(0x1FFFF270))
+    {
+        uid_addr = (uint32_t*)UID_BASE;
+    }
+    else
+    {
+        uid_addr = (uint32_t*)(0x1FFFF270);
+    }
         
     for (num = 0; num < UID_LENGTH;)
     {

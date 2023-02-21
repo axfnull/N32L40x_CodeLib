@@ -27,8 +27,9 @@
 
 /**
  * @file main.h
- * @author Nations 
- * @version v1.2.0
+ * @author Nations
+ * @version V1.2.1
+ *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #ifndef __MAIN_H__

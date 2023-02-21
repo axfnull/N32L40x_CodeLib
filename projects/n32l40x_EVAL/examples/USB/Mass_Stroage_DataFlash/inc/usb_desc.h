@@ -1,7 +1,7 @@
 /******************** (C) COPYRIGHT 2020 Nations Technologies Inc ********************
 * File Name          : usb_desc.c
 * Author             : Nations
-* Version            : v1.2.0
+* Version            : V1.2.1
 * Date               : 09/03/2020
 * Description        : Descriptors for Mass Storage Device
  * ****************************************************************************
@@ -29,7 +29,7 @@
 /**
  * @file usb_desc.h
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */

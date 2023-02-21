@@ -422,6 +422,16 @@
               <FileType>1</FileType>
               <FilePath>..\src\User_RTC_Config.c</FilePath>
             </File>
+            <File>
+              <FileName>User_RTCBKP_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\User_RTCBKP_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>User_Delay_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\User_Delay_Config.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

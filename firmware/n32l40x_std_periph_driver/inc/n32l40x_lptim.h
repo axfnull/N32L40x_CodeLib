@@ -36,7 +36,7 @@
  * @file     n32l40x_lptim.h
  * @author   
  * @date     
- * @version  v1.2.0
+ * @version  V1.2.1
  * @brief    
  ******************************************************************************/
 #ifndef __N32L40X_LPTIM_H

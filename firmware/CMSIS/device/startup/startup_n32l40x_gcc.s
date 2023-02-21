@@ -454,4 +454,4 @@ g_pfnVectors:
    .weak      UCDR_IRQHandler                  
    .thumb_set UCDR_IRQHandler,Default_Handler  
    
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+/************************ (C) COPYRIGHT Nations Technologies Inc *****END OF FILE****/

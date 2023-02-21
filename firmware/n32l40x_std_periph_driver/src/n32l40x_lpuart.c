@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_lpuart.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -517,6 +517,10 @@ void LPUART_ClrIntPendingBit(uint16_t LPUART_INT)
     assert_param(IS_LPUART_CLR_INT(LPUART_INT));
     
     itmask      = ((uint8_t)LPUART_INT) & 0xFF;
+    if(LPUART_INT_WUF == LPUART_INT)
+    {
+       itmask = (itmask << 0x01);
+    }
     LPUART->STS = (uint16_t)itmask;
 }
 /**

@@ -471,11 +471,6 @@
               <FilePath>..\src\User_LED_Config.c</FilePath>
             </File>
             <File>
-              <FileName>User_Sysclock_Config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\User_Sysclock_Config.c</FilePath>
-            </File>
-            <File>
               <FileName>User_Systick_Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\User_Systick_Config.c</FilePath>

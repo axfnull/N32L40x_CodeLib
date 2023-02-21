@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -40,6 +40,7 @@
 #include "n32l40x.h"
 #include "User_LED_Config.h"
 #include "User_RTC_Config.h"
+#include "User_RTCBKP_Config.h"
 
 /** @addtogroup RTC_Calendar
  * @{
@@ -147,12 +148,27 @@ int main(void)
     log_info("\r\n RTC Init \r\n");
     /* RTC date and time default value*/
     RTC_DateAndTimeDefaultVale();
-    /* RTC clock source select */
-    RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true, true);
-    RTC_PrescalerConfig();
-    /* Adjust time by values entered by the user on the hyperterminal */
-    RTC_DateRegulate();
-    RTC_TimeRegulate();
+    /* Enable the PWR clock */
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
+    /* Allow access to RTC */
+    PWR_BackupAccessEnable(ENABLE);
+    if (USER_WRITE_BKP_DAT1_DATA != BKP_ReadBkpData(BKP_DAT1) )
+    {
+        /* RTC clock source select */
+        if(SUCCESS==RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true))
+        {
+           RTC_PrescalerConfig();
+           /* Adjust time by values entered by the user on the hyperterminal */
+           RTC_DateRegulate();
+           RTC_TimeRegulate();
+           BKP_WriteBkpData(BKP_DAT1, USER_WRITE_BKP_DAT1_DATA);
+           log_info("\r\n RTC Init Success\r\n");
+        }
+        else
+        {
+           log_info("\r\n RTC Init Faile\r\n");
+        }
+    }
     /* Adjust time by values entered by the user on the hyperterminal */
     RTC_ConfigCalibOutput(RTC_CALIB_OUTPUT_1HZ);
     /* Calibrate output config,push pull */
@@ -163,6 +179,7 @@ int main(void)
     (while externally feeding PD8 with 1HZ signal output from PC13)
     */
     EXTI_PB8_TimeStamp_Configuration(1);
+    EXTI_ClrITPendBit(EXTI_LINE19);
     EXTI19_TAMPER_IRQn_Configuration(ENABLE,1);
     /* clear RTC time stamp flag  */
     RTC_ClrFlag(RTC_FLAG_TISF);

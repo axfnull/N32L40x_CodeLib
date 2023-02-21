@@ -3,6 +3,7 @@
 #include "log.h"
 #include "n32l40x_rtc.h"
 #include "User_RTC_Config.h"
+#include "User_Delay_Config.h"
 
 RTC_DateType  RTC_DateStructure;
 RTC_DateType  RTC_DateDefault;
@@ -15,7 +16,10 @@ uint32_t SynchPrediv, AsynchPrediv;
 
 /**
  * @brief  Display the current alarm time on the Hyperterminal.
- * @param AlarmX ALARMA or ALARMB
+  * @param RTC_Alarm specifies the alarm to be operation.
+ *   This parameter can be one of the following values:
+ *     @arg RTC_A_ALARM to select Alarm A.
+ *     @arg RTC_B_ALARM to select Alarm B.
  */
 void RTC_AlarmShow(uint8_t AlarmX)
 {
@@ -86,6 +90,13 @@ void RTC_DateAndTimeDefaultVale(void)
 
 /**
  * @brief  RTC alarm regulate with the default value.
+ * @param RTC_Alarm specifies the alarm to be configured.
+ *   This parameter can be one of the following values:
+ *     @arg RTC_A_ALARM to select Alarm A.
+ *     @arg RTC_B_ALARM to select Alarm B.
+ * @return An ErrorStatus enumeration value:
+ *          - SUCCESS: RTC Alarm regulate success
+ *          - ERROR: RTC Alarm regulate failed
  */
 ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
 {
@@ -154,6 +165,9 @@ ErrorStatus RTC_AlarmRegulate(uint32_t RTC_Alarm)
 
 /**
  * @brief  RTC date regulate with the default value.
+ * @return An ErrorStatus enumeration value:
+ *          - SUCCESS: RTC date regulate success
+ *          - ERROR: RTC date regulate failed
  */
 ErrorStatus RTC_DateRegulate(void)
 {
@@ -220,6 +234,9 @@ ErrorStatus RTC_DateRegulate(void)
 
 /**
  * @brief  RTC time regulate with the default value.
+ * @return An ErrorStatus enumeration value:
+ *          - SUCCESS: RTC time regulate success
+ *          - ERROR: RTC time regulate failed
  */
 ErrorStatus RTC_TimeRegulate(void)
 {
@@ -300,13 +317,14 @@ void RTC_PrescalerConfig(void)
  *   This parameter can be on of the following values:
  *     @arg true
  *     @arg false
- * @param Is_Rst_Bkp specifies Whether Reset The Backup Area
- *   This parameter can be on of the following values:
- *     @arg true
- *     @arg false
+ * @return An ErrorStatus enumeration value:
+ *          - SUCCESS: RTC clock configure success
+ *          - ERROR: RTC clock configure failed
  */
-void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, bool Is_Rst_Bkp)
+ErrorStatus RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC)
 {
+    uint8_t lse_ready_count=0;
+    ErrorStatus Status=SUCCESS;
     /* Enable the PWR clock */
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_AFIO, ENABLE);
@@ -314,6 +332,7 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
     PWR_BackupAccessEnable(ENABLE);
     /* Disable RTC clock */
     RCC_EnableRtcClk(DISABLE);
+    User_Delay_init();
     if (RTC_CLK_SRC_TYPE_HSE_DIV32 == Clk_Src_Type)
     {
         log_info("\r\n RTC_ClkSrc Is Set HSE/32! \r\n");
@@ -352,8 +371,19 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
     #else
             RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
     #endif
-            while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
+            lse_ready_count=0;
+            /****Waite LSE Ready *****/
+            while((RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET) && (lse_ready_count<RTC_LSE_TRY_COUNT))
             {
+                lse_ready_count++;
+                User_Delay_xms(10);
+                /****LSE Ready failed or timeout*****/
+                if(lse_ready_count>=RTC_LSE_TRY_COUNT)
+                {
+                    Status = ERROR;
+                    log_info("\r\n RTC_ClkSrc Set LSE Faile! \r\n");
+                    break;
+                }
             }
             RCC_ConfigRtcClk(RCC_RTCCLK_SRC_LSE);
         }
@@ -367,8 +397,19 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
     #else
             RCC_ConfigLse(RCC_LSE_ENABLE,0x28);
     #endif
-            while (RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET)
+            lse_ready_count=0;
+            /****Waite LSE Ready *****/
+            while((RCC_GetFlagStatus(RCC_LDCTRL_FLAG_LSERD) == RESET) && (lse_ready_count<RTC_LSE_TRY_COUNT))
             {
+                lse_ready_count++;
+                User_Delay_xms(10);
+                /****LSE Ready failed or timeout*****/
+                if(lse_ready_count>=RTC_LSE_TRY_COUNT)
+                {
+                   Status = ERROR;
+                   log_info("\r\n RTC_ClkSrc Set LSE Faile! \r\n");
+                   break;
+                }
             }
         }
         SynchPrediv  = 0xFF; // 32.768KHz
@@ -405,6 +446,7 @@ void RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE Clk_Src_Type, bool Is_First_Cfg_RCC, b
     /* Enable the RTC Clock */
     RCC_EnableRtcClk(ENABLE);
     RTC_WaitForSynchro();
+    return Status;
 }
 
 /**

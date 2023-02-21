@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_rcc.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -1268,29 +1268,39 @@ void LSE_XtalConfig(uint16_t LSE_Trim)
  */
 void RCC_ConfigLse(uint8_t RCC_LSE,uint16_t LSE_Trim)
 {
-    //PWR DBP set 1
-    /* Enable PWR Clock */
-    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
-    PWR->CTRL1 |=  0x100;
+    uint32_t LDCTRL_Value;
+    uint32_t i=0;
     /* Check the parameters */
     assert_param(IS_RCC_LSE(RCC_LSE));
-    /* Reset LSEEN LSEBYP and LSECLKSSEN bits before configuring the LSE ------------------*/
-    *(__IO uint32_t*)LDCTRL_ADDR &= (~(RCC_LDCTRL_LSEEN | RCC_LDCTRL_LSEBP | RCC_LDCTRL_LSECLKSSEN));
+    /* PWR DBP set 1 Enable PWR Clock */
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
+    PWR->CTRL1 |=  0x100;
+    /* Reset LSEEN LSEBYP and LSECLKSSEN bits before configuring the LSE*/
+    LDCTRL_Value = *(__IO uint32_t*)LDCTRL_ADDR;
+    LDCTRL_Value &= (~(RCC_LDCTRL_LSEEN | RCC_LDCTRL_LSEBP | RCC_LDCTRL_LSECLKSSEN));
     /* Configure LSE (RCC_LSE_DISABLE is already covered by the code section above) */
     switch (RCC_LSE)
     {
-    case RCC_LSE_ENABLE:
-        /* Set LSEON bit */
-        *(__IO uint32_t*)LDCTRL_ADDR |= RCC_LSE_ENABLE;
-        LSE_XtalConfig(LSE_Trim);
-        break;
-    case RCC_LSE_BYPASS:
-        /* Set LSEBYP and LSEON bits */
-        *(__IO uint32_t*)LDCTRL_ADDR |= (RCC_LSE_BYPASS | RCC_LSE_ENABLE);
-        break;
-
-    default:
-        break;
+       case RCC_LSE_ENABLE:
+            /* Set LSEON bit */
+            LDCTRL_Value |= RCC_LSE_ENABLE;
+            *(__IO uint32_t*)LDCTRL_ADDR =LDCTRL_Value ;
+            LSE_XtalConfig(LSE_Trim);
+            break;
+       case RCC_LSE_DISABLE:
+            /* Reset LSEON bit */
+            LDCTRL_Value &= (~RCC_LSE_DISABLE);
+            *(__IO uint32_t*)LDCTRL_ADDR =LDCTRL_Value ;
+            /*Delay for 3 LSE Clock Wait for LSERD bit Reset*/
+            for(i=0;i<0x7FF;i++);
+            break;
+       case RCC_LSE_BYPASS:
+           /* Set LSEBYP and LSEON bits */
+            LDCTRL_Value |= RCC_LSE_BYPASS;
+            *(__IO uint32_t*)LDCTRL_ADDR = LDCTRL_Value;
+            break;
+       default:
+         break;
     }
 }
 

@@ -28,7 +28,7 @@
 /**
  * @file main.h
  * @author Nations 
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -39,17 +39,13 @@
 extern "C" {
 #endif
 
-//#include "n32l40x.h"
 
-///*Led1-PE6,Led2-PE7,Led3-PF6,Led4-PF7,Led5-PF8*/
+#define SRAM1_START_ADDR   0x20000000
+#define SRAM1_SIZE         (1024*16)
 
-//#define LED1           GPIO_PIN_5
-//#define LED2           GPIO_PIN_4
-//#define LED3           GPIO_PIN_8
-//#define KEY_INPUT_PORT GPIOA
-//#define KEY_INPUT_PIN  GPIO_PIN_0
+#define SRAM2_START_ADDR   0x20004000
+#define SRAM2_SIZE         (1024*8)
 
-//void Ledlink(uint16_t Pin);
 #ifdef __cplusplus
 }
 #endif

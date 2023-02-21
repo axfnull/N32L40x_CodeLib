@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_flash.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -512,7 +512,7 @@ FLASH_STS FLASH_EraseOB(void)
 
 /**
  * @brief  Programs the FLASH User Option Byte: 
- *         RDP1 / IWDG_SW / RST_STOP2 / RST_STDBY / RST_PD / OB_Data0 / OB_Data1
+ *         RDP1 / IWDG_SW / RST_STOP2 / RST_STDBY / OB_Data0 / OB_Data1
  *         WRP_Pages / RDP2 / nBOOT0 / nBOOT1 / nSWBOOT0 / BOR_LEV[2:0].
  * @note   This function can be used for n32l40x devices.
  * @param  OB_RDP1 
@@ -531,10 +531,6 @@ FLASH_STS FLASH_EraseOB(void)
  *   This parameter can be one of the following values:
  *     @arg OB_STDBY_NORST No reset generated when entering in STANDBY
  *     @arg OB_STDBY_RST Reset generated when entering in STANDBY
- * @param  OB_PD Reset event when entering PowerDown mode.
- *   This parameter can be one of the following values:
- *     @arg OB_PD_NORST No reset generated when entering in PowerDown
- *     @arg OB_PD_RST Reset generated when entering in PowerDown
  * @param  OB_Data0 
  *   This parameter can be one of the following values:
  *     @arg 0x00 ~ 0xFF
@@ -576,10 +572,9 @@ FLASH_STS FLASH_EraseOB(void)
  *         FLASH_ERR_EV, FLASH_ERR_RDP2 or FLASH_TIMEOUT.
  */
 FLASH_STS FLASH_ConfigALLOptionByte(uint8_t OB_RDP1,    uint8_t OB_IWDG,    uint8_t OB_STOP2, 
-                                    uint8_t OB_STDBY,   uint8_t OB_PD,      uint8_t OB_Data0,
-                                    uint8_t OB_Data1,   uint32_t WRP_Pages, uint8_t OB_RDP2,
-                                    uint8_t OB2_nBOOT0, uint8_t OB2_nBOOT1, uint8_t OB2_nSWBOOT0, 
-                                    uint8_t OB2_BOR_LEV)
+                                    uint8_t OB_STDBY,   uint8_t OB_Data0,   uint8_t OB_Data1,
+                                    uint32_t WRP_Pages, uint8_t OB_RDP2,    uint8_t OB2_nBOOT0,
+                                    uint8_t OB2_nBOOT1, uint8_t OB2_nSWBOOT0, uint8_t OB2_BOR_LEV)
 {
     uint32_t rdpuser_tmp, data0data1_tmp, wrp0wrp1_tmp, wrp2wrp3_tmp, rdp2user2_tmp;
 
@@ -590,7 +585,6 @@ FLASH_STS FLASH_ConfigALLOptionByte(uint8_t OB_RDP1,    uint8_t OB_IWDG,    uint
     assert_param(IS_OB_IWDG_SOURCE(OB_IWDG));
     assert_param(IS_OB_STOP2_SOURCE(OB_STOP2));
     assert_param(IS_OB_STDBY_SOURCE(OB_STDBY));
-    assert_param(IS_OB_PD_SOURCE(OB_PD));
     assert_param(IS_FLASH_WRP_PAGE(WRP_Pages));
     assert_param(IS_OB_RDP2_SOURCE(OB_RDP2));
     assert_param(IS_OB2_NBOOT0_SOURCE(OB2_nBOOT0));
@@ -606,8 +600,8 @@ FLASH_STS FLASH_ConfigALLOptionByte(uint8_t OB_RDP1,    uint8_t OB_IWDG,    uint
     }
     
     WRP_Pages      = (uint32_t)(~WRP_Pages);
-    rdpuser_tmp    = (((uint32_t)OB_RDP1) | (((uint32_t)(OB_IWDG | OB_STOP2 | OB_STDBY | OB_PD)) << 16));
-    data0data1_tmp = (((uint32_t)OB_Data0) | (((uint32_t)OB_Data0) << 16));
+    rdpuser_tmp    = (((uint32_t)OB_RDP1) | (((uint32_t)(OB_IWDG | OB_STOP2 | OB_STDBY)) << 16));
+    data0data1_tmp = (((uint32_t)OB_Data0) | (((uint32_t)OB_Data1) << 16));
     wrp0wrp1_tmp   = ((WRP_Pages & FLASH_WRP0_WRP0) | ((WRP_Pages << 8) & FLASH_WRP1_WRP1));
     wrp2wrp3_tmp   = (((WRP_Pages >> 16) & FLASH_WRP2_WRP2) | ((WRP_Pages >> 8) & FLASH_WRP3_WRP3));
     rdp2user2_tmp  = (((uint32_t)OB_RDP2) | (((uint32_t)(OB2_nBOOT0 | OB2_nBOOT1 | OB2_nSWBOOT0 | OB2_BOR_LEV)) << 16));
@@ -1061,15 +1055,11 @@ FLASH_STS FLASH_ReadOutProtectionL2_ENABLE(void)
  *   This parameter can be one of the following values:
  *     @arg OB_STDBY_NORST No reset generated when entering in STANDBY
  *     @arg OB_STDBY_RST Reset generated when entering in STANDBY
- * @param OB_PD Reset event when entering PowerDown mode.
- *   This parameter can be one of the following values:
- *     @arg OB_PD_NORST No reset generated when entering in PowerDown
- *     @arg OB_PD_RST Reset generated when entering in PowerDown
  * @return FLASH Status: The returned value can be: FLASH_BUSY, FLASH_ERR_RDKEY,
  *         FLASH_ERR_PG, FLASH_ERR_PV, FLASH_ERR_WRP, FLASH_COMPL,
  *         FLASH_ERR_EV, FLASH_ERR_RDP2 or FLASH_TIMEOUT.
  */
-FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY, uint8_t OB_PD)
+FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY)
 {
     uint32_t rdpuser_tmp = RDP_USER_Key;
 
@@ -1079,7 +1069,6 @@ FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY
     assert_param(IS_OB_IWDG_SOURCE(OB_IWDG));
     assert_param(IS_OB_STOP2_SOURCE(OB_STOP2));
     assert_param(IS_OB_STDBY_SOURCE(OB_STDBY));
-    assert_param(IS_OB_PD_SOURCE(OB_PD));
   
     /* Get the actual read protection L2 Option Byte value */
     if (FLASH_GetReadOutProtectionL2STS() != RESET)
@@ -1124,7 +1113,7 @@ FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY
             /* Restore the last read protection Option Byte value */
             OBT->USER_RDP =
                 (uint32_t)rdpuser_tmp
-                | (((uint32_t)(OB_IWDG | OB_STOP2 | OB_STDBY | OB_PD)) << 16);
+                | (((uint32_t)(OB_IWDG | OB_STOP2 | OB_STDBY )) << 16);
             /* Wait for last operation to be completed */
             status = FLASH_WaitForLastOpt(ProgramTimeout);
 

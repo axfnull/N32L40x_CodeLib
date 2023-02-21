@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_it.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -154,5 +154,12 @@ void SysTick_Handler(void)
 			 USART_ConfigInt(USARTz, USART_INT_RXDNE, DISABLE);
 		 }
 	 }
+     if(USART_GetIntStatus(USARTz, USART_INT_OREF) != RESET)
+     {
+        /*Read the STS register first,and the read the DAT 
+        register to clear the overflow interrupt*/
+        (void)USARTz->STS;
+        (void)USARTz->DAT;
+     }
  }
 

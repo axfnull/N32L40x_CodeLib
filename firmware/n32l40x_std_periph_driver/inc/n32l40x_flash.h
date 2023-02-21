@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_flash.h
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -323,17 +323,6 @@ typedef enum
 #define OB_STDBY_RST               ((uint8_t)0x00) /*!< Reset generated when entering in STANDBY */
 #define IS_OB_STDBY_SOURCE(SOURCE) (((SOURCE) == OB_STDBY_NORST) || ((SOURCE) == OB_STDBY_RST))
 
-/**
- * @}
- */
-
-/** @addtogroup Option_Bytes_nRST_PD
- * @{
- */
-
-#define OB_PD_NORST                ((uint8_t)0x08) /*!< No reset generated when entering in PowerDown */
-#define OB_PD_RST                  ((uint8_t)0x00) /*!< Reset generated when entering in PowerDown */
-#define IS_OB_PD_SOURCE(SOURCE)    (((SOURCE) == OB_PD_NORST) || ((SOURCE) == OB_PD_RST))
 
 /**
  * @}
@@ -476,11 +465,10 @@ FLASH_STS FLASH_EnWriteProtection(uint32_t FLASH_Pages);
 FLASH_STS FLASH_ReadOutProtectionL1(FunctionalState Cmd);
 FLASH_STS FLASH_ReadOutProtectionL2_ENABLE(void);
 FLASH_STS FLASH_ConfigALLOptionByte(uint8_t OB_RDP1,    uint8_t OB_IWDG,    uint8_t OB_STOP2, 
-                                    uint8_t OB_STDBY,   uint8_t OB_PD,      uint8_t OB_Data0,
-                                    uint8_t OB_Data1,   uint32_t WRP_Pages, uint8_t OB_RDP2,
-                                    uint8_t OB2_nBOOT0, uint8_t OB2_nBOOT1, uint8_t OB2_nSWBOOT0, 
-                                    uint8_t OB2_BOR_LEV);
-FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY, uint8_t OB_PD);
+                                    uint8_t OB_STDBY,   uint8_t OB_Data0,   uint8_t OB_Data1,
+                                    uint32_t WRP_Pages, uint8_t OB_RDP2,    uint8_t OB2_nBOOT0,
+                                    uint8_t OB2_nBOOT1, uint8_t OB2_nSWBOOT0, uint8_t OB2_BOR_LEV);
+FLASH_STS FLASH_ConfigUserOB(uint8_t OB_IWDG, uint8_t OB_STOP2, uint8_t OB_STDBY);
 FLASH_STS FLASH_ConfigUserOB2(uint8_t OB2_nBOOT0, uint8_t OB2_nBOOT1, uint8_t OB2_nSWBOOT0, uint8_t OB2_BOR_LEV);
 uint32_t FLASH_GetUserOB(void);
 uint32_t FLASH_GetWriteProtectionOB(void);

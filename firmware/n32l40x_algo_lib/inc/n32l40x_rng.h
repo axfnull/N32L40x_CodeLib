@@ -28,7 +28,7 @@
 /*****************************************************************************
 * File Name: n32l40x_rng.h
 * Function: Declaring RNG algorithm library API
-* version: V1.2.0
+* version: V1.2.1
 * Author: zhang.zhenshan
 * date: 2020-4-8
 * ****************************************************************************/ 

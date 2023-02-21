@@ -28,7 +28,7 @@
 /**
  * @file system_n32l40x.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -216,7 +216,7 @@ void SystemInit(void)
     SCB->CPACR |= ((3UL << 10 * 2) | (3UL << 11 * 2)); /* set CP10 and CP11 Full Access */
 #endif
 
-    /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
+//    /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
     /* Set MSIEN bit */
     RCC->CTRLSTS |= (uint32_t)0x00000004;
 
@@ -365,7 +365,7 @@ void SystemCoreClockUpdate(void)
         if (pllsource == 0x00)
         {
             /* HSI selected as PLL clock entry */
-            if ((RCC->PLLHSIPRE & RCC_PLLHSIPRE_PLLSRCDIV) != (uint32_t)RESET)
+            if ((RCC->PLLHSIPRE & RCC_PLLHSIPRE_PLLHSIPRE_HSI_DIV2) != (uint32_t)RESET)
             { /* HSI oscillator clock divided by 2 */
                 SystemCoreClock = (HSI_VALUE >> 1) * pllmull;
             }
@@ -413,14 +413,54 @@ void SystemCoreClockUpdate(void)
  */
 void ConfigMRVoltage1V(void)
 {
-    uint32_t  i=0;
-    ConfigSRAMVoltage(1);                  //SRAM read margin setting switch in 0.9/lprun mode: use low voltage mode settings and 1.0v use normal mode
-    PWR->CTRL1 &= (uint32_t)(~PWR_CTRL1_MRSEL);
-    PWR->CTRL1 |= PWR_CTRL1_MRSEL2;        //MR=1.0V
-    while((PWR->STS2 &PWR_STS2_MRF) != 0);               // wait VOSF to be 0 first
-    for(i=0;i<0x2A;i++);
-    while((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF);   // wait VOSF to be 1 then
+    uint32_t ctrl_temp=0;
+    /*delay about 25us pll in 64M */
+    uint32_t T25us=65*25;
+    __disable_irq();
+    while(((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF) && (T25us--));
+    /*SRAM read margin setting switch in 0.9/lprun mode: use low voltage mode settings and 1.0v use normal mode*/
+    ConfigSRAMVoltage(1);
+    ctrl_temp = PWR->CTRL1;
+    ctrl_temp &= (uint32_t)(~PWR_CTRL1_MRSEL);
+    ctrl_temp |= PWR_CTRL1_MRSEL2;
+    PWR->CTRL1 = ctrl_temp;
+    T25us=65*25;
+    /*wait VOSF to be 0 first*/ 
+    while(((PWR->STS2 & PWR_STS2_MRF) != 0) && (T25us--));
+    T25us=65*25;
+    /* wait VOSF to be 1 then */
+    while(((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF) && (T25us--));
+    __enable_irq();
 }
+
+
+/**
+ * @brief  Configures the System PWR level to 1.1V
+ * .
+ */
+void ConfigMRVoltage1_1V(void)
+{
+    uint32_t ctrl_temp=0;
+    /*delay about 25us pll in 64M */
+    uint32_t T25us=65*25;
+    __disable_irq();
+    while(((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF) && (T25us--));
+    /*SRAM read margin setting switch in 0.9/lprun mode: use low voltage mode settings and 1.0v use normal mode*/
+    ConfigSRAMVoltage(0);
+    /*MR=1.1V*/
+    ctrl_temp = PWR->CTRL1;
+    ctrl_temp &= (uint32_t)(~PWR_CTRL1_MRSEL);
+    ctrl_temp |= PWR_CTRL1_MRSEL;
+    PWR->CTRL1 = ctrl_temp;
+    T25us=65*25;
+    /* wait VOSF to be 0 first */
+    while(((PWR->STS2 &PWR_STS2_MRF) != 0) && (T25us--));
+    T25us=65*25;
+    /* wait VOSF to be 1 then */
+    while(((PWR->STS2 & PWR_STS2_MRF) != PWR_STS2_MRF) && (T25us--));
+    __enable_irq();
+}
+
 /**
  * @brief  Configures the System clock frequency, HCLK, PCLK2 and PCLK1
  * prescalers.
@@ -518,7 +558,7 @@ static void SetSysClock(void)
     RCC->CFG |= (uint32_t)RCC_CFG_AHBPRES_DIV1;
 
     /* PCLK2 max 32M */
-    if (SYSCLK_FREQ > 54000000)
+    if (SYSCLK_FREQ > 32000000)
     {
         RCC->CFG |= (uint32_t)RCC_CFG_APB2PRES_DIV2;
     }
@@ -528,11 +568,11 @@ static void SetSysClock(void)
     }
 
     /* PCLK1 max 16M */
-    if (SYSCLK_FREQ > 54000000)
+    if (SYSCLK_FREQ > 32000000)
     {
         RCC->CFG |= (uint32_t)RCC_CFG_APB1PRES_DIV4;
     }
-    else if (SYSCLK_FREQ > 27000000)
+    else if (SYSCLK_FREQ > 16000000)
     {
         RCC->CFG |= (uint32_t)RCC_CFG_APB1PRES_DIV2;
     }

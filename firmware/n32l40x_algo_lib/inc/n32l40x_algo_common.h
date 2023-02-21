@@ -28,7 +28,7 @@
 /*****************************************************************************
 * File Name: Common.h
 * Function: Defining the public functions used by other algorithm lib
-* version: V1.2.0
+* version: V1.2.1
 * Author: huang.jinshang
 * date: 2020-01-06
 * ****************************************************************************/

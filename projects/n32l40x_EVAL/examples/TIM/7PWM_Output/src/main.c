@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -154,7 +154,7 @@ void WritePuls(void)
  */
 void RCC_Configuration(void)
 {
-    /* TIM1, GPIOA, GPIOB, GPIOE and AFIO clocks enable */
+    /* TIM1,TIM8, GPIOA, GPIOB, GPIOC GPIOD and AFIO clocks enable */
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOA | RCC_APB2_PERIPH_GPIOB | RCC_APB2_PERIPH_GPIOC | RCC_APB2_PERIPH_TIM1
                                 | RCC_APB2_PERIPH_TIM8 | RCC_APB2_PERIPH_GPIOD | RCC_APB2_PERIPH_AFIO,
                             ENABLE);

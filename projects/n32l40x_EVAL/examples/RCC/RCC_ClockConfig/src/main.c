@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -487,23 +487,20 @@ void SetSysClockToPLL(uint32_t freq, uint8_t src)
 
     latency = (freq/32000000);
     
-    if(freq > 54000000)
+    if(freq > 32000000)
     {
         pclk1div = RCC_HCLK_DIV4;
         pclk2div = RCC_HCLK_DIV2;
     }
+    else if(freq > 16000000)
+    {
+        pclk1div = RCC_HCLK_DIV2;
+        pclk2div = RCC_HCLK_DIV1;
+    }
     else
     {
-        if(freq > 27000000)
-        {
-            pclk1div = RCC_HCLK_DIV2;
-            pclk2div = RCC_HCLK_DIV1;
-        }
-        else
-        {
-            pclk1div = RCC_HCLK_DIV1;
-            pclk2div = RCC_HCLK_DIV1;
-        }
+        pclk1div = RCC_HCLK_DIV1;
+        pclk2div = RCC_HCLK_DIV1;
     }
     
     if(((freq % pllsrcclk) == 0) && ((freq / pllsrcclk) >= 2) && ((freq / pllsrcclk) <= 32))

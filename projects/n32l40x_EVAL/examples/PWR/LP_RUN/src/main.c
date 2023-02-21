@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations 
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -77,6 +77,7 @@ int main(void)
     while(1)
     {
        /* Insert a long delay */
+       log_info("\r\n MCU Prepare Enter Low Power Run Mode Sysclock From MSI(4MHz)\r\n");
        delay(200);
        LEDBlink(LED1_PORT,LED1_PIN);
        /* Request to enter LP RUN mode sysclock switch to MSI*/
@@ -85,7 +86,9 @@ int main(void)
        /* Exit LP RUN mode*/
        PWR_ExitLowPowerRunMode();
        /*Switch sysclok from MSI to PLL*/
-       SetSysClockToPLL(48000000,SYSCLK_PLLSRC_HSE_PLLDIV2);
+       SetSysClockToPLL(SystemCoreClock,SYSCLK_PLLSRC_HSE_PLLDIV2);
+       log_init(); 
+       log_info("\r\n MCU Run In Run Mode Sysclock From PLL(64MHz)\r\n");
        LEDBlink(LED1_PORT,LED1_PIN);
     }
 }

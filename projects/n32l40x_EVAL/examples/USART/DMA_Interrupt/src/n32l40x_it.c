@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_it.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -140,6 +140,13 @@ void USART2_IRQHandler(void)
             USART_ConfigInt(USART2, USART_INT_RXDNE, DISABLE);
         }
     }
+    if(USART_GetIntStatus(USART2, USART_INT_OREF) != RESET)
+    {
+        /*Read the STS register first,and the read the DAT 
+        register to clear the overflow interrupt*/
+        (void)USART2->STS;
+        (void)USART2->DAT;
+    }
 }
 
 /**
@@ -158,6 +165,13 @@ void UART4_IRQHandler(void)
             USART_ConfigInt(UART4, USART_INT_RXDNE, DISABLE);
         }
     }
+    if(USART_GetIntStatus(UART4, USART_INT_OREF) != RESET)
+    {
+        /*Read the STS register first,and the read the DAT 
+        register to clear the overflow interrupt*/
+        (void)UART4->STS;
+        (void)UART4->DAT;
+    }
 }
 
 /**
@@ -175,6 +189,13 @@ void UART5_IRQHandler(void)
             /* Disable the UART7 Receive interrupt */
             USART_ConfigInt(UART5, USART_INT_RXDNE, DISABLE);
         }
+    }
+    if(USART_GetIntStatus(UART5, USART_INT_OREF) != RESET)
+    {
+        /*Read the STS register first,and the read the DAT 
+        register to clear the overflow interrupt*/
+        (void)UART5->STS;
+        (void)UART5->DAT;
     }
 }
 

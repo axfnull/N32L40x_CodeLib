@@ -28,7 +28,7 @@
 /**
  * @file n32l40x_adc.h
  * @author Nations Solution Team
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -454,6 +454,29 @@ typedef struct
     ADC_CTRL3_RES ResBit;
     bool Samp303Style;
 } ADC_InitTypeEx;
+
+typedef struct
+{
+  __IO uint32_t TRIMR0;
+  __IO uint32_t TRIMR1;
+  __IO uint32_t TRIMR2;
+  __IO uint32_t TRIMR3;
+  __IO uint32_t TRIMR4;
+  __IO uint32_t TRIMR5;
+  __IO uint32_t TRIMR6;
+  __IO uint32_t TRIMR7;
+  __IO uint32_t TRIMR8;
+  __IO uint32_t TESTR0; 
+  __IO uint32_t TESTR1;
+  __IO uint32_t EMC_CTRL;
+  __IO uint32_t EMC_ST;
+} AFEC_TypeDef;
+
+typedef enum
+{
+    ADC_REFENCE_Volt_VREF	  = 0,
+    ADC_REFENCE_Volt_VREFBUFF = 1,   
+} ADC_REFERENCE_Volt;
 /**
  * @}
  */
@@ -478,7 +501,14 @@ typedef struct
 /**
  * @}
  */
+/** @addtogroup ADC_AFEC definition
+ * @{
+ */
+#define AFEC_BASE             	(APB1PERIPH_BASE + 0x1800)
 
+#define AFEC_CTL                ((AFEC_TypeDef *) AFEC_BASE)
+
+#define RCC_APB1Periph_AFEC     ((uint32_t)0x00000100)
 /**
  * @}
  */
@@ -527,6 +557,8 @@ void ADC_SetBypassCalibration(ADC_Module* ADCx, FunctionalState en);
 void ADC_SetConvResultBitNum(ADC_Module* ADCx, uint32_t ResultBitNum);
 
 void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, uint32_t RCC_ADCHCLKPrescaler);
+
+void Reference_Voltage_Switch(ADC_REFERENCE_Volt Ref_Type);
 /**
  * @}
  */

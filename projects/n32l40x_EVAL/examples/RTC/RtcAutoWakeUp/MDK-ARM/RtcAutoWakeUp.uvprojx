@@ -391,6 +391,13 @@
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>system_n32l40x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\firmware\CMSIS\device\system_n32l40x.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>USER</GroupName>
@@ -399,11 +406,6 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_n32l40x.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\firmware\CMSIS\device\system_n32l40x.c</FilePath>
             </File>
             <File>
               <FileName>n32l40x_it.c</FileName>
@@ -419,6 +421,21 @@
               <FileName>User_RTC_Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\User_RTC_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>User_RTCBKP_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\User_RTCBKP_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>User_Delay_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\User_Delay_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>User_Sysclock_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\User_Sysclock_Config.c</FilePath>
             </File>
           </Files>
         </Group>

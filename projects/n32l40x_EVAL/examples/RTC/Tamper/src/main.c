@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -40,6 +40,7 @@
 #include "n32l40x.h"
 #include "User_LED_Config.h"
 #include "User_RTC_Config.h"
+#include "User_RTCBKP_Config.h"
 
 /** @addtogroup RTC_TAMPER
  * @{
@@ -100,9 +101,24 @@ int main(void)
     /* Initialize USART,TX: PC10 RX: PC11*/
     log_init();
     log_info("\r\n RTC Init \r\n");
-    /* RTC clock source select */
-    RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true, true);
-    RTC_PrescalerConfig();
+    /* Enable the PWR clock */
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
+    /* Allow access to RTC */
+    PWR_BackupAccessEnable(ENABLE);
+    if (USER_WRITE_BKP_DAT1_DATA != BKP_ReadBkpData(BKP_DAT1) )
+    {
+         /* RTC clock source select */
+        if(SUCCESS==RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true))
+        {
+           RTC_PrescalerConfig();
+           BKP_WriteBkpData(BKP_DAT1, USER_WRITE_BKP_DAT1_DATA);
+           log_info("\r\n RTC Init Success\r\n");
+        }
+        else
+        {
+           log_info("\r\n RTC Init Faile\r\n");
+        }
+    }
     /*Tamper GPIO Initialize,PC13*/
     TamperInputIoInit();
     /*Configure Tamper GPIO trigger mode*/
@@ -113,8 +129,10 @@ int main(void)
     RTC_TamperSamplingFreqConfig(RTC_TamperSamplingFreq_RTCCLK_Div256);
     /*Configure precharge duration time*/
     RTC_TamperPinsPrechargeDuration(RTC_TamperPrechargeDuration_1RTCCLK);
+    EXTI_ClrITPendBit(EXTI_LINE19);
     /*Configure tamper interruput,EXTI_LINE19*/
     TAMPER_INT_Configuration(ENABLE);
+    RTC_ClrIntPendingBit(RTC_INT_TAMP1);
     /*Enable tamper interruput*/
     RTC_TamperIECmd(RTC_TAMPER1_INT, ENABLE);
     /*Enable tamper1 */

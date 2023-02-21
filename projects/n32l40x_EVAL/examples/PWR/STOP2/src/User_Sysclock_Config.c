@@ -6,7 +6,7 @@
 /**
  * @brief  Configures system clock after wake-up from low power mode: enable HSE, PLL
  *         and select PLL as system clock source.
- * @param  freq: PLL clock eg 108000000
+ * @param  freq: PLL clock eg 64000000
  * @param  src 
  *   This parameter can be one of the following values:
  *     @arg SYSCLK_PLLSRC_HSI,
@@ -18,7 +18,7 @@
  *     @arg SYSCLK_PLLSRC_HSE_PLLDIV2,
  *     @arg SYSCLK_PLLSRC_HSEDIV2_PLLDIV2,       
  */
-void SetSysClockToPLL(uint32_t freq, uint32_t RCC_SYSCLKSource)
+void SetSysClockToPLL(uint32_t freq, SYSCLK_PLL_TYPE src)
 {
     uint32_t pllsrcclk=0;
     uint32_t pllsrc=0;
@@ -27,7 +27,6 @@ void SetSysClockToPLL(uint32_t freq, uint32_t RCC_SYSCLKSource)
     uint32_t latency=0;
     uint32_t pclk1div=0, pclk2div=0;
     uint32_t msi_ready_flag = RESET;
-    uint8_t src = SYSCLK_PLLSRC_HSE;
     ErrorStatus HSEStartUpStatus=ERROR;
     ErrorStatus HSIStartUpStatus=ERROR;
     if (HSE_VALUE != 8000000)
@@ -154,7 +153,7 @@ void SetSysClockToPLL(uint32_t freq, uint32_t RCC_SYSCLKSource)
     RCC_ConfigSysclk(RCC_SYSCLK_SRC_MSI);
     FLASH_SetLatency(latency);
     /* HCLK = SYSCLK */
-    RCC_ConfigHclk(RCC_SYSCLKSource);//RCC_SYSCLK_DIV1
+    RCC_ConfigHclk(RCC_SYSCLK_DIV1);
     /* PCLK2 = HCLK */
     RCC_ConfigPclk2(pclk2div);
     /* PCLK1 = HCLK */

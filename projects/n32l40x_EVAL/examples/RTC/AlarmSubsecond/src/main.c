@@ -28,7 +28,7 @@
 /**
  * @file main.c
  * @author Nations
- * @version v1.2.0
+ * @version V1.2.1
  *
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
@@ -37,8 +37,10 @@
 #include <stdint.h>
 #include "main.h"
 #include "log.h"
+#include "n32l40x_rtc.h"
 #include "User_LED_Config.h"
 #include "User_RTC_Config.h"
+#include "User_RTCBKP_Config.h"
 
 bool RTC_Time_Out_Flag=false;
 
@@ -65,17 +67,33 @@ int main(void)
     log_info("\r\n RTC Init \r\n ");
     /* RTC date time alarm default value*/
     RTC_DateAndTimeDefaultVale();
-    /* RTC clock source select */
-    RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true, true);
-    RTC_PrescalerConfig();
-    /* ALRMASS Value(128) = 500ms / (1 / (32768/128)) */
-    RTC_ConfigAlarmSubSecond(RTC_A_ALARM, 128, RTC_SUBS_MASK_NONE);
-    /* RTC date time and alarm regulate*/
-    RTC_DateRegulate();
-    RTC_TimeRegulate();
-    RTC_AlarmRegulate(RTC_A_ALARM);
+    /* Enable the PWR clock */
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_PWR, ENABLE);
+    /* Allow access to RTC */
+    PWR_BackupAccessEnable(ENABLE);
+    if (USER_WRITE_BKP_DAT1_DATA != BKP_ReadBkpData(BKP_DAT1) )
+    {
+        /* RTC clock source select */
+        if(SUCCESS==RTC_CLKSourceConfig(RTC_CLK_SRC_TYPE_LSE, true))
+        {
+           RTC_PrescalerConfig();
+           /* ALRMASS Value(128) = 500ms / (1 / (32768/128)) */
+           RTC_ConfigAlarmSubSecond(RTC_A_ALARM, 128, RTC_SUBS_MASK_SS14_7);
+           /* RTC date time and alarm regulate*/
+           RTC_DateRegulate();
+           RTC_TimeRegulate();
+           RTC_AlarmRegulate(RTC_A_ALARM);
+           BKP_WriteBkpData(BKP_DAT1, USER_WRITE_BKP_DAT1_DATA);
+           log_info("\r\n RTC Init Success\r\n");
+        }
+        else
+        {
+           log_info("\r\n RTC Init Faile\r\n");
+        }
+    }
     /* Alarm out select option*/
 #if (RTC_ALARM_TEST_TYPE   ==  RTC_ALARM_TEST_TYPE_IRQ) // 1.Alarm interrupt test
+    RTC_ClrIntPendingBit(RTC_INT_ALRA);
     EXTI18_RTCAlarm_Configuration(ENABLE);
 #elif(RTC_ALARM_TEST_TYPE   ==  RTC_ALARM_TEST_TYPE_OUTPUT) // 2.Alarm out test
     /* Alarm output I/O config */
